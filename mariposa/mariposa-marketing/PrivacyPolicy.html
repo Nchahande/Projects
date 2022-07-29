@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175011770-1"></script>
+    
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="./assets/images/MP Logo 2.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="./assets/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Mariposa - senior living transformed</title>
+    <link rel="shortcut icon" href="" />
+
+    <style>
+    @font-face {
+    font-family: Baloo2SemiBold;
+    src: url("./assets/fonts/Baloo_2/Baloo2-SemiBold.ttf");
+    }
+
+    @font-face {
+    font-family: Baloo2Bold;
+    src: url("./assets/fonts/Baloo_2/Baloo2-Bold.ttf");
+    }
+
+    @font-face {
+    font-family: Baloo2Regular;
+    src: url("./assets/fonts/Baloo_2/Baloo2-Regular.ttf");
+    }
+    .policy-container {
+    padding: 52px;
+    margin: 20px 40px;
+    text-align: justify;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+    h1{
+        font-family: Baloo2SemiBold;
+        font-size: 38px;
+    }
+    h3{
+        font-family: Baloo2SemiBold;
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+    p{
+        font-family: Baloo2Regular;
+        margin-bottom: 0px;
+        letter-spacing: -1;
+        font-size: 16px;
+    }
+    li{
+        font-family: Baloo2Regular;
+        margin-bottom: 0px;
+        letter-spacing: -1;
+        font-size: 16px;
+    }
+    a:hover {
+    text-decoration: none;
+}
+    .primary-navbar {
+    padding: 20px;
+    }
+    .custom-container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 100%;
+        /* min-height: calc(-17px + 100vh); */
+        /* min-height: -webkit-fill-available; */
+        /* max-height: 100vh; */
+    }
+    .modal-dialog.modal-lg {
+    margin: 0;
+    }
+    .primary-navba{
+        padding: 20px 10px;
+    }
+    section.Onscroll-header.web-only {
+    display: flex;
+    /* align-items: auto; */
+    justify-content: center;
+}
+    .primary-navbar a {
+        font-family: Baloo2Regular;
+        font-size: 20px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #333333;
+        padding: 0px 12px;
+        margin: 0px 12px;
+        text-transform: capitalize;
+    }
+    .footer-container {
+        background-color: #ffffff;
+        padding: 40px 120px;
+    }
+    .footer-container .foot-left .logo {
+    width: 30.30%;
+    margin-bottom: 1.5rem;
+    max-height: 100px;
+    }
+
+.footer-container .foot-left .address {
+    font-family: Baloo2SemiBold;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: #333333;
+    margin-bottom: 8px;
+    width: 32.30%;
+}
+.footer-container .foot-left .contact-detail {
+    font-family: Baloo2SemiBold;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #333333;
+    margin-bottom: 90px;
+}
+.footer-container .foot-left .privacy-policy a {
+    font-family: Baloo2Regular;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4137ff;
+    margin-right: 48px;
+}
+.footer-container .foot-left .separator {
+    position: relative;
+}
+.footer-container .foot-left .separator::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 14px;
+    background-color: #bdbdbd;
+    left: -26px;
+    top: 5px;
+}
+.footer-container .foot-right {
+    max-width: 20%;
+}
+.footer-container .foot-right {
+    padding-top: 0px;
+}
+.footer-container .foot-right h6 {
+    font-family: Baloo2SemiBold;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1a1a1a;
+    padding-bottom: 18px;
+}
+.available-on-logo {
+    margin-bottom: 44px;
+}
+.footer-container .foot-right .social-ref-item {
+    width: 16.23%;
+    margin-right: 32px;
+}
+.mr24 {
+    margin-right: 24px;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.available-on-logo a img {
+    width: 40px;
+}
+.web-only {
+    display: block;
+}
+.fadeIn {
+    opacity: 0;
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+}
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+}
+.fadeIn {
+    animation-name: fadeIn;
+}
+.sticky-navbar {
+    max-height: 80px;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1440px;
+    position: fixed;
+    z-index: 100;
+    opacity: 0.9!important;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.16);
+}
+.sticky-header-logo {
+    width: 16%;
+}
+nav.stroke a, nav.fill a {
+    position: relative;
+}
+.sticky-navbar-header nav a {
+    width: 71px;
+    height: 31px;
+    font-family: Baloo2SemiBold;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #333333;
+    margin-left: 48px;
+    text-transform: capitalize;
+}
+nav.stroke a:after, nav.fill a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+}
+nav a, nav a:after, nav a:before {
+    transition: all .5s;
+}
+.mobile-only {
+    display: none;
+    }
+    .navbar-icons {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+nav.stroke a, nav.fill a {
+    position: relative;
+}
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0rem;
+    pointer-events: none;
+}
+.stack{
+    padding: 24px 0px;
+}
+@media only screen and (min-width:320px) and (max-width:765px) {
+    .mb-4, .my-4 {
+    margin-bottom: 0.5rem!important;
+}
+    .policy-container {
+    padding: 32px;
+    margin: 20px 20px;
+    text-align: justify;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+    .mobile-only {
+    display: block;
+    }
+    .web-only {
+    display: none;
+    }
+    .not-mobile{
+        display: none;
+    }
+    h1{
+        font-family: Baloo2SemiBold;
+        font-size: 28px;
+    }
+    h3{
+        font-family: Baloo2SemiBold;
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+    p{
+        font-family: Baloo2Regular;
+        margin-bottom: 0px;
+        letter-spacing: -1;
+        font-size: 14px;
+    }
+    li{
+        font-family: Baloo2Regular;
+        margin-bottom: 0px;
+        letter-spacing: -1;
+        font-size: 14px;
+    }
+    .footer-container .foot-right {
+    max-width: 100%;
+    padding-top: 46px;
+}
+.footer-container {
+    padding: 24px 24px 50px 24px;
+    display: flex;
+    justify-content: center;
+}
+.footer-container .foot-left .logo {
+    width: 46.30%;
+    margin-bottom: 22px;
+}
+.footer-container .foot-left .address {
+    width: 55.30%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.contact-detail {
+    margin-bottom: 20px!important;
+}
+.footer-container .foot-right h6 {
+    font-size: 16px;
+}
+.available-on-logo {
+    margin: auto auto 32px auto;
+}
+.privacy-policy {
+    padding: 28px 0px;
+}
+.footer-container .foot-left .privacy-policy a {
+    font-size: 14px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.footer-container .foot-left .separator::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 16px;
+    background-color: gray;
+    left: 0px;
+    top: 4px;
+}
+.footer-container .foot-right h6 {
+    font-size: 16px;
+}
+.social-ref {
+    text-align: center;
+}
+.mr24 {
+    margin-right: unset;
+}
+.footer-container .foot-right .social-ref a img {
+    width: 10.23%;
+    margin: 0px 6px;
+}
+.mobile-header {
+    background-color: #ffffff;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    max-height: 74px;
+    min-height: 56px;
+    z-index: 100;
+    display: flex;
+    padding: 1% 10%;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.16);
+}
+.mari-logo {
+    width: 40%;
+}
+
+.mobile-header button {
+    background-color: transparent;
+    min-width: auto;
+}
+.mobile-modalbutton {
+    visibility: visible;
+}
+button {
+    border-radius: 4px !important;
+    min-width: 80px;
+    border: 1px solid transparent;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    padding: 0 16px;
+}
+.modal-dialog.modal-lg {
+    /* min-height: 100vh; */
+    height: 100%;
+}
+.modal-content {
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    -webkit-backdrop-filter: blur(150px);
+    backdrop-filter: blur(150px);
+    padding: 58px 24px;
+    background-image: linear-gradient(to bottom, #4137ff, #2ae4f0);
+}
+.cross-btn {
+    width: 8%;
+    margin-left: auto;
+}
+.modal-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px auto;
+}
+.modal-nav li {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+li {
+    list-style: none;
+}
+.modal-nav li a {
+    font-family: Baloo2SemiBold;
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #ffffff;
+    z-index: 6;
+}
+#Contact{
+    display: none;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0rem;
+    pointer-events: none;
+}
+.modal-footer-m {
+    font-family: Baloo2Regular;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+
+}
+    </style>
+</head>
+
+<body>
+    <section class="Onscroll-header web-only">
+        <div class="sticky-navbar p-2 animated fadeIn">
+            <div class="row px-5 align-items-center">
+                <div class="col-2 sticky-header-logo">
+                    <img src="./assets/images/main-logo.png" alt="">
+                </div>
+                <div class="col-8 text-right">
+                    <div class="sticky-navbar-header">
+                        <!-- <nav class="stroke">
+                            <div class="nav-items-sticky-header">
+                                <a href="#Product">product</a>
+                                <a href="#Profile">our story</a>
+                                <a href=" https://medium.com/@mariposa.care">blog</a>
+                                <a href="#Contact">contact</a>
+                            </div>
+                        </nav> -->
+                    </div>
+                </div>
+                <div class="navbar-icons col-2 ">
+                    <a href="">
+                        <img class="pulse" src="./assets/images/black-appstore.svg" alt="">
+                    </a>
+                    <a href="">
+                        <img class="pulse" src="./assets/images/black-playstore.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mobile-navbar mobile-only">
+        <div class="mobile-header">
+            <div class="mari-logo">
+                <img src="./assets/images/main-logo.png" alt="">
+            </div>
+            <!-- <button class="mobile-modalbutton" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="./assets/images/threeBars.svg" alt=""></button> -->
+        </div>
+    </section>
+    <section class="container px-0 primary-jumbo web-only">
+        <div class="row py-2 align-items-center">
+            <div class="col-2 sticky-header-logo">
+                <img src="./assets/images/main-logo.png" alt="">
+            </div>
+            <div class="col-8 text-right">
+                <div class="sticky-navbar-header">
+                    <!-- <nav class="stroke">
+                        <div class="nav-items-sticky-header">
+                            <a href="#Product">product</a>
+                            <a href="#Profile">our story</a>
+                            <a href=" https://medium.com/@mariposa.care">blog</a>
+                            <a href="#Contact">contact</a>
+                        </div>
+                    </nav> -->
+                </div>
+            </div>
+            <div class="navbar-icons col-2">
+                <a href="">
+                    <img class="pulse" src="./assets/images/black-appstore.svg" alt="">
+                </a>
+                <a href="">
+                    <img class="pulse" src="./assets/images/black-playstore.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="mobile-only" id="Home">
+        <div class="text-right">
+            <div class="modal fade bd-example-modal-lg" id="modal-ajax" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="cross-btn" data-dismiss="modal">
+                            <img src="./assets/images/cross.svg" alt="">
+                        </div>
+                        <div class="modal-nav">
+                            <nav class="stroke">
+                                <ul class="pl-0">
+                                    <li>
+                                        <a href="#Home">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="#Product">Product</a>
+                                    </li>
+                                    <li>
+                                        <a href="#OurStoryM">Our Story</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://medium.com/@mariposa.care">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="#ContactM">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="modal-footer-m">
+                            <p class="text-center">@Mariposa 2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <div class="container">
+        <div class="mari-logo mobile-only p-3">
+            <img src="./assets/images/main-logo.png" alt="">
+        </div>
+      <div class="policy-container">
+        <h1 class="mb-4"><strong>Mariposa Privacy Policy</strong></h1>
+        <p>Last updated: August 31 , 2020.</p>
+        <p class="my-3">Mariposa Technologies, Inc. (“Mariposa,” “we,” “our,” or “us”) values the privacy of individuals who use the Mariposa website, mobile application, and related services (collectively, the “Services”). This Privacy Policy (the “Policy”) describes the information that we gather from visitors, users, and others who access or use the Services (“Users” or “you”), how we use and disclose such information, and the steps we take to protect such information. By using the Services, you consent to the privacy practices described in this Policy</p>
+        <p>This Policy is incorporated into and is subject to the Mariposa Terms of Service. Capitalized terms used but not defined in this Policy have the meaning given to them in the Terms of Service. </p>
+
+        <div class="stack">
+            <h3><strong>1. Information We Collect</strong></h3>
+            <p style="font-style: italic;">Personal Information</p>
+            <p class="mb-4">While using the Services, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you (“Personal Information”). Personal Information may include, but is not limited to, your name, contact information, information about other you may invite to use the Services, and additional information we may ask you to provide. You may provide us with Personal Information when you register for an Account, use the Services, make a purchase on the Services, contact customer support, or otherwise communicate with us. Personal Information will also include any health-related information about yourself or others in your network that you choose to directly or indirectly provide to us. </p>
+
+            <p style="font-style: italic;">Usage Information</p>
+            <p class="mb-4">We collect information about how you access and interact with the Services, such as device type, IP address, operating system, browser type, address of a referring website, activity on our website, device ID, access dates and times, and other system activity. We may collect certain information by automated means using technologies such as cookies, web beacons, pixels, browser analysis tools, server logs, and mobile identifiers. In many cases the information we collect using cookies and other tools is only used in a non-identifiable manner without reference to Personal Information. For example, we may use information we collect to better understand website traffic patterns and to optimize our users’ experience. In some cases we associate the information we collect using cookies and other technology with your Personal Information. </p>
+
+            <p style="font-style: italic;">Third-Party Cookies</p>
+            <p class="mb-4">Third parties may also use cookies, web beacons, or other devices to collect information when you use the Services. Mariposa does not control any cookies or other data collection tools that may be placed on the Services by a third party, and this Policy does not cover the use of such cookies and/or other data collection tools by any third party. We encourage you to read the privacy policies of such third parties to find out more about the information that may be collected by them and the choices you have regarding the collection, use, and sharing of such information. You may be able to “opt out” of the collection of information through cookies or other tracking technology by actively managing the settings on your browser or mobile device. </p>
+        </div>
+        <div class="stack">
+             <h3><strong>2. How We Use Your Information </strong></h3>
+            <p style="font-style: italic;">Provide, Maintain, and Improve the Services</p>
+            <p>We may use your information to:</p>
+            <ul class="pl-4">
+                <li>provide customer service</li>
+                <li>send you confirmations, updates, security alerts, and support and administrative messages</li>
+                <li>detect and prevent fraud</li>
+                <li>operate, protect, and optimize the Services and your experience, such as by performing analytics and conducting research </li>
+                <li>troubleshoot and protect against errors</li>
+                <li>personalize and improve the Services </li>
+                <li>monitor and analyze usage and trends and otherwise measure the effectiveness of the Services</li>
+                <li>develop new features</li>
+            </ul>
+
+            <p style="font-style: italic;">Sharing Your Information</p>
+            <p>If you use our Services, you are authorizing us to share information:</p>
+            <ul class="pl-4">
+                <li>that you direct us to disclose to others</li>
+                <li>with other Users in your network</li>
+                <li>with our third-party business partners, vendors, and consultants who perform services on our behalf or who help us provide our Services, such as accounting, managerial, technical, marketing, or analytic services</li>
+                <li>if required to do so by law or in the good-faith belief that such action is necessary to comply with local, state, or federal laws, or to respond to a court order, judicial or other governmental subpoena or warrant, or in the event of bankruptcy proceedings</li>
+                <li>if we believe in good faith that doing so is reasonably necessary or appropriate to protect the rights, property, or safety of Mariposa, our users, our employees, copyright owners, third parties, or the public, including without limitation to protect Mariposa or our users from fraudulent, abusive, inappropriate, or unlawful use of our Services</li>
+                <li>to enforce or apply this Policy, our Terms of Service, or our other policies or agreements</li>
+                <li>in connection with, or during negotiations of, any merger, sale of company assets, financing or acquisition, or in any other situation where information may be disclosed or transferred as one of the business assets of Mariposa</li>
+            </ul>
+            <p>Nothing herein restricts the sharing of aggregated or anonymized information, which may be shared with third parties without your consent. This Policy in no way restricts or limits our collection and use of aggregate or de-identified information.</p>
+        </div>
+        <div class="stack">
+             <h3><strong>3. How We Protect Your Information</strong></h3>
+            <p>We take measures designed to protect your information in an effort to prevent loss, misuse, unauthorized access, disclosure, alteration, and destruction. Please be aware, however, that despite our efforts, no security measures are perfect or impenetrable and no method of data transmission can be guaranteed against any interception or other type of misuse. To protect the confidentiality of information maintained in your Account, you must keep your password confidential and not disclose it to any other person. You are responsible for all uses of the Services by any person using your password. Please advise us immediately if you believe your password has been misused.</p>
+        </div>
+        <div class="stack">
+             <h3><strong>4. California Privacy Rights</strong></h3>
+            <p>California law permits California residents to request and obtain from us once a year, free of charge, a list of the third parties to whom we have disclosed their personal information (if any) for their direct marketing purposes in the prior calendar year, as well as the type of personal information disclosed to those third parties. See the “Contact” section for where to send such requests. We do not share your Personal Information with third parties for their own direct marketing purposes without your prior consent. Accordingly, you can prevent disclosure of your Personal Information to third parties for their direct marketing purposes by withholding consent.</p>
+        </div>
+        <div class="stack">
+             <h3><strong>5. Children’s Privacy</strong></h3>
+            <p>Persons under the age of 13, or any higher minimum age in the jurisdiction where that person resides, are not permitted to create accounts unless their parent has consented in accordance with applicable law. If we learn that we have collected the personal information of a child under the relevant minimum age without parental consent, we will take steps to delete the information as soon as possible. Parents who believe that their child has submitted personal information to us and would like to have it deleted may contact us at the email below.</p>
+        </div>
+        <div class="stack">
+             <h3><strong>6. Opting Out</strong></h3>
+            <p>You may “opt out” of receiving marketing or promotional emails from us by following the instructions in those emails. If you opt out, we may still send you non-promotional emails, such as emails about your Account or our ongoing business relations.</p>
+        </div>
+        <div class="stack">
+             <h3><strong>7. Changes and Updates to the Policy</strong></h3>
+            <p>We reserve the right to change the provisions of this Policy at any time. Please revisit this page periodically to stay aware of any changes. If we modify this Policy, we will make it available through the Services and indicate the date of the latest revision. Your continued use of the Services after the revised Policy has become effective indicates that you have read, understood, and agreed to the current version of this Policy. </p>
+        </div>
+        <div class="stack">
+             <h3><strong>8. Contact</strong></h3>
+            <p>Please contact us with any questions regarding this Policy at info@mariposa.care.</p>
+        </div>
+      </div>
+
+    </div>
+    <section class="footer-container web-only" id="Contact">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="foot-left d-flex flex-column">
+                <!-- <div class="logo">
+                    <img src="./assets/images/mariposaSeniorTranslogo.png" alt="">
+                </div>
+                <div class="address">
+                    <p>728 Alabama Street, Unit 201 San Francisco, CA 94110
+                    </p>
+                </div>
+                <div class="contact-detail">
+                    <p>415-806-3121
+                    </p>
+                </div> -->
+                <div class="privacy-policy">
+                    <div class="d-flex">
+                        <a class="pulse" href="">Privacy Policy</a>
+                        <span class="separator"></span>
+                        <a class="pulse" href="">info@mariposa.care</a>
+                    </div>
+                </div>
+            </div>
+             <div class="foot-right d-flex flex-column">
+                <!-- <h6>Available on:</h6>
+                <div class="available-on-logo ">
+                    <a class="mr24 " href="">
+                        <img class="pulse" src="./assets/images/appstore-brand.svg" alt="">
+                    </a>
+                    <a class="mr24" href="">
+                        <img class="pulse" src="./assets/images/playstore-brand.svg" alt="">
+                    </a>
+                </div> -->
+                <h6>Follow us on:</h6>
+                <div class="social-ref d-flex">
+                    <div class="social-ref-item ">
+                        <a class="mr24" href="https://www.facebook.com/mariposacommunity/">
+                            <img class="pulse" src="./assets/images/facebook.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="social-ref-item ">
+                        <a class="mr24" href="https://medium.com/@mariposa.care">
+                            <img class="pulse" src="./assets/images/Medium Logo 2.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="social-ref-item ">
+                        <a class="mr24" href="https://twitter.com/CareMariposa">
+                            <img class="pulse" src="./assets/images/twitter.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <section class="footer-container mobile-only " id="ContactM">
+        <div class="foot-left foot-right d-flex flex-column justify-content-center align-items-center">
+            <!-- <div class="logo">
+                <img src="./assets/images/mariposaSeniorTranslogo.png" alt="">
+            </div>
+            <div class="address">
+                <p>728 Alabama Street, Unit 201 San Francisco, CA 94110
+                </p>
+            </div>
+            <div class="contact-detail">
+                <p>+1 415-806-3121
+                </p>
+            </div>
+            <h6>Available on:</h6>
+            <div class="available-on-logo">
+                <a class="mr24" href="">
+                    <img src="./assets/images/appstore-brand.svg" alt="">
+                </a>
+                <a class="mr24" href="">
+                    <img src="./assets/images/playstore-brand.svg" alt="">
+                </a>
+            </div> -->
+            <div class="privacy-policy">
+                <div class="d-flex flex-row">
+                    <a href="">Privacy Policy</a>
+                    <span class="separator"></span>
+                    <a href="">info@mariposa.care</a>
+                </div>
+            </div>
+            <h6>Follow us on:</h6>
+            <div class="social-ref">
+                <a class="mr24" href="https://www.facebook.com/mariposacommunity/">
+                    <img src="./assets/images/facebook.svg" alt="">
+                </a>
+                <a class="mr24" href="https://medium.com/@mariposa.care">
+                    <img src="./assets/images/Medium Logo 2.svg" alt="">
+                </a>
+                <a class="mr24" href="https://twitter.com/CareMariposa">
+                    <img src="./assets/images/twitter.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section></section>
+
+</body>
+<script>
+      $(document).ready(function() {
+
+    $('.sticky-navbar').hide();
+    $('.mobile-navbar').css("display", "none");
+    $(window).scroll(function() {
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop > 550) {
+            $('.sticky-navbar').show();
+        } else {
+            $('.sticky-navbar').hide();
+
+        }
+    });
+
+
+
+    $(window).scroll(function() {
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop > 350) {
+            $('.mobile-navbar').css("display", "block");
+        } else {
+            $('.mobile-navbar').css("display", "none");
+
+        }
+    });
+
+    $('.mobile-modalbutton').click(function() {
+        $('.modal')
+            .prop('class', 'modal fade') // revert to default
+            .addClass($(this).data('direction'));
+        $('.modal').modal('show').delay(6000);
+    });
+
+
+
+});
+
+$(document).on('click', '.modal a', function() {
+    $(this).closest(".modal").modal("hide");
+});
+</script>
+</html>

@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width,
+    initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' />
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+    <title>Annuity</title>
+
+    <!--google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--fontawesome fonts -->
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css?ver=5.4.1" rel="stylesheet" />
+
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/annuity.css">
+    <link rel="stylesheet" href="css/annuity-form-elements.css">
+
+    <style>
+        html,
+        body {
+            background-color: #F4F6FA;
+        }
+
+        .annuity__stepper {
+            display: none;
+        }
+        header a.resume {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loader__container">
+        <div class="loader"></div>
+    </div>
+    <!--/.loader__container-->
+
+    <header>
+        <!-- <div class="kotak__grid">
+            <div class="inner__container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-5">
+                            <div class="logo">
+                                <a href="./">
+                                    <img src="img/common/kotak-logo.png" class="img-fluid"
+                                        alt="Kotak Life Insurance Logo" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-7 align-self-center">
+                            <div class="header_right_block">
+                                <a href="#">Contact us</a>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Need Help</a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <p>Our experts are here to help you</p>
+                                        <div class="dropdown_row">
+                                        <div class="dropdown_col">
+                                            Customer Care
+                                        </div>
+                                        <div class="dropdown_col text-right">
+                                            <a href="tel:1800 209 8800">1800 209 8800</a>
+                                        </div>
+                                        </div>
+                                        <div class="dropdown_row m-0 pb-0">
+                                        <div class="dropdown_col">
+                                            Email
+                                        </div>
+                                        <div class="dropdown_col text-right col_lg">
+                                            <a href="mailto:kli.einsurance@kotak.com">kli.einsurance@kotak.com</a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </header>
+    <!-- /header -->
+
+    <main id="main">
+        <div class="kotak__grid">
+            <div class="inner__container">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="annuity__stepper stepper_nps">
+                                <div class="stepper_items completed">
+                                    <div class="step_item">1</div>
+                                    <div class="step_caption">Get Started</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items completed">
+                                    <div class="step_item">2</div>
+                                    <div class="step_caption">Personal Information</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items completed">
+                                    <div class="step_item">3</div>
+                                    <div class="step_caption">Nominee Details</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items completed">
+                                    <div class="step_item">4</div>
+                                    <div class="step_caption">Payout Information</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items inprogress">
+                                    <div class="step_item">5</div>
+                                    <div class="step_caption">Document Upload</div>
+                                </div>
+                            </div>
+                            <div class="annuity__stepper stepper_lti">
+                                <div class="stepper_items completed">
+                                    <div class="step_item">1</div>
+                                    <div class="step_caption">Personal Information</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items completed">
+                                    <div class="step_item">2</div>
+                                    <div class="step_caption">Nominee Details</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items completed">
+                                    <div class="step_item">3</div>
+                                    <div class="step_caption">Payout Information</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items completed">
+                                    <div class="step_item">4</div>
+                                    <div class="step_caption">Payment Details</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items inprogress">
+                                    <div class="step_item">5</div>
+                                    <div class="step_caption">Document Upload</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-5 col-lg-6 col-md-8 col-sm-9 col-12">
+                            <h2 class="mb-3">Upload your documents</h2>
+                            <div class="accordion" id="documentUpload">
+
+                                <div class="card">
+                                    <div class="card-header " data-toggle="collapse" data-target="#upload1"
+                                        id="heading1">
+                                        <h4>Pancard</h4>
+                                        <div class="card-close"></div>
+                                    </div>
+                                    <div id="upload1" class="collapse show" aria-labelledby="heading1"
+                                        data-parent="#documentUpload">
+                                        <div class="card-body pt-0">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="upload_button">
+                                                        <img src="img/common/upload-button-icon.svg"
+                                                            class="img-fluid mr-1">
+                                                        UPLOAD Photo
+                                                    </div>
+                                                    <input type="file" name="pancard" class="upload_file"
+                                                        style="display: none;" />
+                                                    <div class="upload_container_row">
+                                                        <div class="upload_container">
+                                                            <div class="upload_image_container">
+                                                                <img src="" class="img-fluid">
+                                                            </div>
+                                                            <div class="upload_image_details">
+                                                                <p class="fileName"></p>
+                                                                <p class="fileSize"></p>
+                                                                <a href="#" class="delete_file">DELETE</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- pancard -->
+
+
+                                <div class="card">
+                                    <div class="card-header" data-toggle="collapse" data-target="#upload2"
+                                        id="heading2">
+                                        <h4>Proof of Permanent Address</h4>
+                                        <div class="card-close"></div>
+                                    </div>
+                                    <div id="upload2" class="collapse show" aria-labelledby="heading2"
+                                        data-parent="#documentUpload">
+                                        <div class="card-body pt-0">
+                                            <div class="row">
+                                                <div class="col-12 d-xl-block d-lg-block d-md-block d-none">
+                                                    <div class="radio__group mb-3">
+                                                        <label class="radio__container">
+                                                            <input class="" type="radio" name="permAddType"
+                                                                value="AadhaarCard" checked>
+                                                            <span class="checkmark"></span>
+                                                            <span class="caption">Aadhaar Card <img
+                                                                    src="img/common/info-icon.svg"
+                                                                    class="img-fluid annuity-popOvers ml-1"
+                                                                    data-toggle="popover-click"
+                                                                    data-content="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                                                                    data-original-title="" title=""></span>
+                                                        </label>
+
+                                                        <label class="radio__container">
+                                                            <input class="" type="radio" name="permAddType"
+                                                                value="Passport" data-form="form_5">
+                                                            <span class="checkmark"></span>
+                                                            <span class="caption">Passport</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 d-xl-none d-lg-none d-md-none d-block">
+                                                    <div class="form_field mb-3">
+                                                        <button type="button"
+                                                            class="btn_annuity btn_blue_outline btn_blue_outline_sm active mr-1 accountType"
+                                                            data-value="0">Aadhaar Card </button>
+                                                        <button type="button"
+                                                            class="btn_annuity btn_blue_outline btn_blue_outline_sm accountType"
+                                                            data-value="1">Passport</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                                                    <div class="upload_button">
+                                                        <img src="img/common/upload-button-icon.svg"
+                                                            class="img-fluid mr-1">
+                                                        UPLOAD front Photo
+                                                    </div>
+                                                    <input type="file" name="pancard" class="upload_file"
+                                                        style="display: none;" />
+                                                    <div class="upload_container_row">
+                                                        <div class="upload_container">
+                                                            <div class="upload_image_container">
+                                                                <img src="" class="img-fluid">
+                                                            </div>
+                                                            <div class="upload_image_details">
+                                                                <p class="fileName"></p>
+                                                                <p class="fileSize"></p>
+                                                                <a href="#" class="delete_file">DELETE</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                                                    <div class="upload_button mb-0">
+                                                        <img src="img/common/upload-button-icon.svg"
+                                                            class="img-fluid mr-1">
+                                                        UPLOAD back Photo
+                                                    </div>
+                                                    <input type="file" name="pancard" class="upload_file"
+                                                        style="display: none;" />
+                                                    <div class="upload_container_row">
+                                                        <div class="upload_container">
+                                                            <div class="upload_image_container">
+                                                                <img src="" class="img-fluid">
+                                                            </div>
+                                                            <div class="upload_image_details">
+                                                                <p class="fileName"></p>
+                                                                <p class="fileSize"></p>
+                                                                <a href="#" class="delete_file">DELETE</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 d-xl-block d-lg-block d-md-block d-none">
+                                                    <p class="upload_skip_container">Don’t have Aadhaar or Passport? <a
+                                                            href="#" class="show_other_proof">Upload other address
+                                                            proof</a></p>
+                                                </div>
+                                                <div class="col-12 d-xl-none d-lg-none d-md-none d-block">
+                                                    <p class="upload_skip_container">Don’t have Aadhaar or
+                                                        Passport?<br><a href="#" class="show_other_proof">Upload other
+                                                            address proof</a></p>
+                                                </div>
+                                                <div class="col-12" id="other_proof">
+                                                    <div class="form__row mt-2 mb-0">
+                                                        <div class="form_field">
+                                                            <select class="get_document_type">
+                                                                <option value="0" selected="">Select
+                                                                </option>
+                                                                <option value="1">Document 1</option>
+                                                                <option value="2">Document 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 mt-4" id="additional_document">
+                                                    <div class="upload_button">
+                                                        <img src="img/common/upload-button-icon.svg"
+                                                            class="img-fluid mr-1">
+                                                        UPLOAD Document
+                                                    </div>
+                                                    <input type="file" name="pancard" class="upload_file"
+                                                        style="display: none;" />
+                                                    <div class="upload_container_row">
+                                                        <div class="upload_container">
+                                                            <div class="upload_image_container">
+                                                                <img src="" class="img-fluid">
+                                                            </div>
+                                                            <div class="upload_image_details">
+                                                                <p class="fileName"></p>
+                                                                <p class="fileSize"></p>
+                                                                <a href="#" class="delete_file">DELETE</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Proof of Permanent Address -->
+
+                                <div class="card">
+                                    <div class="card-header collapsed" data-toggle="collapse" data-target="#upload3"
+                                        id="heading3">
+                                        <h4>PRAN Card</h4>
+                                        <div class="card-close"></div>
+                                    </div>
+                                    <div id="upload3" class="collapse" aria-labelledby="heading3"
+                                        data-parent="#documentUpload">
+                                        <div class="card-body pt-0">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="upload_button">
+                                                        <img src="img/common/upload-button-icon.svg"
+                                                            class="img-fluid mr-1">
+                                                        UPLOAD Photo
+                                                    </div>
+                                                    <input type="file" name="pancard" class="upload_file"
+                                                        style="display: none;" />
+                                                    <div class="upload_container_row">
+                                                        <div class="upload_container">
+                                                            <div class="upload_image_container">
+                                                                <img src="" class="img-fluid">
+                                                            </div>
+                                                            <div class="upload_image_details">
+                                                                <p class="fileName"></p>
+                                                                <p class="fileSize"></p>
+                                                                <a href="#" class="delete_file">DELETE</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRAN Card -->
+
+                                <div class="card">
+                                    <div class="card-header collapsed" data-toggle="collapse" data-target="#upload7"
+                                        id="heading7">
+                                        <h4>Income Proof</h4>
+                                        <div class="card-close"></div>
+                                    </div>
+                                    <div id="upload7" class="collapse" aria-labelledby="heading7"
+                                        data-parent="#documentUpload">
+                                        <div class="card-body pt-0">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="upload_button">
+                                                        <img src="img/common/upload-button-icon.svg"
+                                                            class="img-fluid mr-1">
+                                                        UPLOAD Photo
+                                                    </div>
+                                                    <input type="file" name="pancard" class="upload_file"
+                                                        style="display: none;" />
+                                                    <div class="upload_container_row">
+                                                        <div class="upload_container">
+                                                            <div class="upload_image_container">
+                                                                <img src="" class="img-fluid">
+                                                            </div>
+                                                            <div class="upload_image_details">
+                                                                <p class="fileName"></p>
+                                                                <p class="fileSize"></p>
+                                                                <a href="#" class="delete_file">DELETE</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRAN Card -->
+
+                                <div class="card">
+                                    <div class="card-header collapsed" data-toggle="collapse" data-target="#upload4"
+                                        id="heading4">
+                                        <h4>Upload Photo</h4>
+                                        <div class="card-close"></div>
+                                    </div>
+                                    <div id="upload4" class="collapse" aria-labelledby="heading4"
+                                        data-parent="#documentUpload">
+                                        <div class="card-body pt-0">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="upload_button">
+                                                        <img src="img/common/upload-button-icon.svg"
+                                                            class="img-fluid mr-1">
+                                                        UPLOAD Photo
+                                                    </div>
+                                                    <input type="file" name="pancard" class="upload_file"
+                                                        style="display: none;" />
+                                                    <div class="upload_container_row">
+                                                        <div class="upload_container">
+                                                            <div class="upload_image_container">
+                                                                <img src="" class="img-fluid">
+                                                            </div>
+                                                            <div class="upload_image_details">
+                                                                <p class="fileName"></p>
+                                                                <p class="fileSize"></p>
+                                                                <a href="#" class="delete_file">DELETE</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Upload Photo -->
+
+                                <div class="card">
+                                    <div class="card-header collapsed" data-toggle="collapse" data-target="#upload5"
+                                        id="heading5">
+                                        <h4>Cancelled Cheque</h4>
+                                        <div class="card-close"></div>
+                                    </div>
+                                    <div id="upload5" class="collapse" aria-labelledby="heading5"
+                                        data-parent="#documentUpload">
+                                        <div class="card-body pt-0">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="upload_button">
+                                                        <img src="img/common/upload-button-icon.svg"
+                                                            class="img-fluid mr-1">
+                                                        UPLOAD Photo
+                                                    </div>
+                                                    <input type="file" name="pancard" class="upload_file"
+                                                        style="display: none;" />
+                                                    <div class="upload_container_row">
+                                                        <div class="upload_container">
+                                                            <div class="upload_image_container">
+                                                                <img src="" class="img-fluid">
+                                                            </div>
+                                                            <div class="upload_image_details">
+                                                                <p class="fileName"></p>
+                                                                <p class="fileSize"></p>
+                                                                <a href="#" class="delete_file">DELETE</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Cancelled Cheque -->
+
+                                <div class="card">
+                                    <div class="card-header collapsed" data-toggle="collapse" data-target="#upload6"
+                                        id="heading6">
+                                        <h4>Spouse Age Proof</h4>
+                                        <div class="card-close"></div>
+                                    </div>
+                                    <div id="upload6" class="collapse" aria-labelledby="heading6"
+                                        data-parent="#documentUpload">
+                                        <div class="card-body pt-0">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="upload_button">
+                                                        <img src="img/common/upload-button-icon.svg"
+                                                            class="img-fluid mr-1">
+                                                        UPLOAD Document
+                                                    </div>
+                                                    <input type="file" name="pancard" class="upload_file"
+                                                        style="display: none;" />
+                                                    <div class="upload_container_row">
+                                                        <div class="upload_container">
+                                                            <div class="upload_image_container">
+                                                                <img src="" class="img-fluid">
+                                                            </div>
+                                                            <div class="upload_image_details">
+                                                                <p class="fileName"></p>
+                                                                <p class="fileSize"></p>
+                                                                <a href="#" class="delete_file">DELETE</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form__row mt-3 mb-0">
+                                                        <div class="form_field">
+                                                            <select class="get_document_type">
+                                                                <option value="0" selected="">Select
+                                                                </option>
+                                                                <option value="1">Document 1</option>
+                                                                <option value="2">Document 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 mt-4" id="additional_document">
+                                                    <div class="upload_button">
+                                                        <img src="img/common/upload-button-icon.svg"
+                                                            class="img-fluid mr-1">
+                                                        UPLOAD Document
+                                                    </div>
+                                                    <input type="file" name="pancard" class="upload_file"
+                                                        style="display: none;" />
+                                                    <div class="upload_container_row">
+                                                        <div class="upload_container">
+                                                            <div class="upload_image_container">
+                                                                <img src="" class="img-fluid">
+                                                            </div>
+                                                            <div class="upload_image_details">
+                                                                <p class="fileName"></p>
+                                                                <p class="fileSize"></p>
+                                                                <a href="#" class="delete_file">DELETE</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Spouse Age Proof -->
+
+                            </div>
+                            <div class="text-center mt-4 mb-3">
+                                <button type="button"
+                                    class="btn_annuity btn_blue_outline btn_done bg_white_off text-uppercase">Done</button>
+                            </div>
+
+                            <div class="skip__now text-center">
+                                <div class="d-xl-block d-lg-block d-md-block d-none">
+                                    Don’t have these documents handy? <a href="failed.html">Upload later</a>
+                                </div>
+                                <div class="d-xl-none d-lg-none d-md-none d-block">
+                                    <a href="failed.html">Upload later</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- /main -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+
+    <!-- custom script -->
+    <script src="js/annuity.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var plan = localStorage.getItem('plan');
+            $('.stepper_' + plan).css('display', 'flex');
+
+            $('.upload_button').click(function (e) {
+                $(this).next('input').focus().trigger('click');
+
+                $(this).next('input').change(function (e) {
+
+                    f_name = e.target.files[0].name;
+                    f_size = Math.round(e.target.files[0].size / 1024) + 'kb';
+                    f_path = $(this).val();
+
+                    $(this).next('.upload_container_row').find('.upload_container').css(
+                        'display',
+                        'flex');
+                    $(this).prev('.upload_button').css('display', 'none');
+                    $(this).next('.upload_container_row').find(
+                        '.upload_image_container img').attr('src', URL.createObjectURL(e
+                        .target.files[0]));
+
+                    $(this).next('.upload_container_row').find(
+                        '.upload_image_details .fileName').html(f_name);
+                    $(this).next('.upload_container_row').find(
+                        '.upload_image_details .fileSize').html(f_size);
+
+                    $(this).parent().parent().parent().parent().prev('.card-header')
+                        .find('h4').addClass('active');
+                });
+
+                $('.delete_file').click(function () {
+                    $(this).parent().parent().parent().prev('.upload_file')[0]
+                        .value = ''
+                    $(this).parent().parent('.upload_container').css('display', 'none');
+                    $(this).parent().parent().parent().parent().find(
+                        '.upload_button').css('display', 'flex');
+                    $(this).parent().parent().parent().parent().parent().parent()
+                        .parent().prev('.card-header')
+                        .find('h4').removeClass('active')
+                    return false;
+                })
+            });
+
+            $('.btn_done').click(function () {
+                location.href = 'success.html';
+            });
+
+            $('.show_other_proof').click(function () {
+                $(this).toggleClass('open_dd');
+                if ($(this).hasClass('open_dd')) {
+                    $('#other_proof').css('display', 'block');
+                } else {
+                    $('#other_proof').css('display', 'none');
+                    $('#additional_document').css('display', 'none');
+                    $('.get_document_type').val(0).change();
+                }
+                return false;
+            });
+
+            $('.get_document_type').change(function () {
+                console.log($(this).val());
+                if ($(this).val() != 0) {
+                    $('#additional_document').css('display', 'block');
+                } else {
+                    $('#additional_document').css('display', 'none');
+                }
+            })
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

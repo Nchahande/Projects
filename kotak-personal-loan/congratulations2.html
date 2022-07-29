@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link href="css/kotak-personal-loan.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/other.css">
+
+    <title>Kotak Personal Loan</title>
+    <style>
+        .showPremium{
+            display: none;
+        }
+        .page_title_container .page-title-icon {
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+        }
+        #insurancePremium{
+            display: none;
+        }
+        #hiddenBlock{
+            visibility: hidden;
+        }
+        .borderBottom{
+            border-bottom: none!important;;
+        }
+        
+    </style>
+  </head>
+  <body>
+    
+    <header>
+        <div class="center_grid">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="logo">
+                            <img src="img/kotak-bank-logo.svg" class="img-fluid" alt="Kotak Mahindra Bank Logo">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact Us</a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <p>Our experts are here to help you</p>
+                                <div class="dropdown_row">
+                                    <div class="dropdown_col">
+                                        Customer Care
+                                    </div>
+                                    <div class="dropdown_col text-right">
+                                        <a href="tel:1800 209 8800">1800 209 8800</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown_row m-0 pb-0">
+                                    <div class="dropdown_col">
+                                        Email
+                                    </div>
+                                    <div class="dropdown_col text-right col_lg">
+                                        <a href="mailto:kli.einsurance@kotak.com">kli.einsurance@kotak.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main_kotak_container">
+        <div class="center_grid">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 p-0">
+                        <div class="progress_outer_container">
+                            <div class="progress_container">
+                                <div class="progress-bar">
+                                    <div class="progress-block" data-value="90"></div>
+                                </div>
+                                <div class="progress-status">0% Completed</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="main_container typography">
+                            <div class="page_title_container d-xl-flex d-lg-flex d-md-flex d-none">
+                                <div class="page-title-icon">
+                                    <img src="img/congratulations-2.svg" class="img-fluid">
+                                </div>
+                                <div class="page-title">
+                                    <h3>Congratulations Rajesh!</h3>
+                                    <h6>Your kotak personal loan application for<strong>&nbsp; ₹ 6,00,000</strong> has been approved</h6>
+                                </div>
+                            </div>
+                            <div class="d-xl-none d-lg-none d-md-none d-block">
+                                <img src="img/congratulations-2.svg" class="img-fluid mx-auto d-block mb-4">
+                                <h3 class="text-center">Congratulations Rajesh!</h3>
+                                <h6 class="text-center">Your kotak personal loan application for <br><strong>₹ 6,00,000</strong> has been approved</h6>
+                            </div>
+                                                       
+                            <hr class="mt-4 mb-4">
+
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                                    <div class="form_row mb-0">
+                                        <label>Loan amount needed</label>
+                                        <div class="inr inr-sm">
+                                            <input type="text" pattern="\d*" class="amount-value" placeholder="Enter value" value="6,00,000">
+                                        </div>
+                                        <p class="input-info">Amount entered should be less than or equal to ₹ 6,00,000.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form_row mb-0 d-xl-block d-lg-block d-md-block d-sm-block d-none">
+                                <div class="congrats_process_box">
+                                    <div class="congrats_process_left">
+                                        <div class="box_row">
+                                            <p>Processing Fees</p>
+                                            <p><strong>(-) ₹ 1,200</strong></p>
+                                        </div>
+                                        <div class="box_row">
+                                            <p>Stamp Duty</p>
+                                            <p><strong>(-) ₹ 572</strong></p>
+                                        </div>
+                                        <div class="box_row" id="insurancePremium">
+                                            <p>Insurance Premium</p>
+                                            <p><strong>(-) ₹ 264</strong></p>
+                                        </div>
+                                        <div class="box_row borderBottom" id="box_row_bottom">
+                                            <p>Net Loan Amount</p>
+                                            <p><strong>₹ 5,97,172</strong></p>
+                                        </div>
+                                        <div class="box_row" id="hiddenBlock">
+                                            <p>Net Loan Amount</p>                                            
+                                        </div>
+                                    </div>
+                                    <div class="congrats_process_right">
+                                        <div>
+                                            <p>EMI per month</p>
+                                            <p><strong>₹ 1,832</strong></p>
+                                        </div>
+                                        <div class="py-5">
+                                            <p>Tenure</p>
+                                            <p><strong>48 months</strong></p>
+                                        </div>
+                                        <div>
+                                            <p>Rate</p>
+                                            <p><strong>18% p.a.</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form_row mb-0 d-xl-none d-lg-none d-md-none d-sm-none d-block">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <hr class="mt-4 mb-4">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                                        <div class="form_row mb-4">
+                                            <label class="mb-1 color-grey">Tenure</label>
+                                            <h5>48 months</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                                        <div class="form_row mb-4">
+                                            <label class="mb-1 color-grey">Rate</label>
+                                            <h5>18% p.a.</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                                        <div class="form_row mb-4">
+                                            <label class="mb-1 color-grey">Processing Fees</label>
+                                            <h5>₹ 1,256</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                                        <div class="form_row mb-4">
+                                            <label class="mb-1 color-grey">Stamp Duty</label>
+                                            <h5>₹ 572</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-4 col-6 showPremium">
+                                        <div class="form_row mb-4">
+                                            <label class="mb-1 color-grey">Insurance Premium</label>
+                                            <h5>₹ 1,972</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                                        <div class="form_row mb-4">
+                                            <label class="mb-1 color-grey">Net Amount</label>
+                                            <h5>₹ 3,97,172</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                                        <div class="form_row mb-4">
+                                            <label class="mb-1 color-grey">EMI per month</label>
+                                            <h5>₹ 5,256</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <hr class="mb-4">
+                                    </div>
+                                </div>
+                            </div>       
+                            
+                            <div class="add_insurance_container">
+                                <div class="insurance-block">
+                                    <div class="add-icon">
+                                        <img src="img/umbrella-icon.svg" class="img-fluid">
+                                    </div>
+                                    <div class="add-content">
+                                        Get insured for <strong>₹ 5,00,000</strong><br class="d-xl-none d-lg-none d-flex">
+                                        with additional <strong>₹ 264 p.m.</strong>
+                                    </div>
+                                    <div class="add-btn hidePremium">
+                                        <button class="add-insurance-btn addInsurance">+ Add</button>
+                                    </div>
+                                    <div class="add-btn showPremium text-right">
+                                        <img src="img/add-insurance-close.svg" class="img-fluid deleteInsurance">
+                                    </div>
+                                </div>
+                                <div class="add-insurance-form showPremium">
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                                            <div class="form_row">
+                                                <label>Nominee name</label>
+                                                <input type="text" class="amount-value" placeholder="Enter value">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                                            <div class="form_row">
+                                                <label>Relationship</label>
+                                                <select>
+                                                    <option>Father</option>
+                                                    <option>Son</option>
+                                                    <option>Brother</option>
+                                                    <option>Grandfather</option>
+                                                    <option>Grandson</option>
+                                                    <option>Daughter</option>
+                                                    <option>Granddaughter</option>
+                                                    <option>Grandmother</option>
+                                                    <option>Sister</option>
+                                                    <option>Wife</option>
+                                                    <option>Mother</option>
+                                                    <option>Husband</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-12 align-self-center">
+                                            <div class="form_row">
+                                                <label>Gender</label>
+                                                <div class="option_container option-inline">
+                                                    <label>
+                                                        <input type="radio" name="name">
+                                                        <span class="caption">Female</span>
+                                                        <span class="dotmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="option_container option-inline">
+                                                    <label>
+                                                        <input type="radio" name="name">
+                                                        <span class="caption">Male</span>
+                                                        <span class="dotmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                                            <div class="form_row mb-0">
+                                                <label>Date of birth</label>
+                                                <input type="text" class="dob" placeholder="DD/MM/YYYY" readonly autocomplete="off">
+                                                <p class="input-info">Minimum age of Nominee needs to be 18 years</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_row mb-3">
+                                <label>Notes (optional)</label>
+                                <div class="textareaInput">
+                                    <textarea maxlength="140" placeholder="Write here"></textarea>
+                                    <div class="character-container">0/140</div>
+                                </div>
+                            </div>
+                            <div class="form_row hidePremium">
+                                <div class="option_container">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="caption">I understand and confirm that this loan offer will be processed in few working days</span>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form_row showPremium">
+                                <div class="option_container mb-2">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="caption">I hereby confirm for Group Life Insurance. I have understood all details in the Declaration of Good Health.</span>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="option_container mb-2">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="caption">I confirm that I have voluntarily applied and agreed to enroll for Kotak Life Insurance cover and I am fully aware of the terms and conditions of the said policy & agree to bind by it.</span>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="option_container">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="caption">I understand and confirm that this loan offer will be processed in few working days</span>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center_grid_footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form_row mb-0 d-flex align-content-center justify-content-between">
+                            <button class="btn-pl-link backBtn"><img src="img/back-icon.svg" class="img-fluid mr-2">Back</button>
+                            <button class="btn-pl-primary proceedBtn">Proceed</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+   
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/kotak-personal-loan.js"></script>
+    <script src="js/currency.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.box_row').removeClass('borderBottom')
+
+            $('.addInsurance').click(function(){
+                $('.showPremium').css('display', 'block');
+                $('.hidePremium').css('display', 'none');
+                $('#insurancePremium').css('display', 'flex');
+                $('#hiddenBlock').css('display', 'none');
+                $('#box_row_bottom').addClass('borderBottom');
+            });
+            $('.deleteInsurance').click(function(){
+                $('.showPremium').css('display', 'none');
+                $('.hidePremium').css('display', 'block');
+                $('#insurancePremium').css('display', 'none');
+                $('#hiddenBlock').css('display', 'block');
+                $('#box_row_bottom').removeClass('borderBottom')
+            });
+            
+            $('.proceedBtn').click(function(){
+                location.href="upload-documents.html";
+            });
+            $('.backBtn').click(function(){
+                location.href="income-verification.html";
+            });
+            $('.progress-block').css('width', $('.progress-block').data('value')+'%');
+            $('.progress-status').html($('.progress-block').data('value')+'% Completed');
+
+            var maxchars = 140;
+
+            $('body').on('keyup paste keypress', 'textarea', function () {
+                $(this).val($(this).val().substring(0, maxchars));
+                var tlength = ($(this).val().length)-maxchars;
+                remain = maxchars + parseInt(tlength);
+                $('.character-container').html(remain+'/'+maxchars);
+            });
+            
+        });
+
+    </script>
+    
+  </body>
+</html>

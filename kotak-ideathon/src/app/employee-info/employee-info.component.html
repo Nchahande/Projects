@@ -1,0 +1,39 @@
+<div class="user_dropdown_account_details">
+  <div class="d-flex justify-content-start align-items-start">
+    <img src="assets/images/account-logo.svg" class="user_dropdown_account_img" alt="account_logo" />
+    <div class="ps-2">
+      <p class="user_dropdown_emp_name">Swapnil J</p>
+      <p class="user_dropdown_text">Deputy Vice President</p>
+      <p style="opacity: 0.5;" class="user_dropdown_text">
+        swapnil.j@kotak.com
+      </p>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="user_dropdown_employe_details">
+  <div class="d-flex justify-content-start align-items-between flex-wrap">
+    <div style="min-width: 50%">
+      <p class="user_dropdown_role">Roles assigned:</p>
+      <p class="user_dropdown_text">Employee, Evaulator</p>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="d-flex justify-content-start align-items-between flex-wrap">
+  <div style="min-width: 50%">
+    <p *ngIf="route_path === 'admin' || route_path === 'reviewer'" class="user_dropdown_text user_dropdown_hover"
+      routerLink="/">Employee view &#8594;</p>
+    <p *ngIf="route_path === '' || route_path === 'admin'" class="user_dropdown_text user_dropdown_hover"
+      routerLink="/reviewer">Evaluator view &#8594;</p>
+    <p *ngIf="route_path === '' || route_path === 'reviewer'" class="user_dropdown_text user_dropdown_hover"
+      routerLink="/admin">Admin view &#8594;</p>
+  </div>
+</div>
+<hr />
+<div class="user_dropdown_logout">
+  <a href="#" class=" user_dropdown_text logout_text">
+    <img src="assets/images/logout.svg" alt="logout" />
+    Logout
+  </a>
+</div>

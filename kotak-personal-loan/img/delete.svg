@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+  <g id="trash-can" transform="translate(0.366)">
+    <rect id="Rectangle_20841" data-name="Rectangle 20841" width="2" height="10" transform="translate(8.634 8)" fill="#ee1d24"/>
+    <rect id="Rectangle_20842" data-name="Rectangle 20842" width="2" height="10" transform="translate(12.634 8)" fill="#ee1d24"/>
+    <path id="Path_24072" data-name="Path 24072" d="M4,6V7.4H5.4V21.446a1.4,1.4,0,0,0,1.4,1.4H18.042a1.4,1.4,0,0,0,1.4-1.4V7.4h1.4V6ZM6.808,21.446V7.4H18.042V21.446Z" transform="translate(-1.025 -1.787)" fill="#ee1d24"/>
+    <rect id="Rectangle_20843" data-name="Rectangle 20843" width="6" height="2" transform="translate(8.634 1)" fill="#ee1d24"/>
+    <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" width="23" height="23" transform="translate(-0.366)" fill="none"/>
+  </g>
+</svg>

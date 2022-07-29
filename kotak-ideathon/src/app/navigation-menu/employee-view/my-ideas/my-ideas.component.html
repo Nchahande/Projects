@@ -1,0 +1,93 @@
+<div class="idea_table_container">
+  <table class="idea_table">
+    <thead>
+      <tr>
+        <th class="idea_heading">Idea no.</th>
+        <th class="idea_heading">Title of the idea</th>
+        <th class="idea_heading">Department</th>
+        <th class="idea_heading">Category</th>
+        <th class="idea_heading">Status</th>
+        <th class="idea_heading">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="idea_row" *ngFor="let idea of ideas">
+        <td>
+          <p class="table_idea_id">{{idea._id}}</p>
+        </td>
+        <td>
+          <p class="table_idea_title">{{idea.title}}</p>
+          <p class="table_idea_desc">{{idea.description}}</p>
+        </td>
+        <td>
+          <p class="table_idea_dept">{{idea.department}}</p>
+        </td>
+        <td>
+          <div class="custom_badge table_idea_category">{{idea.category}}</div>
+        </td>
+        <td>
+          <p class=" custom_badge table_idea_status"
+            ngClass="{{idea.status_code == '001' ? 'status_green' : idea.status_code == '002' ? 'status_review' : idea.status_code == '003' ? 'status_warning':null}}">
+            <img
+              src="{{idea.status_code == '001' ? status_implemented : idea.status_code == '002' ? status_review : idea.status_code == '003' ? status_warning:null}}"
+              alt="">
+            &nbsp;
+            {{idea.status}}
+          </p>
+        </td>
+        <td>
+          <button class="view_btn">
+            <span>
+              <img style="width: 18px;" src="assets/images/visibility-red.svg" alt="Visibility">
+              &nbsp;
+            </span>
+            View
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="idea_table_mobile_container">
+    <div class="mobile_idea_table_row" *ngFor="let idea of ideas">
+      <div class="d-flex justify-content-start align-items-start">
+        <div style="width: 25px;">
+          <p class="mobile_table_idea_id">{{idea._id}}</p>
+        </div>
+        <div style="width:100%;">
+          <p class="mobile_table_idea_title">{{idea.title}}</p>
+          <p class="mobile_table_idea_desc">{{idea.description}}</p>
+          <div class="d-flex justify-content-between align-items-start mt-20">
+            <div style="width: 50%;">
+              <p class="mobile_table_idea_heading mb-2">Depatment</p>
+              <p class="table_idea_dept">{{idea.department}}</p>
+            </div>
+            <div style="width: 50%;">
+              <p class="mobile_table_idea_heading mb-2">Category</p>
+              <p class="custom_badge table_idea_category">{{idea.category}}</p>
+            </div>
+          </div>
+          <div class="d-flex justify-content-start align-items-start mt-20 mb-20">
+            <div style="width: 50%;">
+              <p class="mobile_table_idea_heading mb-2">Status</p>
+              <p class=" custom_badge table_idea_status"
+                ngClass="{{idea.status_code == '001' ? 'status_green' : idea.status_code == '002' ? 'status_review' : idea.status_code == '003' ? 'status_warning':null}}">
+                <img
+                  src="{{idea.status_code == '001' ? status_implemented : idea.status_code == '002' ? status_review : idea.status_code == '003' ? status_warning:null}}"
+                  alt="">
+                &nbsp;
+                {{idea.status}}
+              </p>
+            </div>
+          </div>
+          <button class="view_btn w-100">
+            <span>
+              <img style="width: 18px;" src="assets/images/visibility-red.svg" alt="Visibility">
+              &nbsp;
+            </span>
+            View
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

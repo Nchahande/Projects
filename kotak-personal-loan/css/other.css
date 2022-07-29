@@ -1,0 +1,86 @@
+@media (min-width: 1120px){
+    
+    .main_kotak_container{
+        background: #F7F7F7 0% 0% no-repeat padding-box;
+    }
+    section.main_kotak_container.no-footer {
+        margin-top: 32px;
+    }
+    .main_container {
+        width: 776px;
+        height: auto;
+        padding: 32px;
+        background: #FFFFFF;
+        border: 1px solid #EAEAEA;
+        border-radius: 2px;
+        margin: 0 auto;
+    }
+    .progress_outer_container {
+        width: 776px;
+        margin: 0 auto;
+        height: 60px;
+        box-shadow: none;
+        background: #F7F7F7 0% 0% no-repeat padding-box;
+        padding: 0;
+    }
+    .form_row {
+        width: 100%;
+        height: auto;
+        margin-bottom: 32px;
+        position: relative;
+    }
+    a{
+        color: #0070E0;;
+    }
+
+    .income_verification_box {
+        min-height: 250px;
+    }
+    .align_text_response{
+        text-align: left;
+    }
+    .align_text_response .btn-pl-primary{ 
+        width: 320px;
+    }
+}
+
+@media (max-width:768px){
+    .mb-xs-40 {
+        margin-bottom: 40px!important;
+    }
+    .btn-pl-primary{
+        width: auto;
+    }
+    .align_text_response{ 
+       text-align: center;
+    }
+    .align_text_response .btn-pl-primary{ 
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+.mb-28{
+    margin-bottom: 28px;
+}
+.range-slider{
+    display: flex;
+    width: 100%;
+}
+div.range-slider__value {
+    width: auto;
+    max-width: 5px;
+    height: auto;
+    color: #111111;
+}
+
+.balance-transfer-container #balance-transfer-first:first-child{
+    border-top: 1px solid #ffffff;
+}
+.balance-transfer-container #balance-transfer-first:first-child .lable-with-icon{
+    margin-top: 0px;
+}
+
+.emailError{
+    display: none;
+}

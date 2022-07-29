@@ -1,0 +1,121 @@
+<div class="center-grid">
+  <div class="page_heading_container">
+    <div class="search-outer">
+      <div class="d-flex justify-content-center align-items-center">
+          <img style="width:15px;" src="assets/images/admin_bulb.svg" alt="bulb">
+          <span class="page_heading">&nbsp;55 Ideas</span>
+      </div>
+      <div class="search-container">
+          <input type="text" placeholder="Search" />
+      </div>
+  </div>
+  </div>
+  <div class="review_filter_container" style="padding:22px 0px 0px 0px;">
+    <form [formGroup]="review_form">
+      <div class="radio_container">
+        <div class="form_check me-4">
+          <label class="label_container">
+            <input type="radio" formControlName="review" value="Under Review" name="review">
+            <span class="checkmark"></span>
+            <span class="d-block ps-2 radio-label">Pending ideas</span>
+          </label>
+        </div>
+        <div class="form_check">
+          <label class="label_container">
+            <input type="radio" value="all" name="review" formControlName="review">
+            <span class="checkmark"></span>
+            <span class="d-block ps-2 radio-label">All ideas</span>
+          </label>
+        </div>
+      </div>
+    </form>
+    <button (click)="toggle_filter()" class="filter_btn filter_mobile_btn">
+      <span>
+        <img style="width: 18px;" src="assets/images/filter.svg" alt="">
+        &nbsp;
+      </span>
+      Filters&nbsp;
+      <span class="filter_length" *ngIf="!filter_change_state">{{4-filter_length}}</span>
+    </button>
+  </div>
+  <div *ngIf="toggle_filter_state" style="padding: 39px 0px 0px 0px;">
+    <form [formGroup]="filter_form">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="form-group admin_filter">
+          <div class="d-flex justify-content-between align-items-center">
+            <label for="status_select" class="filter-label">Idea Status</label>
+            <p style="cursor: pointer;" class="text-danger" (click)="clear_input('filter_status')"
+              *ngIf="filter_form.get('filter_status').dirty && filter_form.get('filter_status').value != null">Clear</p>
+          </div>
+          <select class="select-filter-control" id="status_select" name="filter_status" formControlName="filter_status">
+            <option [value]="null" selected disabled>Select</option>
+            <option value="Implemented">Implemented</option>
+            <option value="Under Review">Under Review</option>
+            <option value="Implement Later">Implement Later</option>
+          </select>
+        </div>
+        <div class="form-group admin_filter">
+          <div class="d-flex justify-content-between align-items-center">
+            <label for="status_select" class="filter-label">Department</label>
+            <p style="cursor: pointer;" class="text-danger" (click)="clear_input('filter_dept')"
+              *ngIf="filter_form.get('filter_dept').dirty && filter_form.get('filter_dept').value != null">Clear</p>
+          </div>
+          <select class="select-filter-control" id="dept_select" name="filter_dept" formControlName="filter_dept">
+            <option [value]="null" selected disabled>Select</option>
+            <option value="HR">HR</option>
+            <option value="Operations">Operations</option>
+            <option value="Administration">Administration</option>
+          </select>
+        </div>
+        <div class="form-group admin_filter">
+          <div class="d-flex justify-content-between align-items-center">
+            <label for="status_select" class="filter-label">Category</label>
+            <p style="cursor: pointer;" class="text-danger" (click)="clear_input('filter_category')"
+              *ngIf="filter_form.get('filter_category').dirty && filter_form.get('filter_category').value != null">Clear
+            </p>
+          </div>
+          <select class="select-filter-control" id="category_select" name="filter_category"
+            formControlName="filter_category">
+            <option [value]="null" selected disabled>Select</option>
+            <option value="Process Efficiency">Process Efficiency</option>
+            <option value="Core values">Core values</option>
+            <option value="Value proposition">Value proposition</option>
+            <option value="Technology">Technology</option>
+          </select>
+        </div>
+        <div class="form-group admin_filter">
+          <div class="d-flex justify-content-between align-items-center">
+            <label for="status_select" class="filter-label">Rating</label>
+            <p style="cursor: pointer;" class="text-danger" (click)="clear_input('filter_rating')"
+              *ngIf="filter_form.get('filter_rating').dirty && filter_form.get('filter_rating').value != null">Clear</p>
+          </div>
+          <select class="select-filter-control" id="rating_select" name="filter_rating" formControlName="filter_rating">
+            <option [value]="null" selected disabled>Select</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>       
+      </div>
+
+      <div class="admin_filter_container justify-content-start mt-4">
+        <div class="form-group admin_filter">
+            <div class="d-flex justify-content-between align-items-center">
+                <label for="status_select" class="filter-label">From date</label>
+            </div>
+            <input type="text" class="select-filter-control calendar-icon" placeholder="Select date">
+        </div>
+        <div class="form-group admin_filter ">
+            <div class="d-flex justify-content-between align-items-center">
+                <label for="status_select" class="filter-label">To date</label>
+            </div>
+            <input type="text" class="select-filter-control calendar-icon" placeholder="Select date">
+        </div>
+      </div>
+    </form>
+  </div>
+  <app-pending-ideas *ngIf="review_form.get('review').value === 'Under Review'"></app-pending-ideas>
+  <app-reviewer-view *ngIf="review_form.get('review').value === 'all'"></app-reviewer-view>
+</div>

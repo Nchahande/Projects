@@ -1,0 +1,1142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width,
+    initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' />
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+    <title>Annuity</title>
+
+    <!-- For Google -->
+    <meta name="description" content="Kotak Life time Income Plan. Secure your future by investing today." />
+    <meta name="keywords" content="bank" />
+
+    <meta name="author" content="Kotak Life Insurance" />
+    <meta name="copyright" content="Kotak Life Insurance" />
+    <meta name="application-name" content="Kotak Life Insurance" />
+
+    <!-- For Facebook -->
+    <meta property="og:title" content="Kotak Life Insurance" />
+    <meta property="og:type" content="web application" />
+    <meta property="og:image" content="http://f1studioz.com/demo/annuity/img/common/kotak-logo-icon.png" />
+    <meta property="og:url" content="http://f1studioz.com/demo/annuity/" />
+    <meta property="og:description" content="Kotak Life time Income Plan. Secure your future by investing today." />
+
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Kotak Life Insurance" />
+    <meta name="twitter:description" content="Kotak Life time Income Plan. Secure your future by investing today." />
+    <meta name="twitter:image" content="http://f1studioz.com/demo/annuity/img/common/kotak-logo-icon.png" />
+
+    <!--google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!--fontawesome fonts -->
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css?ver=5.4.1" rel="stylesheet" />
+
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/annuity.css">
+    <link rel="stylesheet" href="css/annuity-form-elements.css">
+
+    <style>
+        main {
+            background-image: url('img/common/home-shape.png');
+            background-repeat: no-repeat;
+            background-size: 100% 600px;
+            background-position: bottom center;
+        }
+        
+        @media (max-width: 575px) {
+            main {
+                background-image: none;
+            }
+        }
+        
+        #a .icon {
+            display: inline;
+            white-space: nowrap;
+        }
+        
+        .Quotation-text,
+        #emailQuotetext {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="landing">
+
+    <div class="loader__container">
+        <div class="loader"></div>
+    </div>
+    <!--/.loader__container-->
+    <header></header>
+    <!-- <header>
+        <div class="kotak__grid">
+            <div class="inner__container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-5">
+                            <div class="logo">
+                                <a href="./">
+                                    <img src="img/common/kotak-logo.png" class="img-fluid" alt="Kotak Life Insurance Logo" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-7 align-self-center">
+                            <div class="header_right_block">
+                                <a href="resume-policy.html">Resume</a>
+
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Need Help</a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <p>Our experts are here to help you</p>
+                                        <div class="dropdown_row">
+                                        <div class="dropdown_col">
+                                            Customer Care
+                                        </div>
+                                        <div class="dropdown_col text-right">
+                                            <a href="tel:1800 209 8800">1800 209 8800</a>
+                                        </div>
+                                        </div>
+                                        <div class="dropdown_row m-0 pb-0">
+                                        <div class="dropdown_col">
+                                            Email
+                                        </div>
+                                        <div class="dropdown_col text-right col_lg">
+                                            <a href="mailto:kli.einsurance@kotak.com">kli.einsurance@kotak.com</a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> -->
+    <!-- /header -->
+
+    <main id="main">
+        <div class="kotak__grid">
+            <div class="inner__container">
+
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-6 col-lg-6 d-xl-block d-lg-block d-none">
+                            <div class="home__container">
+                                <h1>Kotak Lifetime Income Plan</h1>
+                                <p class="h1-small pt-1">An Immediate Annuity Non-linked Non-participating Life Insurance Plan</p>
+                                <div class="annuity_list mb-5">
+                                    <ul>
+                                        <li class="tick-red">Earn income without having financial worries post retirement
+                                        </li>
+                                        <li class="tick-red">Pay once and get regular income for life</li>
+                                        <li class="tick-red">Secure your spouse financial needs, after you when you are not around</li>
+                                        <li class="tick-red">Option to provide Cash-Back to Nominee when you are not around
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <img src="img/common/Senior-Citizen-Travel-Insurance.png" class="img-fluid mx-auto d-block">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-12">
+                            <form action="" id="form_main">
+                                <div class="home__container right_container" style="width: 100% !important;">
+                                    <h2 class="mb-4">Get Rs <span>6768 per month<sup>*</sup></span> starting next month</h2>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form__row">
+                                                <div class="form__field__caption">
+                                                    Name
+                                                </div>
+                                                <div class="form_field mb-3">
+                                                    <input type="text" name="name" id="name" placeholder="Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-5">
+                                            <div class="form__row">
+                                                <div class="form__field__caption">
+                                                    My Gender
+                                                </div>
+                                                <div class="d-xl-block d-lg-block d-none">
+                                                    <div class="radio__group mb-3">
+                                                        <label class="radio__container">
+                                                            <input class="" type="radio" name="gender" value="Male" checked>
+                                                            <span class="checkmark"></span>
+                                                            <span class="caption">Male</span>
+                                                        </label>
+
+                                                        <label class="radio__container">
+                                                            <input class="" type="radio" name="gender" value="Female">
+                                                            <span class="checkmark"></span>
+                                                            <span class="caption">Female</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="d-xl-none d-lg-none d-block">
+                                                    <button type="button" class="btn_annuity btn_blue_outline btn_blue_outline_sm mr-1 mobile_gender" data-value="Male">Male</button>
+                                                    <button type="button" class="btn_annuity btn_blue_outline btn_blue_outline_sm mobile_gender" data-value="Female">Female</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-7">
+                                            <div class="form__row">
+                                                <div class="form__field__caption">
+                                                    My Date of birth
+                                                </div>
+                                                <div class="form_field datepicker_container mb-1">
+                                                    <input type="text" name="dob" id="dob" placeholder="DD/MM/YYYY" autocomplete="off" class="datepicker-field" readonly>
+                                                    <div class="calendar-icon"></div>
+                                                </div>
+                                                <p class="selected-years"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form__row">
+                                                <div class="form__field__caption">
+                                                    Mobile number
+                                                </div>
+                                                <div class="form_field mb-3">
+                                                    <input type="text" name="mobile" maxlength="10" onkeypress="validate(event)" pattern="\d*" inputmode="numeric" placeholder="9820 XXX XXX">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form__row">
+                                                <div class="form__field__caption d-flex flex-start">
+                                                    <p class="with_info_icon annuity-popOvers" data-toggle="popover-click" data-content="National Pension scheme (NPS) is a government -sponsored Pension scheme which allows you to save for retirement post which you can choose to invest 40% of your NPS income into a pension plan which provides regular income for lifetime"
+                                                        data-original-title="" title="">
+                                                        Do you want to use your NPS funds to buy pension plan?
+                                                    </p>
+                                                </div>
+                                                <div class="d-xl-block d-lg-block d-none">
+                                                    <div class="radio__group mb-3">
+                                                        <label class="radio__container">
+                                                            <input class="" type="radio" name="nps" value="Yes">
+                                                            <span class="checkmark"></span>
+                                                            <span class="caption">Yes</span>
+                                                        </label>
+
+                                                        <label class="radio__container">
+                                                            <input class="" type="radio" name="nps" value="No" checked>
+                                                            <span class="checkmark"></span>
+                                                            <span class="caption">No</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="d-xl-none d-lg-none d-block">
+                                                    <div class="form_field">
+                                                        <label class="annuity_switch">
+                                                            <input type="checkbox" name="nps">
+                                                            <span class="annuity_slider round"></span>
+                                                            <span class="annuity_switch_label"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form__row">
+                                                <label class="field_row checkbox__container">
+                                                    <input type="checkbox" name="policy" checked required id="check1">
+                                                    <p class="caption">By sharing above details, I agree to KLI and its representatives contacting me through call, SMS, email or WhatsApp even if I am registered under NDNC. I also agree that I have read and understood the <a href="https://insurance.kotak.com/common/privacy.php" target="_blank">Privacy policy</a> and agree to abide by the same</p>
+                                                    <span class="checkmark"></span>
+                                                    <p class="error-msg poliycheck_declaration pl-0">please select the checkbox</p>
+                                                </label>
+
+                                                <label class="field_row checkbox__container mb-20">
+                                                        <input type="checkbox" name="policy1" required="" id="policy1">
+                                                        <p class="caption">To undergo suitability analysis, please <a class="policy1text" type="button" data-toggle="modal" data-target="#policy1modal">Click here</a>. If you wish to bypass the suitability analysis please click on the checkbox. By selecting the checkbox, you declare to consciously bypass the recommended suitability module and purchase the policy based on your independent assessment.</p>
+                                                        <span class="checkmark"></span>
+                                                       
+                                                    </label>
+                                                <button type="submit" class="btn_annuity btn_red btn_full text-uppercase mb-3">View
+                                                        Plans</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- /main -->
+
+    <div class="terms__container">
+        <div class="terms_inner_container">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-xl-11 col-lg-11 col-12">
+                        <div class="download_brochure" onClick="window.open('https://www.kotaklife.com/assets/images/uploads/insurance-plans/Kotak_e-Invest_-_Brochure1.pdf', '_blank'); return false;">
+
+                            <span style="width: 20px; height: 20px;"><img src="./img/download1.svg" alt="" style="width: 13.14px; height: 13.14px; margin: 0;"></span> &nbsp;
+                            <span class="headerstyle" style="font-weight: 500;">Product Brochure</span>
+                        </div>
+                        <br>
+                        <div class="divclass active" style="padding-bottom: 0;">
+                            <h6 class="headerstyle terms" style="margin-bottom: 8px;">Terms &amp; Conditions</h6>
+                        </div>
+                        <div id="divwrapfooter" class="warp-footer ng-star-inserted active" style="height: auto; ">
+                            <div class="warp-footer-inner foot-bg">
+                                <div id="displayTC">
+                                    <ol>
+                                        <li>This is a non-linked, non-participating immediate annuity plan.</li>
+                                        <li>*The illustration mentioned above is for a 60 year old male, who has paid Rs 10,00,000 as Single Premium and has opted for “Lifetime Income” as Annuity Option under this plan. The annuity rates is as of <span>xx-Mar-22</span>.</li>
+                                        <li>After the policy contract is issued, the annuity option chosen and annuity payable is guaranteed for <strong>life or guaranteed term</strong> basis the annuity option chosen by you, and cannot be changed</li>
+                                        <li><strong>Annuity Options :</strong> There are 6 annuity options available under this plan as mentioned below:
+                                            <ul>
+                                                <li><strong>Option 1: Lifetime Income :</strong> Annuity amount shall be payable throughout lifetime of the Annuitant ; On death of the Annuitant, the plan terminates</li>
+                                                <li><strong>Option 2: Lifetime Income with Cash-Back :</strong> Annuity amount shall be payable throughout lifetime of the Annuitant ; On death of the Annuitant, Total Premium (excluding Goods <span>and Services Tax and Other Statutory levies shall be payable to the Nominee / Legal Heir</span></li>
+                                                <li><strong>Option 3: Lifetime Income with Term Guarantee :</strong> Annuity amount shall be payable for the guaranteed term (5/10/15/20 years) as opted by the <span>Proposer</span> on inception irrespective
+                                                    of the survival status of the Annuitant. In case the Annuitant survives the chosen guaranteed term then payout will continue throughout his / her lifetime and on death the annuity payout will cease.
+                                                    Upon death of the annuitant during the guaranteed term, the annuity payout to the nominee will continue till the expiry of the guaranteed term.</li>
+                                                <li><strong>Option 4: Last survivor Lifetime Income with 100% annuity to Surviving Spouse :</strong> Annuity amount shall be payable throughout lifetime of the Primary Annuitant and upon his / her death 100%
+                                                    of the initial annuity payout will be made throughout the lifetime of the Secondary Annuitant / Surviving Spouse. If the Secondary Annuitant predeceases the Primary Annuitant, 100% of the annuity payouts
+                                                    shall continue for the Primary Annuitant.</li>
+                                                <li><strong>Option 5: Last survivor Lifetime Income with 50% annuity to Surviving Spouse :</strong> Annuity amount shall be payable throughout lifetime of the Primary Annuitant and upon his / her death 50% of
+                                                    the initial annuity payout will be made throughout the lifetime of the Secondary Annuitant / Surviving Spouse. If the Secondary Annuitant predeceases the Primary Annuitant, 100% of the annuity payouts
+                                                    shall continue for the Primary Annuitant.</li>
+                                                <li><strong>Option 6: Last survivor Lifetime Income with 100% annuity to the Surviving Spouse and Cash-back on death of Surviving Spouse :</strong> Annuity amount shall be payable throughout lifetime of the
+                                                    Primary Annuitant and upon his / her death 100% of the initial income payout will be made throughout the lifetime of the Secondary Annuitant / Surviving Spouse. If the Secondary Annuitant predeceases
+                                                    the Primary Annuitant, the annuity payments shall continue for the Primary Annuitant. On death of the surviving Annuitant, Total Premium (excluding Goods and Services Tax or other statutory levies, if
+                                                    any) paid for purchasing the plan will be paid back to the nominee</li>
+                                            </ul>
+                                        </li>
+                                        <li>There is no maturity benefit and death benefit other than what is already mentioned under Point 3</li>
+                                        <li>For NPS subscribers, only Monthly Mode of Annuity Payout shall be applicable. The final annuity amount payable, will be based on the amount transferred by the NPS authority to Kotak Mahindra Life Insurance Company
+                                            Ltd, so the Benefit Illustration &amp; Proposal Form will be updated accordingly.</li>
+                                        <li>TDS at prevailing rate will be deducted from any amount paid under a life insurance policy subject to the provisions of prevailing tax laws. In case of non-availability of valid PAN, TDS will be deducted at higher
+                                            rate.
+                                        </li>
+                                        <li>
+                                            <ol type="i">
+                                                <li> For Non NPS subscribers - Goods and Services Tax and Other Statutory Levies as applicable are levied at applicable Tax rates in accordance with the prevailing Tax Laws. Prevailing tax laws are applicable
+                                                    on this policy which may vary from time to time. </li>
+                                                <li> For NPS subscribers - Goods and Services Tax and Other Statutory Levies are not applicable for NPS Subscribers. However, the same shall be applicable on any alteration charges such as Duplicate Policy Document
+                                                    Fees. </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="warp-footer2 mt-5" style="height: auto;">
+                            <div class="groove">
+                                <p style="font-size: 13px; font-weight: 700; margin: 0 0 10px 0;">BEWARE OF SPURIOUS PHONE CALLS AND FICTITIOUS/ FRAUDULENT OFFERS</p>
+                                <p style="font-size: 12px; font-weight: 400; margin-bottom: 0px;">IRDAI is not involved in activities like selling insurance policies, announcing bonus or investment of premiums. Public receiving such phone calls are requested to lodge a police complaint</p>
+                            </div>
+                        </div>
+                        <div id="divwrapfooter" class="warp-footer2" style="height: auto;">
+                            <div class="warp-footer-inner foot-bg">
+                                <div>
+                                    <!-- <p id="eterm">
+                                        Kotak Mahindra Life Insurance Company Ltd. Regd. Office: 2nd Floor, Plot # C-12, G-Block, BKC, Bandra (E), Mumbai - 400 051, India, Regn. No. 107. CIN : U66030MH2000PLC128503. Website: <a href="www.kotaklife.com" target="_blank" style="color: blue; cursor: pointer;">www.kotaklife.com</a> | WhatsApp: 9321003007 | Toll Free No:1800-209-8800 | Ref. No. KLI/XXXXXXXXX.
+                                        All rights reserved. Registered with Insurance Regulatory & Development Authority of India (IRDAI) as Life Insurance Company.</p> -->
+                                    <p id="eterm">
+                                        <h5>Kotak Lifetime Income Plan - UIN: 107N103V08, Form No: N103</h5>
+                                        <p>This is a non-participating, immediate annuity plan. For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale. Tax benefits are subject to conditions specified
+                                            in the Income Tax Act, 1961. Tax laws are subject to amendments from time to time. Customer is advised to take an independent view from tax consultant.</p>
+
+                                        <h5>Kotak Mahindra Life Insurance Company Ltd.</h5>
+                                        <p>Regn. No.: 107, CIN: U66030MH2000PLC128503, Regd. Office: 2nd Floor, Plot # C- 12, G- Block, BKC, Bandra (E), Mumbai - 400 051. Website: www.kotaklife.com | Toll Free No. – 1800 209 8800. All rights reserved. Registered
+                                            with Insurance Regulatory & Development Authority of India (IRDAI) as Life Insurance Company <span>KLI\xxxx</span></p>
+                                        <p>Trade Logo displayed above belongs to Kotak Mahindra Bank Limited and is used by Kotak Mahindra Life Insurance Company Ltd. under license.</p>
+                                    </p>
+                                </div>
+                                <div>
+                                    <!-- <p>
+                                        Trade Logo displayed above belongs to Kotak Mahindra Bank Limited and is used by Kotak Mahindra Life Insurance Company Ltd. under license.
+                                    </p> -->
+                                    <!--  <p><a href="https://insurance.kotak.com/do-not-call-registry" target="_blank" style="color: blue; cursor: pointer;">Do Not Call Registry </a>• <a href="https://insurance.kotak.com/disclaimer" target="_blank" style="color: blue; cursor: pointer;">Disclaimer</a>                                            • <a href="https://insurance.kotak.com/common/privacy.php" target="_blank" style="color: blue; cursor: pointer;">Privacy Policy</a> • Visit Our: <a href="https://insurance.kotak.com/home/index.php" target="_blank"
+                                            style="color: blue; cursor: pointer;">Corporate Website</a> | <a href="https://customer.kotaklifeinsurance.com/kliportal/Selectlogin.aspx" target="_blank" style="color: blue; cursor: pointer;">Services Website</a></p>
+                                    <p> Kotak Mahindra Life Insurance Company Ltd. <br> Regd. Office: 2nd Floor, Plot # C-12, G-Block, BKC, Bandra (E), Mumbai - 400 051, India. All rights reserved. Registered with <a href="http://www.irda.gov.in/Defaulthome.aspx?page=H1"
+                                            target="_blank" style="color: blue; cursor: pointer;">Insurance Regulatory &amp; Development Authority (IRDA)</a> as Life Insurance Company. Regn. No. 107. CIN : U66030MH2000PLC128503. </p>
+                                    <p> Trade Logo displayed above belongs to Kotak Mahindra Bank Limited and is used by Kotak Mahindra Life Insurance Company Ltd. under license. <br> © 2012 Kotak Mahindra Group. All rights reserved. This site is best
+                                        viewed in 1024*768 resolution and in IE9 and above browsers. </p>
+-->
+                                </div>
+                                <div class="clearstyle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="modal fade" id="policy1modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="content1 db">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Suitability analysis</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body" style="overflow-y: unset;">
+                        <div class="col-lg-12 mb-3">
+                            <h6>Life insured details</h6>
+                        </div>
+                        <form class="col-lg-12" action="Plan.html" id="ploicy1form">
+                            <div class="row form1">
+                                <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+                                    <div class="field_row">
+                                        <label>Full name</label>
+                                        <input type="text" class="name_error_field1" name="name1" placeholder="Enter full name" value="" id="name1" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" />
+                                        <!-- onkeypress="return /[a-z]/i.test(event.key)" -->
+                                        <!-- return replace(/  +/g, ' ')" -->
+                                        <p class="error-msg name_error1">Please enter valid name</p>
+                                        <p class="error-msg name_error11">Name doesn't match with personal details form</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+                                    <div class="field_row">
+                                        <label>Date of birth</label>
+                                        <input type="text" placeholder="DD/MM/YYYY" name="dob1" autocomplete="off" class="date-field-dob calendar dob1 dob_error_field1" id="dob1">
+                                        <p class="info-msg selected-years" style="display: none;">0 years</p>
+                                        <!-- <p class="error-msg">Please enter date of birth</p> -->
+                                        <p class="error-msg dob_error1">Please enter valid date of birth</p>
+                                        <p class="error-msg dob_error11">DOB doesn't match with personal details form</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+                                    <div class="field_row">
+                                        <label>Total income of insured</label>
+                                        <!--  <input type="text" onkeypress="validate(event)" name="income" placeholder="Your annual income" value="" /> -->
+                                        <!-- onkeypress="return /[a-z]/i.test(event.key)" -->
+                                        <input type="text" pattern="\d*" placeholder="Enter total income" name="tincome" maxlength="10" id="tincome" onkeypress="validate(event)" />
+                                        <!-- <input type="text" placeholder="Enter total income income" name="income" maxlength="10" id="annualincome" onkeypress="validate(event)" onkeyup="getAmount(this.value)" /> -->
+                                        <!-- <p class="info-msg" id="annualIncome">₹ 0.00 lakh</p> -->
+                                        <p class="error-msg tincome_error_msg">Please enter your total income</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+                                    <div class="field_row">
+                                        <label>Total premium across all polices</label>
+                                        <!--  <input type="text" onkeypress="validate(event)" name="income" placeholder="Your annual income" value="" /> -->
+                                        <!-- onkeypress="return /[a-z]/i.test(event.key)" -->
+                                        <input type="text" pattern="\d*" placeholder="Enter premium (existing & new)" name="total_premium" maxlength="10" id="total_premium" onkeypress="validate(event)" />
+                                        <p class="error-msg total_premium_error_msg">Please enter your total premium</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+                                    <div class="field_row">
+                                        <label>Total liability of insured</label>
+                                        <input type="text" pattern="\d*" placeholder="Enter total liability" name="total_liability" maxlength="10" id="total_liability" onkeypress="validate(event)" />
+                                        <p class="error-msg total_liability_error_msg">Please enter your total liability</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+                                    <div class="field_row">
+                                        <label>Existing insurance cover of insured</label>
+                                        <input type="text" pattern="\d*" placeholder="Enter existing insured cover" name="total_insured" maxlength="10" id="cover" onkeypress="validate(event)" />
+                                        <p class="error-msg cover_error_msg">Please enter your existing insured cover</p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="field_row">
+                                        <label>Occupation </label>
+                                        <button type="button" class="selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary occupation active">Professional</button>
+                                        <button type="button" class="selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary occupation">Self employed</button>
+                                        <button type="button" class="selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary occupation">Student</button>
+                                        <button type="button" class="selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary occupation">Housewife</button>
+                                        <button type="button" class="selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary occupation">Retired</button>
+                                        <button type="button" class="selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary occupation">Salaried</button>
+                                    </div>
+                                </div>
+                        </form>
+                        <div class="col-12 mb-2">
+                            <div class="row">
+                                <div class=" col-lg-2 col-3 back align-self-center" data-dismiss="modal " aria-label="Close "><img src="img/arrow-left-black.svg ">&nbsp;Back</div>
+                                <div class="col-lg-10 col-9 text-right landing-modal-footer">
+                                    <span class="mr-3 ">Step 1 of 2</span>
+                                    <button class="kotak-btn kotak-btn-primary acbutton1 " type="button ">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" content2 dn ">
+                <div class="modal-content ">
+                    <div class="modal-header ">
+                        <h5 class="modal-title " id="exampleModalLabel ">Suitability analysis</h5>
+                        <button type="button " class="close " data-dismiss="modal " aria-label="Close ">
+                      <span aria-hidden="true ">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body " style="overflow-y: unset; ">
+                        <!--  <div class="col-lg-12 mb-3 ">
+                        <h6>Life insured details</h6>
+                    </div> -->
+                        <form class="col-lg-12 " action="Plan.html " id="ploicy1form ">
+                            <div class="row form1 ">
+                                <div class="col-12 ">
+                                    <div class="field_row mb-3 " style="min-height: unset !important; ">
+                                        <label>Investment horizon</label>
+                                        <button type="button " class="selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary investment_h active ">Less than 10 years</button>
+                                        <button type="button " class="selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary investment_h ">10-15 years</button>
+                                        <button type="button " class="selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary investment_h ">15+ years </button>
+                                    </div>
+                                </div>
+                                <div class="col-12 ">
+                                    <div class="field_row mb-3 " style="min-height: unset !important; ">
+                                        <label>Objective (multiple selection is allowed)</label>
+                                        <button type="button " class="multiselect selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary objective ">Pure Protection</button>
+                                        <button type="button " class="multiselect selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary objective ">Retirement Planning</button>
+                                        <button type="button " class="multiselect selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary objective ">Children’s Marriage</button>
+                                        <button type="button " class="multiselect selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary objective ">Children’s Education</button>
+                                        <button type="button " class="multiselect selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary objective ">One Time Surplus</button>
+                                        <!--     <button type="button " class="multiselect selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary objective active ">Retirement Planning</button> -->
+                                        <button type="button " class="multiselect selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary objective ">Income replacement</button>
+                                        <button type="button " class="multiselect selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary objective ">Estate planning</button>
+                                        <button type="button " class="multiselect selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary objective ">Asset purchase</button>
+                                        <button type="button " class="multiselect selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary objective ">Long term savings</button>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-12 oneInputMand ">
+                                <p class=" ">Please select at least one input</p>
+                            </div> -->
+                                <div class="col-12 mb-4 ">
+                                    <div class="field_row mb-3 " style="min-height: unset !important; ">
+                                        <label>Investment risk profile</label>
+                                        <button type="button " class="selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary risk active ">Secure</button>
+                                        <button type="button " class="selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary risk ">Moderate</button>
+                                        <button type="button " class="selection_btn kotak-btn kotak-btn-sm kotak-btn-secondary risk ">Growth</button>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-12 oneInputMand ">
+                                <p class=" ">Please select at least one input</p>
+                            </div> -->
+                        </form>
+                        <div class="col-12 mb-2 ">
+                            <div class="row ">
+                                <div class="col-lg-2 col-3 back1 "><img src="img/arrow-left-black.svg ">&nbsp;Back</div>
+                                <div class="col-lg-10 col-9 text-right ">
+                                    <span class="mr-3 ">Step 2 of 2</span>
+                                    <button class="kotak-btn kotak-btn-primary acbutton2 " type="button " disabled>Run suitability analysis</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class=" content3 dn ">
+                <div class="modal-content ">
+                    <div class="modal-header ">
+                        <h5 class="modal-title " id="exampleModalLabel ">Suitability analysis - Results</h5>
+                        <button type="button " class="close " data-dismiss="modal " aria-label="Close ">
+                      <span aria-hidden="true ">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body " style="overflow-y: unset; ">
+                        <div class="col-lg-12 mb-3 ">
+                            Based on your inputs we have come up with a set of recommendations for you
+                        </div>
+                        <div class="col-lg-8 col-12 mb-3 analysis_box m-xl-3 p-3 ">
+                            <div class="row ">
+                                <div class="col-lg-12 ">
+                                    <div class="row ">
+                                        <div class="col-lg-6 col-6 ">
+                                            <strong>Based on your input</strong>
+                                        </div>
+                                        <!--  <div class="col-lg-8 col-6 ">
+                                        <strong>We recommend</strong>
+                                    </div> -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 ">
+                                    <hr>
+                                </div>
+                                <div class="col-lg-12 mb-3 ">
+                                    <div class="row ">
+                                        <div class="col-lg-4 col-6 ">
+                                            Your objective
+                                        </div>
+                                        <div class="col-lg-8 col-6 blue ">
+                                            Pure Protection, Children’s Marriage, One Time Surplus, Retirement Planning, Income replacement, Estate planning, Asset purchase, Long term savings
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mb-3 ">
+                                    <div class="row ">
+                                        <div class="col-lg-4 col-6 ">
+                                            Your risk profile
+                                        </div>
+                                        <div class="col-lg-8 col-6 blue ">
+                                            Secure
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-12 mb-3 ">
+                                <div class="row ">
+                                    <div class="col-lg-4 col-6 ">
+                                        Income
+                                    </div>
+                                    <div class="col-lg-8 col-6 blue ">
+                                        6,45,000
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mb-3 ">
+                                <div class="row ">
+                                    <div class="col-lg-4 col-6 ">
+                                        Age
+                                    </div>
+                                    <div class="col-lg-8 col-6 blue ">
+                                        35
+                                    </div>
+                                </div>
+                            </div> -->
+                                <div class="col-lg-12 ">
+                                    <div class="row ">
+                                        <!--   <div class="col-lg-6 col-6 ">
+                                        <strong>Based on your input</strong>
+                                    </div> -->
+                                        <div class="col-lg-8 col-6 ">
+                                            <strong>We recommend</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 ">
+                                    <hr>
+                                </div>
+                                <div class="col-lg-12 mb-3 ">
+                                    <div class="row ">
+                                        <div class="col-lg-4 col-6 ">
+                                            Plan
+                                        </div>
+                                        <div class="col-lg-8 col-6 blue ">
+                                            E-Invest
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 ">
+                            Customer Declaration
+                            <div class="option_container custom-multiline option-inline form-mb ">
+                                <label class="checkbox__container ">
+                                <input type="checkbox " name="checka1 " class="chk " required id="checka1 ">
+                                <p class="caption ">I hereby confirm that the above information has been filled by me , basis which the product suitability has been ascertained.</p>
+                                <span class="checkmark "></span>
+                            </label>
+                                <label class="checkbox__container ">
+                                <input type="checkbox " name="checka2 " class="chk " required id="checka2 "  >
+                                <p class="caption ">I hereby confirm that the product selected by me for investment is not recommended as per the product suitability matrix. However, I have completely understood the same and would like to proceed with this investment with complete cognizance of its features, benefits and risks associated with it.</p>
+                                <span class="checkmark "></span>
+                            </label>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-2 ">
+                            <div class="row ">
+                                <div class="col-lg-2 col-3 back2 " style="line-height: 3; "><img src="img/arrow-left-black.svg ">&nbsp;Back</div>
+                                <div class="col-lg-10 col-9 text-right ">
+                                    <button class="kotak-btn kotak-btn-primary acbutton3 " disabled type="submit ">Accept and continue</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.5.1.min.js "></script>
+    <script src="js/popper.min.js "></script>
+    <script src="js/bootstrap.min.js "></script>
+    <script src="js/jquery-ui.js "></script>
+    <script src="js/kotak.js "></script>
+    <script src="js/dist/jquery.validate.js "></script>
+
+
+    <!-- custom script -->
+    <script src="js/annuity.js "></script>
+    <script type="text/javascript ">
+        var click = true;
+        var v1 = 1;
+        var v2 = 1;
+        var v3 = 1;
+        var v4 = 0; //for checkbox 1
+        var v5 = 1;
+        var v11 = 1;
+        var v12 = 1;
+        var v13 = 1;
+        var v14 = 1;
+        var v15 = 1;
+        var v16 = 1;
+        var alalysisFormFill = 0;
+
+        $('#ploicy1form input').on("blur ", function() {
+            if ($(this).val() == '') {
+                $('.acbutton').prop('disabled', true);
+                var error = $(this).parent().siblings('p.error-msg');
+                console.log(error);
+                $(this).addClass("errorInput ");
+                error.addClass('error-msg-1').css('display', 'block');
+            } else {
+                $('.acbutton').prop('disabled', false);
+                var correct = $(this).parent().siblings('p.error-msg');
+                console.log(correct);
+                $(this).removeClass("errorInput ");
+                correct.removeClass('error-msg-1').css('display', 'none');
+            }
+        });
+
+        $("input ").on("keyup ", function() {
+            var correct = $(this).siblings('p.error-msg');
+            $(this).removeClass("errorInput ");
+            correct.removeClass('error-msg-1').css('display', 'none');
+        });
+        $("input ").on("keyup ", function() {
+            var correct = $(this).parent().siblings('p.error-msg');
+            $(this).removeClass("errorInput ");
+            correct.removeClass('error-msg-1').css('display', 'none');
+        });
+        $(function() {
+            localStorage.setItem('plan', 'lti');
+            $('.annuity-popOvers').popover({
+                html: true,
+                trigger: 'click',
+                placement: 'top',
+                content: function() {
+                    return '<p>' + $(this).data('content') + '</p>';
+                }
+            });
+            $('html').on('click', function(e) {
+                if (typeof $(e.target).data('original-title') == 'undefined' &&
+                    !$(e.target).parents().is('.popover.in')) {
+                    $('[data-original-title]').popover('hide');
+                }
+            });
+            $("#form_main input ").on("blur ", function() {
+                var valueofinput = $(this).val();
+                if ($(this).attr('name') == "name ") {
+                    if (validateName(valueofinput) == false || valueofinput == " ") {
+                        var error = $(this).parent().siblings('p.name_error');
+                        $(this).addClass("errorInput ");
+                        error.addClass('error-msg-1').css('display', 'block');
+                        v1 = 1;
+                    } else {
+                        var correct = $(this).parent().siblings('p.name_error');
+                        $(this).removeClass("errorInput ");
+                        correct.removeClass('error-msg-1').css('display', 'none');
+                        v1 = 0;
+                    }
+                }
+                if ($(this).attr('name') == "email ") {
+                    if (ValidateEmail(valueofinput) == false || valueofinput == " ") {
+                        var error = $(this).parent().siblings('p.error-msg');
+                        $(this).addClass("errorInput ");
+                        error.addClass('error-msg-1').css('display', 'block');
+                        v2 = 1;
+                    } else {
+                        var correct = $(this).parent().siblings('p.error-msg');
+                        $(this).removeClass("errorInput ");
+                        correct.removeClass('error-msg-1').css('display', 'none');
+                        v2 = 0;
+                    }
+                }
+                if ($(this).attr('name') == "mobile ") {
+                    if (validatePhone(valueofinput) == false || valueofinput == " ") {
+                        var error = $(this).parent().siblings('p.error-msg');
+                        $(this).addClass("errorInput ");
+                        error.addClass('error-msg-1').css('display', 'block');
+                        v3 = 1;
+                    } else {
+                        var correct = $(this).parent().siblings('p.error-msg');
+                        $(this).removeClass("errorInput ");
+                        correct.removeClass('error-msg-1').css('display', 'none');
+                        v3 = 0;
+                    }
+                }
+                // changeofinput();
+                // console.log(v1,v2,v3);
+            });
+            $('#dob').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                showAnim: 'slideDown',
+                yearRange: '1945:' + (new Date).getFullYear(),
+                dateFormat: 'dd/mm/yy',
+                maxDate: 0,
+                beforeShow: function(input, inst) {
+                    $(document).off('focusin.bs.modal');
+                },
+                onClose: function() {
+                    $(document).on('focusin.bs.modal');
+                }
+            }).on('change', function() {
+                var age = getAge(this);
+                $(this).parent().next('.selected-years').html(age + ' years');
+            });
+
+            $('.mobile_gender').click(function() {
+                $('.mobile_gender').removeClass('active');
+                $(this).addClass('active');
+            })
+
+
+            $("#form_main ").validate({
+                rules: {
+                    name: "required ",
+                    dob: "required ",
+                    mobile: "required "
+                },
+                messages: {
+                    name: "Please fill the name ",
+                    dob: "Please enter date of birth ",
+                    mobile: "Mobile no. required ",
+                },
+                submitHandler: function(form) {
+                    var nps = $("input[name='nps' ]:checked ").val();
+                    if (nps == 'Yes') {
+                        location.href = 'nps-plan.html';
+                        localStorage.setItem('plan', 'nps');
+                    } else {
+                        location.href = 'lti-plan.html';
+                        localStorage.setItem('plan', 'lti');
+                    }
+                    return false;
+                }
+            });
+        });
+
+        $('.divclass').click(function() {
+            click = !click;
+            if (click) {
+                $('.ng-star-inserted').show();
+                $('.divclass').addClass("active ");
+            } else {
+                $('.ng-star-inserted').hide();
+                $('.divclass').removeClass("active ");
+            }
+        });
+
+
+
+
+        // Validations for sustainability popup
+
+
+        function changeofinput() {
+            // var isValid = true;
+            // $("#form_main input ").each(function() {
+            //     var element = $(this);
+            //     if (v1 == 1 || v2 == 1 || v3 == 1 || v4 == 1 || v5 == 1) {
+            //         isValid = false;
+            //     } else {
+
+            //     }
+            // });
+            // if (isValid != false) {
+            //     $('.proceedbtn').prop('disabled', false);
+            //     // console.log("btn enabled111 ");
+            // } else {
+            //     $('.proceedbtn').prop('disabled', true);
+            // }
+
+
+            if (v1 == 1) {
+                // var abval = $(this).attr('name');
+                // var error = $('p.error-msg');
+                if (validateName($('#name').val()) == false || $('#name').val() == " ") {
+                    $('.name_error_field').addClass("errorInput ");
+                    $('.name_error').addClass('error-msg-1').css('display', 'block');
+                    v1 = 1;
+
+                }
+
+
+            } else {
+                if (policy1check == 0) {
+                    if ($('#name1').val() == '') {
+                        // if ($('#name').val() == '') {
+                        //     return;
+                        // }
+                        return;
+                        v1 = 0;
+                    }
+                    if ($('#name1').val() != $('#name').val()) {
+                        if ($('#name').val() == '') {
+
+                        } else {
+                            $('.name_error_field').addClass("errorInput ");
+                            $('.name_error_new').addClass('error-msg-1').css('display', 'block');
+                            // v1 = 1;
+                            return;
+                        }
+                    } else {
+                        v1 = 0;
+                        $('.name_error_field').removeClass("errorInput ");
+                        $('.name_error_new').removeClass('error-msg-1').css('display', 'none');
+                    }
+
+                }
+            }
+            if (v2 == 1) {
+                $('.email_error_field').addClass("errorInput ");
+                $('.email_error').addClass('error-msg-1').css('display', 'block');
+                v2 = 1;
+            } else {
+                v2 = 0;
+            }
+            if (v3 == 1) {
+                $('.mobile_error_field').addClass("errorInput ");
+                $('.mobile_error').addClass('error-msg-1').css('display', 'block');
+                v3 = 1;
+            } else {
+                v3 = 0;
+            }
+            if (v5 == 1) {
+                $('.dob_error_field').addClass("errorInput ");
+                $('.dob_error').addClass('error-msg-1').css('display', 'block');
+                v5 = 1;
+            } else {
+                if (policy1check == 0) {
+                    if ($('#dob1').val() == '') {
+                        return;
+                    }
+                    if ($('#dob1').val() != $('#dob').val()) {
+                        if ($('#dob').val() == '') {
+
+                        } else {
+                            $('.dob_error_field').addClass("errorInput ");
+                            $('.dob_error_new').addClass('error-msg-1').css('display', 'block');
+                            $('.poliycheck_error').addClass('error-msg-1').css('display', 'block');
+                            v5 = 1;
+                            return;
+                        }
+                    } else {
+                        v5 = 0;
+                    }
+
+                }
+            }
+            console.log(v1, v2, v3, v5);
+            if (v1 == 0 && v2 == 0 && v3 == 0 && v5 == 0 && v4 == 0) {
+                window.location = "Plan.html ";
+            } else {
+
+            }
+
+        }
+        $('#policy1').on('change', function(e) {
+            if (e.target.checked) {
+                // $('#myModal').modal();
+                policy1check = 1;
+                console.log(policy1check + "check ");
+
+                // $('.proceedbtn').attr('type', 'submit');
+                // $('#form_main').prop('action', 'Plan.html');
+
+            } else {
+                policy1check = 0;
+                console.log(policy1check + "uncheck ");
+
+
+                // if ($('#name').val() == '') {
+
+                // }
+                // else{
+                //     $('.name_error_field').addClass("errorInput ");
+                //     $('.name_error_new').addClass('error-msg-1').css('display', 'block');
+                //     v1 = 1;
+                //     return;
+                // }
+                // $('#form_main').removeProp('action', 'Plan.html');
+                // $('.proceedbtn').attr('type', 'button');
+                // code to open modal by jquery
+                // jQuery.noConflict(); 
+                // $('#policy1modal').modal('show'); 
+            }
+        });
+        $('.acbutton1').on('click', function(e) {
+
+            // code to open modal by jquery
+            // jQuery.noConflict(); 
+            if ($('#name1').val() == '') {
+                $('#name1').addClass("errorInput ");
+                $('.name_error1').addClass('error-msg-1').css('display', 'block');
+                v15 = 1;
+            } else {
+                if ($('#name1').val() != $('#name').val()) {
+                    if ($('#name').val() == '') {
+
+                    } else {
+                        $('#name1').addClass("errorInput ");
+                        $('.name_error11').addClass('error-msg-1').css('display', 'block');
+                        v15 = 1;
+                        return;
+                    }
+                } else {
+                    v15 = 0;
+                }
+            }
+
+            if ($('#dob1').val() == '') {
+                $('#dob1').addClass("errorInput ");
+                $('.dob_error1').addClass('error-msg-1').css('display', 'block');
+                v16 = 1;
+            } else {
+                if ($('#dob1').val() != $('#dob').val()) {
+                    if ($('#dob').val() == '') {
+
+                    } else {
+                        $('#dob1').addClass("errorInput ");
+                        $('.dob_error11').addClass('error-msg-1').css('display', 'block');
+                        $('.poliycheck_error').addClass('error-msg-1').css('display', 'block');
+
+                        v16 = 1;
+                        return;
+                    }
+                } else {
+                    v16 = 0;
+                }
+            }
+            if ($('#tincome').val() == '') {
+                $('#tincome').addClass("errorInput ");
+                $('.tincome_error_msg').addClass('error-msg-1').css('display', 'block');
+                v11 = 1;
+            } else {
+                v11 = 0;
+            }
+            if ($('#total_premium').val() == '') {
+                $('#total_premium').addClass("errorInput ");
+                $('.total_premium_error_msg').addClass('error-msg-1').css('display', 'block');
+                v12 = 1;
+            } else {
+                v12 = 0;
+            }
+            if ($('#total_liability').val() == '') {
+                $('#total_liability').addClass("errorInput ");
+                $('.total_liability_error_msg').addClass('error-msg-1').css('display', 'block');
+                v13 = 1;
+            } else {
+                v13 = 0;
+            }
+            if ($('#cover').val() == '') {
+                $('#cover').addClass("errorInput ");
+                $('.cover_error_msg').addClass('error-msg-1').css('display', 'block');
+                v14 = 1;
+            } else {
+                v14 = 0;
+            }
+            if (v11 == 0 || v12 == 0 || v13 == 0 || v14 == 0 || v15 == 0 || v16 == 0) {
+                $('.content1').addClass('dn');
+                $('.content1').removeClass('db');
+                $('.content2').addClass('db');
+                $('.content2').removeClass('dn');
+            } else {
+
+            }
+
+            $('html, body, .modal').animate({
+                scrollTop: ($('.errorInput').offset().top - 300)
+            }, 2000);
+
+        });
+
+        $('.oneInputMand').css('display', 'none');
+
+        $('.objective').click(function() {
+            if ($(this).hasClass('active')) {
+                $('.acbutton2').attr('disabled', 'disabled');
+            } else {
+                $('.acbutton2').removeAttr('disabled');
+            }
+        });
+        $('.acbutton2').on('click', function(e) {
+            // code to open modal by jquery
+            // jQuery.noConflict(); 
+
+            $('.oneInputMand').addClass('error-msg-1').css('display', 'block');
+            $('.content2').addClass('dn');
+            $('.content2').removeClass('db');
+            $('.content3').addClass('db');
+            $('.content3').removeClass('dn');
+
+        });
+
+
+        $(".chk ").on("click ", function() {
+            if ($(".chk:checked ").length > 1) {
+                $('.acbutton3').prop('disabled', false);
+            } else {
+                $('.acbutton3').prop('disabled', true);
+            }
+        });
+        // $('#checka2').click(function () {
+        //     //check if checkbox is checked
+        //     if ($(this).is(':checked')) {
+
+        //         $('.acbutton3').removeAttr('disabled'); //enable input
+
+        //     } else {
+        //         $('.acbutton3').attr('disabled', true); //disable input
+        //     }
+        // });
+
+
+        $('.back1').on('click', function(e) {
+            // code to open modal by jquery
+            // jQuery.noConflict(); 
+            $('.content1').removeClass('dn');
+            $('.content1').addClass('db');
+            $('.content2').removeClass('db');
+            $('.content2').addClass('dn');
+        });
+        $('.back2').on('click', function(e) {
+            // code to open modal by jquery
+            // jQuery.noConflict(); 
+            $('.content2').removeClass('dn');
+            $('.content2').addClass('db');
+            $('.content3').removeClass('db');
+            $('.content3').addClass('dn');
+        });
+        $('.acbutton3').on('click', function(e) {
+            alalysisFormFill = 1;
+            $('#policy1modal').modal('hide');
+            // location.href = "Plan.html ";
+        });
+    </script>
+
+</body>
+
+</html>

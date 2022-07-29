@@ -1,0 +1,1946 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Roboto Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/kotak-ulip.css" />
+    <link rel="stylesheet" href="css/other.css">
+    <link rel="stylesheet" href="css/gsp.css">
+
+    <title>Digital Ulip</title>
+</head>
+
+<body>
+    <div class="loader__container">
+        <div class="mask"></div>
+        <div class="loader">
+            <img src="./img/kotak-defaultLoader-1.gif" alt="">
+        </div>
+    </div>
+    <header></header>
+    <!-- header -->
+
+    <main class="bgs-grey">
+        <div class="center_grid">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-8 col-md-9 col-sm-10 col-11">
+                        <div class="stepper__container">
+                            <div class="stepper_items progrees">
+                                <div class="flex_div">
+                                    <div class="step_item">1</div>
+                                    <div class="step_caption">Personal details</div>
+                                </div>
+                                <div class="step_count">2/2</div>
+                            </div>
+                            <div class="stepper_gap"></div>
+                            <div class="stepper_items">
+                                <div class="flex_div">
+                                    <div class="step_item">2</div>
+                                    <div class="step_caption">Health details</div>
+                                </div>
+                            </div>
+                            <div class="stepper_gap"></div>
+                            <div class="stepper_items">
+                                <div class="flex_div">
+                                    <div class="step_item">3</div>
+                                    <div class="step_caption">
+                                        <div>Benefits & Review</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stepper_gap"></div>
+                            <div class="stepper_items">
+                                <div class="flex_div">
+                                    <div class="step_item">4</div>
+                                    <div class="step_caption">Upload documents</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-7 col-md-10 col-12">
+                        <div class="form_left_container">
+
+                            <form id="nomineeFrom">
+                                <h2>Family details</h2>
+                                <div class="row">
+                                    <!-- Fathers Name -->
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Father's/Spouse’s name*</label>
+                                            <input type="text" placeholder="Enter full name" name="father" value="Ramesh kumar" class="father_text" onkeypress="return /[a-zA-Z\s]/i.test(event.key)" />
+                                            <p class="error-msg father_error_msg">Please enter full name</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mother's name -->
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label id="check_status">Mother's name*</label>
+                                            <input type="text" placeholder="Enter full name" name="mother" class="mother_text" onkeypress="return /[a-zA-Z\s]/i.test(event.key)" />
+                                            <p class="error-msg mother_error_msg">Please enter full name</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h2>Nominee details</h2>
+                                <div class="row" id="form11">
+
+
+                                    <div class="col-xl-6 nominee_relation_box db">
+                                        <div class="field_row">
+                                            <div class="d-flex align-items-center">
+                                                <span id="nominee_relation">Nominee’s name</span><span class="imp_tag">*</span>
+                                            </div>
+                                            <input type="text" placeholder="Enter full name" name="name" onkeypress="return /[a-zA-Z\s]/i.test(event.key)" class="name" />
+                                            <p class="error-msg name_error_msg">Please enter full name</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Relation with life insured<span class="imp_tag">*</span></label>
+                                            <select required name="relationship" id="nominee1_relation_selected" class="relationship">
+                                                <option value="" disabled selected hidden style="font-weight: 400;">Select relationship</option>
+                                                  <option value="Father">Father</option>
+                                                  <option value="Son">Son</option>
+                                                  <option value="Brother">Brother</option>
+                                                  <option value="Grandfather">Grandfather</option>
+                                                  <option value="Grandson">Grandson</option>
+                                                  <option value="Daughter">Daughter</option>
+                                                  <option value="Granddaughter">Granddaughter</option>
+                                                  <option value="Grandmother">Grandmother</option>
+                                                  <option value="Sister">Sister</option>
+                                                  <option value="Wife">Wife</option>
+                                                  <option value="Mother">Mother</option>
+                                                  <option value="Husband">Husband</option>
+                                            </select>
+                                            <p class="error-msg relationship_error_msg">Please select relationship</p>
+                                        </div>
+                                    </div>
+
+                                    <!--   <div class="col-xl-6 nominee_mother_relation_box dn">
+                                        <div class="field_row">
+                                            <div class="d-flex align-items-center">
+                                                <span id="nominee_relation_mother">Mother’s name</span><span class="imp_tag">*</span>
+                                            </div>
+                                            <input type="text" placeholder="Enter full name" name="name" onkeypress="return /[a-zA-Z\s]/i.test(event.key)" class="name" />
+                                            <p class="error-msg name_error_msg">Please enter full name</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-6 nominee_other_relation_box dn">
+                                        <div class="field_row">
+                                            <div class="d-flex align-items-center">
+                                                <span id="nominee_relation_other">Full name</span><span class="imp_tag">*</span>
+                                            </div>
+                                            <input type="text" placeholder="Enter full name" name="name" onkeypress="return /[a-zA-Z\s]/i.test(event.key)" class="name" />
+                                            <p class="error-msg name_error_msg">Please enter full name</p>
+                                        </div>
+                                    </div>
+ -->
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Date of birth<span class="imp_tag">*</span></label>
+                                            <input type="text" placeholder="DD/MM/YYYY" name="dob" inputmode='none' autocomplete="off" class="nomineeDOB calendar dob" readonly>
+                                            <p class="error-msg dob_error_msg">Please enter valid date of birth</p>
+                                            <!-- <p class="subtitle">When nominee is below 18 years, proposer needs to add appointee</p> -->
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Share percentage(%)<span class="imp_tag">*</span></label>
+                                            <input type="number" placeholder="Enter share in percent" name="share" autocomplete="off" id="firstNominee" class="share sharepercent-check" value="100" disabled="disabled" oninput="calculateShare();">
+                                            <!-- oninput="calculateShare();" -->
+                                            <p class="error-msg share_error_msg">Please note the total share percentage need to be 100%</p>
+                                            <p class="error-msg share_error_msg_1">Share % can not be 0</p>
+
+                                            <!-- <p class="error-msg share_error_msg">Please enter valid share percent</p> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h6>Communication address</h6>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="option_container option-inline mb-3">
+                                            <label>
+                                                <input type="checkbox" id="checkLifeInsured" checked>
+                                                <span class="caption">Same as life insured's current address</span>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row isInsured">
+                                    <!--  <div class="col-12 mt-3">
+                                        <h6>Communication address</h6>
+                                    </div> -->
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Address line 1<span class="imp_tag">*</span></label>
+                                            <input type="text" placeholder="Enter address line 1" class="address1" name="address1" />
+                                            <p class="error-msg address1_error_msg">Please enter address line 1</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Address line 2</label>
+                                            <input type="text" placeholder="Enter address line 2" class="address2" name="address2" />
+                                            <p class="error-msg">Please enter address line 2</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Landmark</label>
+                                            <input type="text" placeholder="Enter landmark" class="landmark" name="landmark" />
+                                            <p class="error-msg">Please select relationship</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Pincode<span class="imp_tag">*</span></label>
+                                            <input type="number" placeholder="Enter pincode" class="pincode" name="pincode" />
+                                            <p class="error-msg pincode_error_msg">Please enter valid pincode</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>City<span class="imp_tag">*</span></label>
+                                            <select class="city" name="city">
+                                                <option value="0">Hyderabad</option>
+                                                <option value="0">Bengaluru</option>
+                                                <option value="0">Chennai</option>
+                                                <option value="0">Mumbai</option>
+                                              </select>
+                                            <p class="error-msg">Please select relationship</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>State<span class="imp_tag">*</span></label>
+                                            <select class="state" name="state">
+                                            <option>Andaman and Nicobar Islands</option>  
+                                            <option>Andhra Pradesh</option>
+                                            <option>Arunachal Pradesh</option>
+                                            <option>Assam</option>
+                                            <option>Bihar</option>
+                                            <option>Chandigarh</option>
+                                            <option>Chhattisgarh</option>
+                                            <option>Dadra and Nagar Haveli</option>
+                                            <option>Daman and Diu</option>
+                                            <option>National Capital Territory of Delhi union territory</option>
+                                            <option>Goa</option>
+                                            <option>Gujarat</option>
+                                            <option>Haryana</option>
+                                            <option>Himachal Pradesh</option>
+                                            <option>Jammu and Kashmir</option>
+                                            <option>Jharkhand</option>
+                                            <option>Karnataka</option>
+                                            <option>Kerala</option>
+                                            <option>Ladakh</option>
+                                            <option>Lakshadweep</option>
+                                            <option>Madhya Pradesh</option>
+                                            <option>Maharashtra</option>
+                                            <option>Manipur</option>
+                                            <option>Meghalaya</option>
+                                            <option>Mizoram</option>
+                                            <option>Nagaland</option>
+                                            <option>Odisha</option>
+                                            <option>Puducherry</option>
+                                            <option>Punjab</option>
+                                            <option>Rajasthan</option>
+                                            <option>Sikkim</option>
+                                            <option>Tamil Nadu</option>
+                                            <option>Telangana</option>
+                                            <option>Tripura</option>
+                                            <option>Uttar Pradesh</option>
+                                            <option>Uttarakhand</option>
+                                            <option>West Bengal</option>
+                                          </select>
+                                            <p class="error-msg">Please select relationship</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 p-0 mb-3">
+                                    <div class="option_container option-inline mb-2" style="min-height: unset;">
+                                        <label class="nomineeadd">
+                                            <input type="checkbox" class="nominee2" name="nominee2">
+                                            <span class="caption">Add second nominee</span>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="field_row p-0 col-lg-12 dn" id="form12">
+                                    <div class="row">
+                                        <div class="col-12 mt-3">
+                                            <h6>Nominee 2 details</h6>
+                                        </div>
+
+                                        <div class="col-xl-6 nominee_relation_box1 db">
+                                            <div class="field_row">
+                                                <div class="d-flex align-items-center">
+                                                    <span id="nominee2_relation">Nominee’s name</span><span class="imp_tag">*</span>
+                                                </div>
+                                                <input type="text" placeholder="Enter full name" name="n2name" onkeypress="return /[a-zA-Z\s]/i.test(event.key)" class="n2name" />
+                                                <p class="error-msg n2name_error_msg">Please enter full name</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-6">
+                                            <div class="field_row">
+                                                <label>Relation with life insured<span class="imp_tag">*</span></label>
+                                                <select required name="relationship1" id="nominee2_relation_selected" class="n2relationship">
+                                                    <option value="" disabled selected hidden style="font-weight: 400;">Select relationship</option>
+                                                      <option value="Father">Father</option>
+                                                      <option value="Son">Son</option>
+                                                      <option value="Brother">Brother</option>
+                                                      <option value="Grandfather">Grandfather</option>
+                                                      <option value="Grandson">Grandson</option>
+                                                      <option value="Daughter">Daughter</option>
+                                                      <option value="Granddaughter">Granddaughter</option>
+                                                      <option value="Grandmother">Grandmother</option>
+                                                      <option value="Sister">Sister</option>
+                                                      <option value="Wife">Wife</option>
+                                                      <option value="Mother">Mother</option>
+                                                      <option value="Husband">Husband</option>
+                                                </select>
+                                                <p class="error-msg n2relationship_error_msg">Please select relationship</p>
+                                            </div>
+                                        </div>
+
+                                        <!--   <div class="col-xl-6 nominee_mother_relation_box1 dn">
+                                          <div class="field_row">
+                                                <div class="d-flex align-items-center">
+                                                    <span id="nominee_relation_mother">Mother’s name</span><span class="imp_tag">*</span>
+                                                </div>
+                                                <input type="text" placeholder="Enter full name" name="n2name" onkeypress="return /[a-zA-Z\s]/i.test(event.key)" class="n2name" />
+                                                <p class="error-msg n2name_error_msg">Please enter full name</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-6 nominee_other_relation_box1 dn">
+                                            <div class="field_row">
+                                                <div class="d-flex align-items-center">
+                                                    <span id="nominee_relation_other">Full name</span><span class="imp_tag">*</span>
+                                                </div>
+                                                <input type="text" placeholder="Enter full name" name="n2name" onkeypress="return /[a-zA-Z\s]/i.test(event.key)" class="n2name" />
+                                                <p class="error-msg n2name_error_msg">Please enter full name</p>
+                                            </div>
+                                        </div> -->
+
+                                        <div class="col-xl-6">
+                                            <div class="field_row">
+                                                <label>Date of birth<span class="imp_tag">*</span></label>
+                                                <input type="text" placeholder="DD/MM/YYYY" name="n2dob" inputmode='none' autocomplete="off" class="date-field-dob nomineeDOB calendar n2dob" readonly>
+                                                <p class="error-msg n2dob_error_msg">Please enter valid date of birth</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="field_row">
+                                                <label>Share percentage(%)<span class="imp_tag">*</span></label>
+                                                <input type="number" placeholder="Enter share in percent" value="0" name="n2share" autocomplete="off" id="secondNominee" class="n2share sharepercent-check" oninput="calculateShare();">
+                                                <p class="error-msg n2share_error_msg">Please note the total share percentage need to be 100%</p>
+                                                <p class="error-msg n2share_error_msg_1">Share % can not be 0</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row No2communication">
+                                    <div class="col-12">
+                                        <h6>Communication address</h6>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="option_container option-inline mb-3">
+                                            <label>
+                                                <input type="checkbox" id="No2checkLifeInsured" checked>
+                                                <span class="caption">Same as life insured's current address</span>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row No2isInsured">
+                                    <!--  <div class="col-12 mt-3">
+                                        <h6>Communication address</h6>
+                                    </div> -->
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Address line 1<span class="imp_tag">*</span></label>
+                                            <input type="text" placeholder="Enter address line 1" class="No2address1" name="No2address1" />
+                                            <p class="error-msg No2address1_error_msg">Please enter address line 1</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Address line 2</label>
+                                            <input type="text" placeholder="Enter address line 2" class="No2address2" name="No2address2" />
+                                            <p class="error-msg">Please enter address line 2</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Landmark</label>
+                                            <input type="text" placeholder="Enter landmark" class="No2landmark" name="No2landmark" />
+                                            <p class="error-msg">Please select relationship</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Pincode<span class="imp_tag">*</span></label>
+                                            <input type="number" placeholder="Enter pincode" class="No2pincode" name="No2pincode" />
+                                            <p class="error-msg No2pincode_error_msg">Please enter valid pincode</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>City<span class="imp_tag">*</span></label>
+                                            <select class="city" name="No2city">
+                                                <option value="0">Hyderabad</option>
+                                                <option value="0">Bengaluru</option>
+                                                <option value="0">Chennai</option>
+                                                <option value="0">Mumbai</option>
+                                              </select>
+                                            <p class="error-msg">Please select relationship</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>State<span class="imp_tag">*</span></label>
+                                            <select class="state" name="No2state">
+                                            <option>Andaman and Nicobar Islands</option>  
+                                            <option>Andhra Pradesh</option>
+                                            <option>Arunachal Pradesh</option>
+                                            <option>Assam</option>
+                                            <option>Bihar</option>
+                                            <option>Chandigarh</option>
+                                            <option>Chhattisgarh</option>
+                                            <option>Dadra and Nagar Haveli</option>
+                                            <option>Daman and Diu</option>
+                                            <option>National Capital Territory of Delhi union territory</option>
+                                            <option>Goa</option>
+                                            <option>Gujarat</option>
+                                            <option>Haryana</option>
+                                            <option>Himachal Pradesh</option>
+                                            <option>Jammu and Kashmir</option>
+                                            <option>Jharkhand</option>
+                                            <option>Karnataka</option>
+                                            <option>Kerala</option>
+                                            <option>Ladakh</option>
+                                            <option>Lakshadweep</option>
+                                            <option>Madhya Pradesh</option>
+                                            <option>Maharashtra</option>
+                                            <option>Manipur</option>
+                                            <option>Meghalaya</option>
+                                            <option>Mizoram</option>
+                                            <option>Nagaland</option>
+                                            <option>Odisha</option>
+                                            <option>Puducherry</option>
+                                            <option>Punjab</option>
+                                            <option>Rajasthan</option>
+                                            <option>Sikkim</option>
+                                            <option>Tamil Nadu</option>
+                                            <option>Telangana</option>
+                                            <option>Tripura</option>
+                                            <option>Uttar Pradesh</option>
+                                            <option>Uttarakhand</option>
+                                            <option>West Bengal</option>
+                                          </select>
+                                            <p class="error-msg">Please select relationship</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row isAppointee">
+                                    <div class="col-12 mt-3">
+                                        <h2>Appointee details</h2>
+                                        <div class="subtitle">When nominee is below 18 years, proposer needs to add appointee</div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Full name<span class="imp_tag">*</span></label>
+                                            <input type="text" placeholder="Enter full name" name="name1" onkeypress="return /[a-zA-Z\s]/i.test(event.key)" class="name1" />
+                                            <p class="error-msg name1_error_msg">Please enter full name</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Relation with nominee<span class="imp_tag">*</span></label>
+                                            <select required name="relationship1" class="relationship1">
+                                                <option value="" disabled selected hidden style="font-weight: 400 !important;">
+                                                Select relationship</option> 
+                                                  <option>Father</option>
+                                                  <option>Son</option>
+                                                  <option>Brother</option>
+                                                  <option>Grandfather</option>
+                                                  <option>Grandson</option>
+                                                  <option>Daughter</option>
+                                                  <option>Granddaughter</option>
+                                                  <option>Grandmother</option>
+                                                  <option>Sister</option>
+                                                  <option>Wife</option>
+                                                  <option>Mother</option>
+                                                  <option>Husband</option>
+                                            </select>
+                                            <p class="error-msg relationship1_error_msg">Please select relationship</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Date of birth<span class="imp_tag">*</span></label>
+                                            <input type="text" placeholder="DD/MM/YYYY" name="dob1" inputmode='none' autocomplete="off" class="date-field-dob calendar dob1" readonly>
+                                            <p class="error-msg dob_check dob1_error_msg">Please enter valid date of birth</p>
+                                        </div>
+                                    </div>
+                                    <!--  <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Gender</label>
+                                            <button type="button" class="kotak-btn kotak-btn-sm kotak-btn-secondary gender active">Male</button>
+                                            <button type="button" class="kotak-btn kotak-btn-sm kotak-btn-secondary gender">Female</button>
+                                        </div>
+                                    </div> -->
+                                </div>
+
+                                <div class="row commAddAppointee">
+                                    <div class="col-12">
+                                        <h6>Communication address</h6>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="option_container option-inline mb-3">
+                                            <label>
+                                                <input type="checkbox" id="addSameAppointee" checked>
+                                                <span class="caption" id="tagAppointeeAdd">Same as nominee 1 communication address</span>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row appointeeAdd">
+                                    <!--  <div class="col-12 mt-3">
+                                        <h6>Communication address</h6>
+                                    </div> -->
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Address line 1<span class="imp_tag">*</span></label>
+                                            <input type="text" placeholder="Enter address line 1" class="Appointeeaddress1" name="Appointeeaddress1" />
+                                            <p class="error-msg Appointeeaddress1_error_msg">Please enter address line 1</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Address line 2</label>
+                                            <input type="text" placeholder="Enter address line 2" class="Appointeeaddress2" name="Appoaddress2" />
+                                            <p class="error-msg">Please enter address line 2</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Landmark</label>
+                                            <input type="text" placeholder="Enter landmark" class="Appointeelandmark" name="Appointeelandmark" />
+                                            <p class="error-msg">Please select relationship</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Pincode<span class="imp_tag">*</span></label>
+                                            <input type="number" placeholder="Enter pincode" class="Appointeepincode" name="Appointeepincode" />
+                                            <p class="error-msg Appointeepincode_error_msg">Please enter valid pincode</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>City<span class="imp_tag">*</span></label>
+                                            <select class="city" name="Appointeecity">
+                                                <option value="0">Hyderabad</option>
+                                                <option value="0">Bengaluru</option>
+                                                <option value="0">Chennai</option>
+                                                <option value="0">Mumbai</option>
+                                              </select>
+                                            <p class="error-msg">Please select relationship</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>State<span class="imp_tag">*</span></label>
+                                            <select class="state" name="Appointeestate">
+                                            <option>Andaman and Nicobar Islands</option>  
+                                            <option>Andhra Pradesh</option>
+                                            <option>Arunachal Pradesh</option>
+                                            <option>Assam</option>
+                                            <option>Bihar</option>
+                                            <option>Chandigarh</option>
+                                            <option>Chhattisgarh</option>
+                                            <option>Dadra and Nagar Haveli</option>
+                                            <option>Daman and Diu</option>
+                                            <option>National Capital Territory of Delhi union territory</option>
+                                            <option>Goa</option>
+                                            <option>Gujarat</option>
+                                            <option>Haryana</option>
+                                            <option>Himachal Pradesh</option>
+                                            <option>Jammu and Kashmir</option>
+                                            <option>Jharkhand</option>
+                                            <option>Karnataka</option>
+                                            <option>Kerala</option>
+                                            <option>Ladakh</option>
+                                            <option>Lakshadweep</option>
+                                            <option>Madhya Pradesh</option>
+                                            <option>Maharashtra</option>
+                                            <option>Manipur</option>
+                                            <option>Meghalaya</option>
+                                            <option>Mizoram</option>
+                                            <option>Nagaland</option>
+                                            <option>Odisha</option>
+                                            <option>Puducherry</option>
+                                            <option>Punjab</option>
+                                            <option>Rajasthan</option>
+                                            <option>Sikkim</option>
+                                            <option>Tamil Nadu</option>
+                                            <option>Telangana</option>
+                                            <option>Tripura</option>
+                                            <option>Uttar Pradesh</option>
+                                            <option>Uttarakhand</option>
+                                            <option>West Bengal</option>
+                                          </select>
+                                            <p class="error-msg">Please select relationship</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="bottom__fixed">
+                                    <div class="row align-items-center">
+                                        <div class="col-12 align-items-center d-flex justify-content-between">
+                                            <a href="./Verify-Application.html" class="arrow-back-black mr-4">Back</a>
+                                            <button class="kotak-btn kotak-btn-primary proceedbtn" type="button">Proceed</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </form>
+
+
+                        </div>
+
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-12">
+                        <div class="aside_container d-xl-block d-lg-block d-none mb-2">
+                            <div class="icon-block-caption highligh_blue">You get guranteed maturity benefit of</div>
+                            <div class="aside-icon-container">
+                                <img class="mr-3" src="img/bag-icon.svg" class="img-fluid">
+                                <div class="aside-icon-block">
+                                    <div class="icon-block-value value-sm">₹ 3,49,600 </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="aside-cover-container d-block m-0">
+                                <div class="icon-block-caption mt-3 mb-2">Death benefit</div>
+                                <div class="cover-container-full mb-2 fw-jcsb">
+                                    <div class="icon-block-caption mb-1">Benefit cover up to</div>
+                                    <div class="icon-block-amount"><b><span>₹</span>5,000</b></div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="aside-cover-container d-block m-0">
+
+                                <!-- <div class="icon-block-caption mt-3 mb-2">Benefits</div> -->
+                                <div class="icon-block-caption mt-3 mb-2">Your Riders</div>
+                                <div class="cover-container-full  fw-jcsb">
+                                    <div class="icon-block-caption mb-1">Kotak Term Benefit Rider</div>
+                                    <div class="icon-block-amount"><b><span>₹</span>5,000</b></div>
+                                    <!-- <div class="mb-2">
+                                    <div class="icon-block-caption mb-1">Accidental death</div>
+                                    <div class="icon-block-amount"><b><span>₹</span>6,000</b></div>
+                                </div>  -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside_container aside-cover-container d-xl-block d-lg-block d-md-block d-none">
+                            <div class="cover-container-full mb-2">
+                                <div class="icon-block-caption">Your quotation ID</div>
+                                <div class="icon-block-amount"><span>: </span>OT125780</div>
+                            </div>
+                            <div class="cover-container-full mb-2">
+                                <div class="icon-block-caption">You invest</div>
+                                <div class="icon-block-amount"><span> : </span>₹ 5,000 <small class="taxeLabel">(incl. of taxes)</small></div>
+                            </div>
+                            <div class="title-circle-footer mt-4"><span>Pay for</span> <strong>10 years</strong> for a policy term of <strong>20 years</strong></div>
+                        </div>
+
+                        <!--   
+                    <div class="d-xl-none d-lg-none d-md-none d-block" id="collaspse_mobile">
+                        <div class="float_button">
+                            <button id="for_expand"><img src="./img/expand.svg" alt=""></button>
+                        </div>
+                        <div class="aside_container bottom_sm_fixed more_details_fixed">
+                            <div id="after_expand">
+                                <h6 class="mb-3">Your returns</h6>
+                                <div class="aside_container">
+                                    <div class="aside-icon-container">
+                                        <img class="" src="img/bag-icon.svg" class="img-fluid">
+                                        <div class="aside-icon-block justify_sm_right pl-4">
+                                            <div class="icon-block-caption">Guaranteed returns</div>
+                                            <div class="icon-block-value value-sm">₹ 3,49,600</div>
+                                        </div> 
+                                    </div> 
+                                    <hr class="my-2">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p class="payment_main">You pay</p>
+                                            <p class="payment_main_amt"><span>₹ </span> 3,49,600</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="payment_main">You get</p>
+                                            <p class="payment_main_amt"><span>₹ </span> 2,19,200</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+
+                            <div id="before_expand">
+                                <div class="aside-icon-block">
+                                    <div class="icon-block-caption">Guaranteed returns</div>
+                                    <div class="icon-block-value value-sm">₹ 3,49,600 </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <!-- main -->
+
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Custom jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/kotak-digital-ulip.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/dist/jquery.validate.js"></script>
+
+    <script>
+        var showAppointee = false;
+        var showcommunicationAddress = false;
+        var No2showcommunicationAddress = false;
+        var v14 = 1; //father
+        var v15 = 1; //mother
+
+        var v1 = 1;
+        var v2 = 1;
+        var v3 = 1;
+        var v4 = 0;
+        var v5 = 1;
+        var v6 = 0;
+        var v7 = 0;
+        var v8 = 0;
+        var v17 = 0;
+        var v18 = 0;
+
+        // for nominee 2 
+        var v9 = 1;
+        var v10 = 1;
+        var v11 = 1;
+        var v12 = 1;
+        var v13 = 1;
+        var nominee2added = 0;
+
+        var total = 100;
+        var first = 100;
+        var second = 0;
+
+        var v21 = 0;
+        var v22 = 0;
+        var showAppointeeAdd = false;
+        // var numOfNomineeBelow18 = 0;
+        var isNomineeAgeBelow18 = [false, false];
+
+        $(".proceedbtn").click(function() {
+            changeofinput();
+
+
+            if (isValid == true) {
+                window.location = "Health-Details.html";
+            } else {
+                // console.log(v7+"v7"+'  '+v8+"v8"+'  '+v17+"v17"+'  '+v18+"v18"+ '  '+v21+"v21"+'  '+v22+"v22" )
+                console.log(v14 + ' || v || ' +
+                    v15 + ' || v || ' +
+                    v1 + ' || v || ' +
+                    v2 + ' || v || ' +
+                    v3 + ' || v || ' +
+                    v4 + ' || v || ' +
+                    v5 + ' || v || ' +
+                    v6 + ' || v || ' +
+                    v7 + ' || v || ' +
+                    v8 + ' || v || ' +
+                    v17 + ' || v || ' +
+                    v18 + ' || v || ' +
+                    v9 + ' || v || ' +
+                    v10 + ' || v || ' +
+                    v11 + ' || v || ' +
+                    v12 + ' || v || ' +
+                    v13 + ' || v || ' +
+                    second + ' || v || ' +
+                    v21 + ' || v || ' +
+                    v22)
+                $('html, body').animate({
+                    scrollTop: ($('.errorInput').offset().top - 300)
+                }, 2000);
+            }
+
+
+            //     var number = $('#pincode').val();
+            //     var sign = number > 0 ? 1 : number == 0 ? 0 : -1; 
+            //     if(sign == 1){ 
+            //         $('#CommunicationAddress').prop('action', 'Verify-Application.html');
+            //     } else {
+            //         $('#CommunicationAddress').prop('action', 'Sorry.html');
+            //     }                
+        });
+
+        // $('#firstNominee').on('input', function () {
+
+        //     var value = $(this).val();
+
+        //     if ((value !== '') && (value.indexOf('.') === -1)) {
+        //         var validValue= Math.max(Math.min(value, total), 0);
+        //         console.log(validValue);
+
+        //         if(validValue+second>total)
+        //                 validValue = total-second;
+        //         first = validValue;    
+        //         $(this).val(validValue);
+        //         /* share = 100 - validValue; */
+        //     }
+        // });
+
+        // $('#secondNominee').on('input', function () {
+
+        //     var value = $(this).val();
+
+        //     if ((value !== '') && (value.indexOf('.') === -1)) {
+        //         var validValue= Math.max(Math.min(value, total), 0);
+        //         console.log(validValue);
+
+        //         if(validValue+first>total)
+        //                 validValue = total-first;
+        //         second = validValue;
+
+        //         $(this).val(validValue);
+        //     }
+        // });
+
+
+        $(document).ready(function() {
+            if ($('input[name$="father"]').val()) {
+                v14 = 0;
+            };
+            if ($('input[name$="mother"]').val()) {
+                v15 = 0;
+            };
+        });
+
+        $("input").on("keyup", function() {
+            var correct = $(this).siblings('p.error-msg');
+            $(this).removeClass("errorInput");
+            correct.removeClass('error-msg-1').css('display', 'none');
+        });
+
+
+        var isValid = true;
+
+        function changeofinput() {
+
+
+            console.log(isValid);
+            isValid = true;
+
+            if (v1 == 1) {
+                $('.name').addClass("errorInput");
+                $('.name_error_msg').addClass('error-msg-1').css('display', 'block');
+                v1 = 1;
+            } else {
+                v1 = 0;
+            }
+            if (v2 == 1) {
+                $('.relationship').addClass("errorInput");
+                $('.relationship_error_msg').addClass('error-msg-1').css('display', 'block');
+                v2 = 1;
+            } else {
+                v2 = 0;
+            }
+            if (v3 == 1) {
+                $('.dob').addClass("errorInput");
+                $('.dob_error_msg').addClass('error-msg-1').css('display', 'block');
+                v3 = 1;
+            } else {
+                v3 = 0;
+            }
+            if (v14 == 1) {
+                $('.father_text').addClass("errorInput");
+                $('.father_error_msg').addClass('error-msg-1').css('display', 'block');
+                v14 = 1;
+            } else {
+                v14 = 0;
+            }
+
+            if (v15 == 1) {
+                $('.mother_text').addClass("errorInput");
+                $('.mother_error_msg').addClass('error-msg-1').css('display', 'block');
+                v15 = 1;
+            } else {
+                v15 = 0;
+            }
+
+            if (first + second < 100) {
+                if (v11 == 1) {
+                    $('.share').addClass("errorInput");
+                    $('.share_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v11 = 1;
+                } else {
+                    v11 = 0;
+                }
+            }
+
+
+            if (nominee2added == 1) {
+                if (v9 == 1) {
+                    $('.n2name').addClass("errorInput");
+                    $('.n2name_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v9 = 1;
+                } else {
+                    v9 = 0;
+                }
+                if (v10 == 1) {
+                    $('.n2dob').addClass("errorInput");
+                    $('.n2dob_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v10 = 1;
+                } else {
+                    v10 = 0;
+                }
+
+                if (v17 == 1) {
+                    $('.No2address1').addClass("errorInput");
+                    $('.No2address1_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v17 = 1;
+                } else {
+                    v17 = 0;
+                }
+
+                if (v18 == 1) {
+                    $('.No2pincode').addClass("errorInput");
+                    $('.No2pincode_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v18 = 1;
+                } else {
+                    v18 = 0;
+                }
+
+                if (first + second < 100) {
+                    console.log("gjtjtjt" + v12)
+                    if (v12 == 1) {
+                        console.log("IF" + v12)
+                        $('.n2share').addClass("errorInput");
+                        $('.n2share_error_msg').addClass('error-msg-1').css('display', 'block');
+                        v12 = 1;
+                    } else {
+                        v12 = 0;
+                    }
+                }
+
+
+                if (v13 == 1) {
+                    $('.n2relationship').addClass("errorInput");
+                    $('.n2relationship_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v13 = 1;
+                } else {
+                    v13 = 0;
+                }
+            }
+
+
+            calculateShare();
+
+            if (showAppointee == true) {
+                if (v4 == 1) {
+                    $('.name1').addClass("errorInput");
+                    $('.name1_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v4 = 1;
+                    console.log("setting v4 1")
+                } else {
+                    console.log("setting v4 0")
+
+                    v4 = 0;
+                }
+                if (v5 == 1) {
+                    $('.relationship1').addClass("errorInput");
+                    $('.relationship1_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v5 = 1;
+                } else {
+                    v5 = 0;
+                }
+                if (v6 == 1) {
+                    $('.dob1').addClass("errorInput");
+                    $('.dob1_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v6 = 1;
+                } else {
+                    v6 = 0;
+                }
+
+                if (showAppointeeAdd == true) {
+                    if (v21 == 1) {
+                        $('.Appointeeaddress1').addClass("errorInput");
+                        $('.Appointeeaddress1_error_msg').addClass('error-msg-1').css('display', 'block');
+                        v21 = 1;
+                        console.log("setting v4 1")
+                    } else {
+                        console.log("setting v4 0")
+
+                        v21 = 0;
+                    }
+                    if (v22 == 1) {
+                        $('.Appointeepincode').addClass("errorInput");
+                        $('.Appointeepincode_error_msg').addClass('error-msg-1').css('display', 'block');
+                        v22 = 1;
+                    } else {
+                        v22 = 0;
+                    }
+
+                    if (v15 == 1 || v1 == 1 || v2 == 1 || v3 == 1 || v4 == 1 || v5 == 1 || v6 == 1 || v22 == 1) {
+                        isValid = false;
+                    } else {
+                        // isValid = false;
+                    }
+                }
+
+                if (nominee2added == 1) {
+                    // checkShareValue();
+
+                    if (v1 == 1 || v2 == 1 || v3 == 1 || v4 == 1 || v5 == 1 || v6 == 1 || v11 == 1 || v9 == 1 || v10 == 1 || v12 == 1 || v13 == 1) {
+                        console.log(isValid);
+                        isValid = false;
+                    } else {
+                        // console.log(isValid);  isValid = true;
+                    }
+                } else {
+                    if (v1 == 1 || v2 == 1 || v3 == 1 || v4 == 1 || v5 == 1 || v6 == 1 || v11 == 1) {
+                        console.log(isValid);
+                        isValid = false;
+                    } else {
+                        // console.log(isValid);  isValid = true;
+                    }
+                }
+            }
+            calculateShare();
+            if (showcommunicationAddress == true) {
+                if (v7 == 1) {
+                    $('.address1').addClass("errorInput");
+                    $('.address1_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v7 = 1;
+                } else {
+                    v7 = 0;
+                }
+                if (v8 == 1) {
+                    $('.pincode').addClass("errorInput");
+                    $('.pincode_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v8 = 1;
+                } else {
+                    v8 = 0;
+                }
+                // checkShareValue();
+                calculateShare();
+                if (nominee2added == 1) {
+
+
+                    if (v1 == 1 || v2 == 1 || v3 == 1 || v4 == 1 || v5 == 1 || v6 == 1) {
+                        console.log(v1 + "v1" + v2 + "v2" + v3 + "v3" + v4 + "v4" + v5 + "v5" + v6 + "v6")
+
+                        console.log(isValid);
+                        isValid = false;
+                    } else {
+                        // console.log(isValid);  isValid = true;
+                    }
+                } else {
+                    if (v1 == 1 || v2 == 1 || v3 == 1 || v4 == 1 || v5 == 1 || v6 == 1 || v7 == 1 || v8 == 1 || v11 == 1) {
+                        console.log(isValid);
+                        isValid = false;
+                    } else {
+                        // console.log(isValid);  isValid = true;
+                    }
+                }
+
+            } else {
+                calculateShare();
+                if (nominee2added == 1) {
+                    // calculateShare();
+                    // checkShareValue();
+                    if (v1 == 1 || v2 == 1 || v3 == 1 || v11 == 1 || v9 == 1 || v10 == 1 || v12 == 1 || v13 == 1) {
+                        console.log(isValid);
+                        isValid = false;
+                    } else {
+                        // console.log(isValid);  isValid = true;
+                    }
+                } else {
+                    if (v1 == 1 || v2 == 1 || v3 == 1 || v11 == 1) {
+                        console.log(isValid);
+                        isValid = false;
+                    } else {
+                        // console.log(isValid);  isValid = true;
+                    }
+                }
+            }
+
+            if (No2showcommunicationAddress == true) {
+                if (v17 == 1) {
+                    $('.No2address1').addClass("errorInput");
+                    $('.No2address1_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v17 = 1;
+                } else {
+                    v17 = 0;
+                }
+                if (v18 == 1) {
+                    $('.No2pincode').addClass("errorInput");
+                    $('.No2pincode_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v18 = 1;
+                } else {
+                    v18 = 0;
+                }
+                // checkShareValue();
+                calculateShare();
+                if (nominee2added == 1) {
+
+                    if (v1 == 1 || v2 == 1 || v3 == 1 || v4 == 1 || v5 == 1 || v6 == 1 || v7 == 1 || v8 == 1 || v11 == 1 || v9 == 1 || v10 == 1 || v12 == 1 || v13 == 1 || v17 == 1 || v18 == 1) {
+                        console.log(isValid);
+                        isValid = false;
+                    } else {
+                        // console.log(isValid);  isValid = true;
+                    }
+                } else {
+                    if (v1 == 1 || v2 == 1 || v3 == 1 || v4 == 1 || v5 == 1 || v6 == 1 || v17 == 1 || v18 == 1 || v11 == 1) {
+                        console.log(isValid);
+                        isValid = false;
+                    } else {
+                        // console.log(isValid);  isValid = true;
+                    }
+                }
+            }
+        }
+
+        // function checkShareValue(){
+        //     var shareValue = $('.share').val() + $('.n2share').val();
+        //     console.log(shareValue);
+        //     if (shareValue != 100) {
+        //         if (v11 == 1) {
+        //                 $('.share').addClass("errorInput");
+        //                 $('.share_error_msg').addClass('error-msg-1').css('display', 'block');
+        //                 v11 = 1;
+        //         }
+        //         else{
+        //             v11 = 0;
+        //         }
+        //         if (v12 == 1) {
+        //                 $('.n2share').addClass("errorInput");
+        //                 $('.n2share_error_msg').addClass('error-msg-1').css('display', 'block');
+        //                 v12 = 1;
+        //         }
+        //         else{
+        //             v12 = 0;
+        //         }
+        //     }
+        // }
+
+
+        $('.relationship').on("change", function() {
+            // console.log("in relationship");
+            var valofrel = $('.relationship').val();
+            if (valofrel == "") {
+                var error = $(this).siblings('p.error-msg');
+                $(this).addClass("errorInput");
+                error.addClass('error-msg-1').css('display', 'block');
+                v2 = 1;
+            } else {
+                var correct = $(this).siblings('p.error-msg');
+                $(this).removeClass("errorInput");
+                correct.removeClass('error-msg-1').css('display', 'none');
+                v2 = 0;
+                // if ($(this).val() == 'Father' || $(this).val() == 'Wife' || $(this).val() == 'Husband') {
+                //     $('.nominee_relation_box').addClass('db');
+                //     $('.nominee_mother_relation_box').addClass('dn');
+                //     $('.nominee_other_relation_box').addClass('dn');
+
+                //     $('.nominee_relation_box').removeClass('dn');
+                //     $('.nominee_mother_relation_box').removeClass('db');
+                //     $('.nominee_other_relation_box').removeClass('db');
+                // }
+                // else if ($(this).val() == 'Mother') {
+                //     $('.nominee_relation_box').addClass('dn');
+                //     $('.nominee_mother_relation_box').addClass('db');
+                //     $('.nominee_other_relation_box').addClass('dn');
+
+                //     $('.nominee_relation_box').removeClass('db');
+                //     $('.nominee_mother_relation_box').removeClass('dn');
+                //     $('.nominee_other_relation_box').removeClass('db');
+                // }
+                // else{
+                //     $('.nominee_relation_box').addClass('dn');
+                //     $('.nominee_mother_relation_box').addClass('dn');
+                //     $('.nominee_other_relation_box').addClass('db');
+
+                //     $('.nominee_relation_box').removeClass('db');
+                //     $('.nominee_mother_relation_box').removeClass('db');
+                //     $('.nominee_other_relation_box').removeClass('dn');
+                // }
+            }
+            // changeofinput();
+        });
+        $('.relationship1').on("change", function() {
+            // console.log("in relationship 1");
+            var valofrel1 = $(this).val();
+            if (valofrel1 == "") {
+                var error = $(this).siblings('p.error-msg');
+                $(this).addClass("errorInput");
+                error.addClass('error-msg-1').css('display', 'block');
+                v5 = 1;
+            } else {
+                var correct = $(this).siblings('p.error-msg');
+                $(this).removeClass("errorInput");
+                correct.removeClass('error-msg-1').css('display', 'none');
+                v5 = 0;
+            }
+            // changeofinput();
+
+        });
+        $('.n2relationship').on("change", function() {
+            // console.log("in relationship");
+            var valofrel = $('.n2relationship').val();
+            if (valofrel == "") {
+                var error = $(this).siblings('p.error-msg');
+                $(this).addClass("errorInput");
+                error.addClass('error-msg-1').css('display', 'block');
+                v13 = 1;
+            } else {
+                var correct = $(this).siblings('p.error-msg');
+                $(this).removeClass("errorInput");
+                correct.removeClass('error-msg-1').css('display', 'none');
+                v13 = 0;
+            }
+            // if ($(this).val() == 'Father' || $(this).val() == 'Wife' || $(this).val() == 'Husband') {
+            //         $('.nominee_relation_box1').addClass('db');
+            //         $('.nominee_mother_relation_box1').addClass('dn');
+            //         $('.nominee_other_relation_box1').addClass('dn');
+
+            //         $('.nominee_relation_box1').removeClass('dn');
+            //         $('.nominee_mother_relation_box1').removeClass('db');
+            //         $('.nominee_other_relation_box1').removeClass('db');
+            //     }
+            //     else if ($(this).val() == 'Mother') {
+            //         $('.nominee_relation_box1').addClass('dn');
+            //         $('.nominee_mother_relation_box1').addClass('db');
+            //         $('.nominee_other_relation_box1').addClass('dn');
+
+            //         $('.nominee_relation_box1').removeClass('db');
+            //         $('.nominee_mother_relation_box1').removeClass('dn');
+            //         $('.nominee_other_relation_box1').removeClass('db');
+            //     }
+            //     else{
+            //         $('.nominee_relation_box1').addClass('dn');
+            //         $('.nominee_mother_relation_box1').addClass('dn');
+            //         $('.nominee_other_relation_box1').addClass('db');
+
+            //         $('.nominee_relation_box1').removeClass('db');
+            //         $('.nominee_mother_relation_box1').removeClass('db');
+            //         $('.nominee_other_relation_box1').removeClass('dn');
+            //     }
+            // changeofinput();
+        });
+        $("input").on("blur", function() {
+
+            var valueofinput = $(this).val();
+
+            if ($(this).attr('name') == "father") {
+                // console.log(valueofinput);
+                if (validateName(valueofinput) == true) {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v14 = 0;
+                } else {
+                    var error = $(this).siblings('p.error-msg');
+                    // $(this).removeClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    $(this).addClass("errorInput");
+                    // $(this).css('border','1px solid red');
+                    v14 = 1;
+                }
+            }
+
+            if ($(this).attr('name') == "mother") {
+                // console.log(valueofinput);
+                if (validateName(valueofinput) == true) {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v15 = 0;
+                } else {
+                    var error = $(this).siblings('p.error-msg');
+                    // $(this).removeClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    $(this).addClass("errorInput");
+                    v15 = 1;
+                    // $(this).css('border','1px solid red');
+                }
+            }
+
+            if ($(this).attr('name') == "name") {
+                if (validateName(valueofinput) == false || valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v1 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v1 = 0;
+                }
+            }
+            if ($(this).attr('name') == "name1") {
+                if (validateName(valueofinput) == false || valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    console.log("setting v4 1")
+
+                    v4 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    console.log("setting v4 0")
+
+                    v4 = 0;
+                }
+            }
+            if ($(this).attr('name') == "n2name") {
+                if (validateName(valueofinput) == false || valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v9 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v9 = 0;
+                }
+            }
+            if ($(this).attr('name') == "dob1") {
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v6 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v6 = 0;
+                }
+            }
+            if ($(this).attr('name') == "n2dob") {
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v10 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v10 = 0;
+                }
+            }
+            if ($(this).attr('name') == "address1") {
+                // console.log("in address keyup");
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v7 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v7 = 0;
+                }
+                // console.log(v7);
+
+            }
+            if ($(this).attr('name') == "No2address1") {
+                // console.log("in address keyup");
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v17 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v17 = 0;
+                }
+                // console.log(v7);
+            }
+            if ($(this).attr('name') == "Appointeeaddress1") {
+                // console.log("in address keyup");
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v21 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v21 = 0;
+                }
+                // console.log(v7);
+            }
+            if ($(this).attr('name') == "Appointeepincode") {
+                if (validatePincode(valueofinput) == false || valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v22 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v22 = 0;
+                }
+            }
+
+            if ($(this).attr('name') == "pincode") {
+                if (validatePincode(valueofinput) == false || valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v8 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v8 = 0;
+                }
+            }
+
+            if ($(this).attr('name') == "No2pincode") {
+                if (validatePincode(valueofinput) == false || valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v18 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v18 = 0;
+                }
+            }
+            if ($(this).attr('name') == "share") {
+                // console.log("in address keyup");
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v11 = 1;
+                } else {
+                    if (nominee2added == 0) {
+                        var correct = $(this).siblings('p.error-msg');
+                        $(this).removeClass("errorInput");
+                        correct.removeClass('error-msg-1').css('display', 'none');
+                        v11 = 0;
+                    } else {
+                        // if ($(this).val() < 100) {
+                        //     var error = $(this).siblings('p.error-msg');
+                        //     $(this).addClass("errorInput");
+                        //     error.addClass('error-msg-1').css('display', 'block');
+                        //     v11 = 1;
+                        // }
+                        // else{
+                        //     var correct = $(this).siblings('p.error-msg');
+                        //     $(this).removeClass("errorInput");
+                        //     correct.removeClass('error-msg-1').css('display', 'none');
+                        //     v11 = 0;
+                        // }
+                    }
+                }
+                // console.log(v7);
+                calculateShare();
+
+            }
+            if ($(this).attr('name') == "n2share") {
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v12 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v12 = 0;
+                }
+                calculateShare();
+            }
+            // changeofinput();
+
+        });
+
+
+        $(function() {
+            $('#checkLifeInsured').change(function() {
+                if ($(this).is(':checked')) {
+                    showcommunicationAddress = false;
+                    $('.isInsured').css('display', 'none');
+
+                } else {
+                    showcommunicationAddress = true;
+                    $('.isInsured').css('display', 'flex');
+                    // $('.proceedbtn').prop('disabled', true);
+                    if ($('.address1').val() == "") {
+                        console.log(isValid);
+                        isValid = false;
+                        v7 = 1;
+                        // $('.proceedbtn').prop('disabled', true);
+                    }
+                    if ($('.pincode').val() == "") {
+                        console.log(isValid);
+                        isValid = false;
+                        v8 = 1;
+                        // $('.proceedbtn').prop('disabled', true);
+                    }
+                }
+                // changeofinput();
+            });
+
+            $('.No2isInsured').css('display', 'none');
+            $('#No2checkLifeInsured').change(function() {
+                if ($(this).is(':checked')) {
+                    No2showcommunicationAddress = false;
+                    $('.No2isInsured').css('display', 'none');
+
+                } else {
+                    $('.No2isInsured').css('display', 'flex');
+                    No2showcommunicationAddress = true;
+                    if ($('.No2address1').val() == "") {
+                        v17 = 1;
+                    }
+                    if ($('.No2pincode').val() == "") {
+                        v18 = 1;
+                    }
+                }
+            });
+
+            $('.appointeeAdd').css('display', 'none');
+            $('#addSameAppointee').change(function() {
+                if ($(this).is(':checked')) {
+                    v21 = 0;
+                    v22 = 0;
+                    showAppointeeAdd = false;
+                    $('.appointeeAdd').css('display', 'none');
+
+                } else {
+                    v21 = 1;
+                    v22 = 1;
+                    isValid = false;
+                    showAppointeeAdd = true;
+                    $('.appointeeAdd').css('display', 'flex');
+                }
+            });
+
+            $('.dob1').on('change', function() {
+                if ($('.dob1').val() == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v6 = 1;
+                } else {
+                    if (getAge((this)) < 18) {
+                        console.log("2");
+                        var error = $(this).siblings('p.error-msg');
+                        $(this).addClass("errorInput");
+                        error.addClass('error-msg-1').css('display', 'block');
+                        $(".dob_check").html("Appointee DOB should not be less than 18 years");
+                        v6 = 1;
+                    } else {
+
+                        var correct = $(this).siblings('p.error-msg');
+                        $(this).removeClass("errorInput");
+                        correct.removeClass('error-msg-1').css('display', 'none');
+                        v6 = 0;
+                    }
+                }
+                // changeofinput();
+
+            });
+            $('.n2dob').on('change', function() {
+                if ($('.n2dob').val() == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v10 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v10 = 0;
+                }
+                // changeofinput();
+
+            });
+            $('.commAddAppointee').css('display', 'none');
+            $('.appointeeAdd').css('display', 'none');
+
+            $('.dob').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                showAnim: 'slideDown',
+                yearRange: '1945:' + (new Date).getFullYear(),
+                dateFormat: 'dd/mm/yy',
+                showOn: 'focus',
+                altFormat: "mm/dd/yy",
+                maxDate: 0,
+
+                beforeShow: function(input, inst) {
+                    $(document).off('focusin.bs.modal');
+                },
+                onClose: function() {
+                    $(document).on('focusin.bs.modal');
+                }
+            }).on('change', function() {
+                var age = getAge(this);
+                if (age < 18) {
+                    isNomineeAgeBelow18[0] = true;
+                    $('.isAppointee').css('display', 'flex');
+                    $('.commAddAppointee').css('display', 'flex');
+                    $('#tagAppointeeAdd').html('Same as nominee 1 communication address');
+
+
+                    showAppointee = true;
+                    if ($('.name1').val() == "") {
+                        console.log(isValid);
+                        isValid = false;
+                        v4 = 1;
+                        console.log("setting v4 1")
+
+                        // $('.proceedbtn').prop('disabled', true);
+                    }
+                    if ($('.relationship1').val() == "") {
+                        console.log(isValid);
+                        isValid = false;
+                        v5 = 1;
+                        // $('.proceedbtn').prop('disabled', true);
+                    }
+                    if ($('.dob1').val() == "") {
+                        console.log(isValid);
+                        isValid = false;
+                        v6 = 1;
+                        // $('.proceedbtn').prop('disabled', true);
+                    }
+                } else {
+                    isNomineeAgeBelow18[0] = false;
+                    //03/15/2022
+                    if (!isNomineeAgeBelow18[0] && !$('.nominee2:checkbox').is(':checked')) {
+                        $('.isAppointee').css('display', 'none');
+                        $('.commAddAppointee').css('display', 'none');
+                    }
+                    //03/15/2022 end
+                    if (!isNomineeAgeBelow18[0] && !isNomineeAgeBelow18[1]) {
+                        $('.isAppointee').css('display', 'none');
+                        $('.commAddAppointee').css('display', 'none');
+                    }
+                    if (!isNomineeAgeBelow18[0] && isNomineeAgeBelow18[1]) {
+                        $('#tagAppointeeAdd').html('Same as nominee 2 communication address');
+                    }
+                    // else {
+                    //     $('.isAppointee').css('display', 'block');
+                    //     $('.commAddAppointee').css('display', 'block');
+                    // }                  
+
+                    v4 = 0;
+                    v5 = 0;
+                    v6 = 0;
+                    showAppointee = false;
+                }
+
+
+                if ($('.dob').val() == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v3 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v3 = 0;
+                }
+                // changeofinput();
+
+            }).on('focus', function() {
+                $(this).mask('99/99/9999');
+            });;
+
+
+            $('.n2dob').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                showAnim: 'slideDown',
+                yearRange: '1945:' + (new Date).getFullYear(),
+                dateFormat: 'dd/mm/yy',
+                showOn: 'focus',
+                altFormat: "mm/dd/yy",
+                maxDate: 0,
+
+                beforeShow: function(input, inst) {
+                    $(document).off('focusin.bs.modal');
+                },
+                onClose: function() {
+                    $(document).on('focusin.bs.modal');
+                }
+            }).on('change', function() {
+                var age = getAge(this);
+                if (age < 18) {
+                    isNomineeAgeBelow18[1] = true;
+                    $('.isAppointee').css('display', 'flex');
+                    $('.commAddAppointee').css('display', 'flex');
+
+                    $('.isAppointee').css('display', 'flex');
+                    $('.commAddAppointee').css('display', 'flex');
+                    $('#tagAppointeeAdd').html('Same as nominee 2 communication address');
+                    if (isNomineeAgeBelow18[0] && isNomineeAgeBelow18[1]) {
+                        $('#tagAppointeeAdd').html('Same as nominee 1 communication address');
+                    }
+                    showAppointee = true;
+                    if ($('.name1').val() == "") {
+                        console.log(isValid);
+                        isValid = false;
+                        v4 = 1;
+                        console.log("setting v4 1")
+
+                        // $('.proceedbtn').prop('disabled', true);
+                    }
+                    if ($('.relationship1').val() == "") {
+                        console.log(isValid);
+                        isValid = false;
+                        v5 = 1;
+                        // $('.proceedbtn').prop('disabled', true);
+                    }
+                    if ($('.dob1').val() == "") {
+                        console.log(isValid);
+                        isValid = false;
+                        v6 = 1;
+                        // $('.proceedbtn').prop('disabled', true);
+                    }
+                } else {
+                    isNomineeAgeBelow18[1] = false;
+                    if (!isNomineeAgeBelow18[0] && !isNomineeAgeBelow18[1]) {
+                        $('.isAppointee').css('display', 'none');
+                        $('.commAddAppointee').css('display', 'none');
+                    }
+                    // else {
+                    //     $('.isAppointee').css('display', 'block');
+                    //     $('.commAddAppointee').css('display', 'block');
+                    // }
+                    showAppointee = false;
+                    v4 = 0;
+                    v5 = 0;
+                    v6 = 0;
+                }
+
+
+            }).on('focus', function() {
+                $(this).mask('99/99/9999');
+            });;
+
+        });
+
+        $('.No2communication').css('display', 'none');
+        $('.No2isInsured').css('display', 'none');
+        $('.nominee2').click(function() {
+            if (!this.checked) {
+                $('.n2dob').val('');
+                var blanckCal = $('.n2dob').val();
+                //03/15/2022
+                if (!blanckCal && !isNomineeAgeBelow18[0]) {
+                    //03/15/2022 end
+                    isNomineeAgeBelow18[1] = false;
+                    $('.isAppointee').css('display', 'none');
+                    $('.commAddAppointee').css('display', 'none');
+                }
+            }
+        })
+        $('.nominee2').on('change', function(e) {
+            if (e.target.checked) {
+                nominee2added = 1;
+                $('#form12').addClass('db');
+                $('#form12').removeClass('dn');
+                $('.No2communication').css('display', 'block');
+                $('.No2isInsured').css('display', 'none');
+                $('.share').prop('disabled', false);
+                $('.share').val('50');
+                $('.n2share').val('50');
+
+
+                if ($('.No2address1').val() == "") {
+                    v17 = 1;
+                } else {
+                    v17 = 0;
+                }
+                if ($('.No2pincode').val() == "") {
+                    v18 = 1;
+                } else {
+                    v18 = 0;
+                }
+            } else {
+                nominee2added = 0;
+                $('#form12').addClass('dn');
+                $('#form12').removeClass('db');
+                $('.No2communication').css('display', 'none');
+                $('.No2isInsured').css('display', 'none');
+                $('.share').prop('disabled', true);
+                $('.share').val('100');
+
+                v17 = 0;
+                v18 = 0;
+            }
+        });
+
+
+        function calculateShare() {
+
+            if ($('.share').val().length > 2) {
+                $('.share').val($('.share').val().slice(0, 2));
+            }
+            if ($('.n2share').val().length > 2) {
+                $('.n2share').val($('.n2share').val().slice(0, 2));
+            }
+            if (nominee2added == 0) {
+                $('.share').val('100');
+            }
+            var a = $('.share').val();
+            // console.log(a);
+
+            var b = $('.n2share').val();
+            if (a == '') {
+                a = 0;
+            }
+            if (b == '') {
+                b = 0;
+            }
+            $('.n2share').val(100 - parseInt(a));
+
+            if (nominee2added == 0) {
+                var correct = $('.share').siblings('p.error-msg');
+                $('.share').removeClass("errorInput");
+                correct.removeClass('error-msg-1').css('display', 'none');
+                v11 = 0;
+                if (parseInt(a) != 100) {
+                    var error = $('.share').siblings('p.error-msg');
+                    $('.share').addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v11 = 1;
+                } else {
+                    var correct = $('.share').siblings('p.error-msg');
+                    $('.share').removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v11 = 0;
+                }
+
+            } else {
+                var shareValue = parseInt(a) + parseInt(b);
+                console.log(shareValue);
+                if (shareValue != 100) {
+                    if (v11 == 1) {
+                        $('.share').addClass("errorInput");
+                        $('.share_error_msg').addClass('error-msg-1').css('display', 'block');
+                        v11 = 1;
+                    } else {
+                        v11 = 0;
+                    }
+                    if (v12 == 1) {
+                        $('.n2share').addClass("errorInput");
+                        $('.n2share_error_msg').addClass('error-msg-1').css('display', 'block');
+                        v12 = 1;
+                    } else {
+                        v12 = 0;
+                    }
+                } else {
+                    $('.share').removeClass("errorInput");
+                    $('.share_error_msg').removeClass('error-msg-1').css('display', 'none');
+                    $('.n2share').removeClass("errorInput");
+                    $('.n2share_error_msg').removeClass('error-msg-1').css('display', 'none');
+
+                    if (parseInt(a) == 0 || parseInt(b) == 0) {
+                        if (parseInt(a) == 0) {
+                            var error = $('.share').siblings('p.share_error_msg_1');
+                            $('.share').addClass("errorInput");
+                            error.addClass('error-msg-1').css('display', 'block');
+                            v11 = 1;
+                        }
+                        if (parseInt(b) == 0) {
+                            var error = $('.share').siblings('p.n2share_error_msg_1');
+                            $('.n2share').addClass("errorInput");
+                            error.addClass('error-msg-1').css('display', 'block');
+                            v12 = 1;
+                        }
+
+                    } else {
+                        v11 = 0;
+                        v12 = 0;
+                    }
+                }
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

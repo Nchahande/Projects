@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+    <title>Annuity</title>
+
+    <!--google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--fontawesome fonts -->
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css?ver=5.4.1" rel="stylesheet" />
+
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/annuity.css">
+    <link rel="stylesheet" href="css/annuity-form-elements.css">
+
+
+</head>
+
+<body>
+
+    <div class="loader__container">
+        <div class="loader"></div>
+    </div>
+    <!--/.loader__container-->
+
+    <header>
+        <div class="kotak__grid">
+            <div class="inner__container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-5">
+                            <div class="logo">
+
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-7 align-self-center">
+                            <div class="header_right_block">
+                                <a href="#">Resume</a>
+                                <a href="#"><img src="img/common/download-header-icon.svg" class="img-fluid"> Download
+                                    Brochure</a>
+                                <a href="#"><img src="img/common/mail-header-icon.svg" class="img-fluid"> Email
+                                    Quote</a>
+                                <a href="#">Contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /header -->
+
+    <main id="main">
+        <div class="kotak__grid">
+            <div class="inner__container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="annuity__stepper mb-5">
+                                <div class="stepper_items completed">
+                                    <div class="step_item">1</div>
+                                    <div class="step_caption">Get Started</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items">
+                                    <div class="step_item">2</div>
+                                    <div class="step_caption">Personal Information</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items">
+                                    <div class="step_item">3</div>
+                                    <div class="step_caption">Nominee Details</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items">
+                                    <div class="step_item">4</div>
+                                    <div class="step_caption">Payout Information</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items">
+                                    <div class="step_item">5</div>
+                                    <div class="step_caption">Document Upload</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="form__field__caption">
+                                My Communication address would be same as
+                            </div>
+                            <div class="radio__group mb-3">
+                                <label class="radio__container">
+                                    <input class="" type="radio" name="address" value="1" data-form="form_5">
+                                    <span class="checkmark"></span>
+                                    <span class="caption">Current Address</span>
+                                </label>
+
+                                <label class="radio__container">
+                                    <input class="" type="radio" name="address" value="2" data-form="form_5">
+                                    <span class="checkmark"></span>
+                                    <span class="caption">Permanent Address</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <label class="annuity_switch">
+                                <input type="checkbox">
+                                <span class="annuity_slider round"></span>
+                                <span class="annuity_switch_label"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form__field__caption">
+                                Spouse Address
+                            </div>
+                            <div class="radio__group mb-3">
+                                <label class="checkbox__container">
+                                    <input type="checkbox" name="mtd">
+                                    <span class="checkmark"></span>
+                                    <span class="caption">Address same as current address</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="form__field__caption">
+                                Name
+                            </div>
+                            <div class="form_field mb-3">
+                                <input type="text" name="name" placeholder="Name" />
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="form__field__caption">
+                                Name
+                            </div>
+                            <div class="form_field mb-3">
+                                <input type="text" class="annuity-error" name="name" placeholder="Name" value="Error" />
+                                <small>Please fill the name</small>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="form__field__caption">
+                                My Date of birth
+                            </div>
+                            <div class="form_field datepicker_container mb-3">
+                                <input type="text" name="dob" id="simpleDOB" placeholder="DD/MM/YYYY"
+                                    class="datepicker-field" />
+                                <div class="calendar-icon"></div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="form__field__caption">
+                                Marital Status
+                            </div>
+                            <div class="form_field mb-3">
+                                <select>
+                                    <option value="0" selected="" disabled="">Select Marital Status</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="form__field__caption">
+                                Marital Status
+                            </div>
+                            <div class="form_field mb-3">
+                                <select disabled>
+                                    <option value="0" selected="" disabled="">Select Marital Status</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <button type="button" class="btn_annuity btn_red btn_full text-uppercase">View
+                                Plans</button>
+                        </div>
+
+                        <div class="col-xl-6">
+                            <button type="button" class="btn_annuity btn_blue">View Plans</button>
+                            <button type="button" class="btn_annuity btn_blue_outline">Proceed</button>
+                            <button type="button" class="btn_annuity btn_blue" data-toggle="modal"
+                                data-target="#exampleModalCenter">
+                                Launch demo modal
+                            </button><br />
+
+                            <a href="#" class="link_back">Back</a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="annuity_list">
+                                <ul>
+                                    <li class="tick-red">Earn income without having financial worries post retirement
+                                    </li>
+
+                                    <li class="tick-red">Pay once and get regular income for life</li>
+
+                                    <li class="tick-red">Secure your spouse financial needs, after you</li>
+
+                                    <li class="tick-red">Option to return investment amount to nominee after you</li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="annuity_order_list">
+                                <ol>
+                                    <li>Submit your NPS exit/withdrawal form at NSDL website - visit www.nsdl.com
+                                    </li>
+
+                                    <li>Select Kotak Life as your Pension Service Provider</li>
+
+                                    <li>Our representatives will reach out to you. Your Permanent Retirement A/c number
+                                        (PRAN) will come in handy here</li>
+
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="annuity_list">
+                                <ul>
+                                    <li class="tick-black">You earn pension for life</li>
+
+                                    <li class="tick-black">Cashback to Nominee, i.e., in case of death, lumpsum amount
+                                        will be returned to your nominee</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <p class="annuity_note annuity_info">Do you want to use your NPS funds to buy pension plan?
+                                <img src="img/common/info-icon.svg" class="img-fluid annuity-poovers"
+                                    data-toggle="popover-click"
+                                    data-content="National Pension scheme (NPS) is a government -sponsored Pension scheme which allows you to save for retirement post which you can choose to invest 40% of your NPS income into a pension plan which provides regular income for lifetime">
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <p class="annuity_note annuity_danger"><img src="img/common/info-danger-icon.svg"
+                                    class="img-fluid">You will be
+                                required to provide a cancelled cheque to furnish your details</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- /main -->
+
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-close">
+                        <img src="img/common/close-icon.svg" class="img-fluid" data-dismiss="modal" aria-label="Close">
+                    </div>
+                    <div class="annuity-modal-container">
+                        <div class="annuity-modal-row">
+                            <h5>Are you an existing pension policy holder?</h5>
+                            <p>Also applicable for nominee of deceased KLI person policy holder</p>
+                        </div>
+                        <div class="annuity-modal-row">
+                            <label class="annuity_switch">
+                                <input type="checkbox">
+                                <span class="annuity_slider round"></span>
+                                <span class="annuity_switch_label"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="annuity-modal-row mt-5 text-center">
+                        <button type="button" class="btn_annuity btn_red text-uppercase">APPLY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editPlanModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-close">
+                        <img src="img/common/close-icon.svg" class="img-fluid" data-dismiss="modal" aria-label="Close">
+                    </div>
+                    <div class="annuity-modal-container modal_small_middle">
+                        <div class="annuity-modal-row text-center mb-4">
+                            <h5>Edit Details</h5>
+                        </div>
+                        <div class="annuity-modal-row">
+                            <div class="form__row">
+                                <div class="form__field__caption">
+                                    My DOB
+                                </div>
+                                <div class="form_field datepicker_container mb-1">
+                                    <input type="text" name="dob" id="myDOB" placeholder="DD/MM/YYYY" autocomplete="off"
+                                        readonly class="datepicker-field">
+                                    <div class="calendar-icon"></div>
+                                </div>
+                                <p class="selected-years"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="annuity-modal-row mt-3 text-center">
+                        <button type="button" class="btn_annuity btn_red text-uppercase" data-dismiss="modal"
+                            aria-label="Close" id="applySpouseAge">APPLY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- edit -->
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+
+    <!-- custom script -->
+    <script src="js/annuity.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            $('#myDOB, #simpleDOB').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                showAnim: 'slideDown',
+                yearRange: '1945:' + (new Date).getFullYear(),
+                dateFormat: 'dd/mm/yy',
+                beforeShow: function (input, inst) {
+                    $(document).off('focusin.bs.modal');
+                },
+                onClose: function () {
+                    $(document).on('focusin.bs.modal');
+                }
+            }).on('change', function () {
+                var age = getAge(this);
+                $('.selected-years').html(age + ' years');
+            });
+
+            $('.annuity-poovers').popover({
+                html: true,
+                trigger: 'click',
+                placement: 'top',
+                content: function () {
+                    return '<p>' + $(this).data('content') + '</p>';
+                }
+            });
+            /* $('body').on('click', '.annuity-poovers', function () {
+                $('.annuity-poovers').popover('hide')
+            }); */
+
+            $('#editPlanModal').modal('show');
+
+            $("body").delegate("#editPlanModal", "focusin", function () {
+                $(this).datepicker();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

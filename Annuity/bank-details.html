@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width,
+    initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' />
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+    <title>Annuity</title>
+
+    <!--google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!--fontawesome fonts -->
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css?ver=5.4.1" rel="stylesheet" />
+
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/annuity.css">
+    <link rel="stylesheet" href="css/annuity-form-elements.css">
+
+    <style>
+        html,
+        body {
+            background-color: #F4F6FA;
+        }
+
+        .annuity__stepper {
+            display: none;
+        }
+
+        .popover .popover-body {
+            min-width: 180px;
+        }
+
+        .bs-popover-top>.arrow::after {
+            border-top-color: #003366;
+        }
+        header a.resume {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="loader__container">
+        <div class="loader"></div>
+    </div>
+    <!--/.loader__container-->
+
+    <header>
+        <!-- <div class="kotak__grid">
+            <div class="inner__container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-5">
+                            <div class="logo">
+                                <a href="./">
+                                    <img src="img/common/kotak-logo.png" class="img-fluid" alt="Kotak Life Insurance Logo" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-7 align-self-center">
+                            <div class="header_right_block">
+                                <a href="#">Contact us</a>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Need Help</a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <p>Our experts are here to help you</p>
+                                        <div class="dropdown_row">
+                                        <div class="dropdown_col">
+                                            Customer Care
+                                        </div>
+                                        <div class="dropdown_col text-right">
+                                            <a href="tel:1800 209 8800">1800 209 8800</a>
+                                        </div>
+                                        </div>
+                                        <div class="dropdown_row m-0 pb-0">
+                                        <div class="dropdown_col">
+                                            Email
+                                        </div>
+                                        <div class="dropdown_col text-right col_lg">
+                                            <a href="mailto:kli.einsurance@kotak.com">kli.einsurance@kotak.com</a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </header>
+    <!-- /header -->
+
+    <main id="main">
+        <div class="kotak__grid">
+            <div class="inner__container">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="annuity__stepper stepper_nps">
+                                <div class="stepper_items completed">
+                                    <div class="step_item">1</div>
+                                    <div class="step_caption">Get Started</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items completed">
+                                    <div class="step_item">2</div>
+                                    <div class="step_caption">Personal Information</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items completed">
+                                    <div class="step_item">3</div>
+                                    <div class="step_caption">Nominee Details</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items inprogress">
+                                    <div class="step_item">4</div>
+                                    <div class="step_caption">Payout Information</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items">
+                                    <div class="step_item">5</div>
+                                    <div class="step_caption">Document Upload</div>
+                                </div>
+                            </div>
+                            <div class="annuity__stepper stepper_lti">
+                                <div class="stepper_items completed">
+                                    <div class="step_item">1</div>
+                                    <div class="step_caption">Personal Information</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items completed">
+                                    <div class="step_item">2</div>
+                                    <div class="step_caption">Nominee Details</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items inprogress">
+                                    <div class="step_item">3</div>
+                                    <div class="step_caption">Payout Information</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items">
+                                    <div class="step_item">4</div>
+                                    <div class="step_caption">Payment Details</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items">
+                                    <div class="step_item">5</div>
+                                    <div class="step_caption">Document Upload</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-8 col-12">
+                            <div class="pran__details__container" id="bank_details_verify">
+                                <p class="mb-1 d-xl-none d-lg-none d-block">Your Quotation ID - OT125780</p>
+                                <h2 class="mb-4">Bank Details... Here’s where we will deposit your pension payments</h2>
+
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-12 d-xl-none d-lg-none d-block">
+                                        <div class="form__row">
+                                            <div class="form__field__caption">
+                                                Select Account Type
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <button type="button" class="btn_annuity btn_blue_outline btn_blue_outline_sm active mr-1 mb-2 accountType" data-value="0">Savings A/C</button>
+                                                <button type="button" class="btn_annuity btn_blue_outline btn_blue_outline_sm accountType" data-value="1">Current A/C</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption">
+                                                Account Number
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="" value="KL090909090">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption">
+                                                IFSC Code
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="" value="IFSC0008277">
+                                                <p class="bank_name">Kotak Bank, Worli Branch</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption">
+                                                Name of A/C holder (as per bank records)
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="" value="Mahesh Jagtap">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 d-xl-block d-lg-block d-none">
+                                        <div class="form__row">
+                                            <div class="form__field__caption">
+                                                Select Account Type
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <button type="button" class="btn_annuity btn_blue_outline btn_blue_outline_sm active mr-1 accountType" data-value="0">Savings A/C</button>
+                                                <button type="button" class="btn_annuity btn_blue_outline btn_blue_outline_sm accountType" data-value="1">Current A/C</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-4 align-self-center">
+                                        <a href="nominee-details.html" class="link_back">Back</a>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-8 text-right align-self-center">
+                                        <button type="button" class="btn_annuity btn_blue_outline verify_bank text-uppercase">Proceed</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pran__details__container" id="bank_details_verified">
+                                <p class="mb-1 d-xl-none d-lg-none d-block">Your Quotation ID - OT125780</p>
+                                <h2 class="mb-4">Your Account has been verified</h2>
+
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label-grey">
+                                                Account Number
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values verified-icon">KL090909090</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label-grey">
+                                                IFSC Code
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">IFSC0008277</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label-grey">
+                                                Bank Name and Bank Branch
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">Kotak Bank, Goregaon Branch</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label-grey">
+                                                Name of A/C holder
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">Mahesh Jagtap</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption">
+                                                Account type
+                                            </div>
+                                            <div class="radio__group mobile_group">
+                                                <label class="radio__container radio_tick">
+                                                    <input type="radio" class="is_myaccount" name="myAccount" value="1">
+                                                    <span class="checkmark"></span>
+                                                    <span class="caption">This is my account</span>
+                                                </label>
+
+                                                <label class="radio__container radio_tick">
+                                                    <input type="radio" class="is_myaccount" name="myAccount" value="0">
+                                                    <span class="checkmark"></span>
+                                                    <span class="caption">This is not my account</span>
+                                                </label>
+                                            </div>
+
+                                            <div class="form__field__caption" id="notMyAccount">
+                                                <p class="annuity_note annuity_danger"><img src="img/common/info-danger-icon.svg" class="img-fluid">You will
+                                                    be
+                                                    required to provide a cancelled cheque to furnish your details</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-4 align-self-center">
+                                        <a href="nominee-details.html" class="link_back">Back</a>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-8 text-right align-self-center">
+                                        <button type="button" class="btn_annuity btn_blue_outline btn_proceed text-uppercase">Proceed</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 d-xl-block d-lg-block d-none">
+                            <div class="pran__details__aside">
+                                <div class="pran_aside_row">
+                                    <div class="pran_aside_row_amount">
+                                        <span>Your Quotation ID</span>
+                                        <p>OT125780</p>
+                                    </div>
+                                </div>
+
+                                <div class="pran_aside_row">
+                                    <p>You selected to get pension for yourself till life and cashback for nominee</p>
+                                </div>
+
+                                <div class="pran_aside_row">
+                                    <div class="pran_aside_row_amount">
+                                        <span>You Pay</span><img src="img/common/info-icon.svg" class="annuity-popOvers ml-2" data-toggle="popover-click" data-content="Amount of single premium" data-original-title="" title="">
+                                        <p><i class="fa fa-inr" aria-hidden="true"></i> 5,00,000 + <i class="fa fa-inr" aria-hidden="true"></i> 0 (Tax)</p>
+                                    </div>
+                                    <div class="pran_aside_row_amount">
+                                        <span>Total amount of single premium to be paid (incl of taxes)</span>
+                                        <p><i class="fa fa-inr" aria-hidden="true"></i> 5,00,000</p>
+                                    </div>
+                                    <div class="pran_aside_row_amount">
+                                        <span>Pension Amount</span>
+                                        <p><i class="fa fa-inr" aria-hidden="true"></i> 2,500 <span style="color: #000 !important;">/month</span></p>
+                                    </div>
+                                </div>
+
+                                <div class="pran_aside_row">
+                                    <div class="pran_aside_row_amount">
+                                        <span>Best Feature</span>
+                                        <div class="annuity_list">
+                                            <ul>
+                                                <li class="tick-black tick-black-small w-100">Return of investment
+                                                    amount of
+                                                    <i class="fa fa-inr" aria-hidden="true"></i> 500000 to nominee on
+                                                    death of pension holder</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- /main -->
+
+
+    <div class="modal fade" id="verifyBankDetailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="email_quote_container">
+                        <form id="emailQuote">
+                            <div class="annuity-modal-container modal_small_middle">
+                                <div class="annuity-modal-row text-center">
+                                    <img src="img/common/bank-icon.svg" class="mg-fluid mx-auto d-block mb-3 mt-2">
+                                    <h5 class="mb-3">Verifying your Bank A/C</h5>
+                                    <p class="modal-notify">We’ll credit Rs.1.00 to verify your account</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="annuity-modal-row mt-3 text-center" id="mail_message">
+                        <img src="img/common/tick-green-circle.svg" class="img-fluid mx-auto d-block mb-3">
+                        <h5>Email Sent</h5>
+                        <p>Your quote has been emailed to you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- existing plan -->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+
+    <!-- custom script -->
+    <script src="js/annuity.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.annuity-popOvers').popover({
+                html: true,
+                trigger: 'click',
+                placement: 'top',
+                content: function() {
+                    return '<p>' + $(this).data('content') + '</p>';
+                }
+            });
+
+            var plan = localStorage.getItem('plan');
+            $('.stepper_' + plan).css('display', 'flex');
+
+            $('.accountType').click(function() {
+                accountType = $(this).data('value');
+                $('.accountType').removeClass('active');
+                $(this).addClass('active');
+            });
+            $('.verify_bank').click(function() {
+                $('#verifyBankDetailsModal').modal({
+                    backdrop: 'static',
+                    show: true,
+                    keyboard: false
+                });
+                setTimeout(function() {
+                    verifyBank();
+                }, 1500);
+            });
+            $('.is_myaccount').click(function() {
+                if ($(this).val() == 0) {
+                    $('#notMyAccount').css('display', 'block');
+                } else {
+                    $('#notMyAccount').css('display', 'none');
+                }
+            });
+
+            $('.btn_proceed').click(function() {
+                location.href = 'review-details.html';
+            });
+        });
+
+        function verifyBank() {
+            $('#bank_details_verify').css('display', 'none');
+            $('#bank_details_verified').css('display', 'block');
+            $('#verifyBankDetailsModal').modal('hide');
+        }
+
+    </script>
+
+
+</body>
+
+</html>

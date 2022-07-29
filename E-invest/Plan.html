@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Roboto Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/kotak-ulip.css" />
+    <link rel="stylesheet" href="css/other.css">
+
+    <title>Digital Ulip</title>
+</head>
+
+<body>
+
+    <header></header>
+    <!-- header -->
+
+
+    <main class="bgs-white" style="overflow: hidden;">
+        <div class="center_grid">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-12">
+                        <div class="invest_container">
+                            <!-- <h5>Investment details</h5> -->
+
+                            <label>You are investing for</label>
+                            <!-- <h5><strong>You are investing for</strong></h5> -->
+                            <div class="field_row row pl-3 ">
+                                <!-- -->
+                                <div class="mr-2"><button type="button" class="kotak-btn kotak-btn-sm kotak-btn-secondary visit-link active wealth_creation" data-url="Maximizer">Wealth creation</button></div>
+
+                                <div class="mr-2"><button type="button" class="kotak-btn kotak-btn-sm kotak-btn-secondary visit-link" data-url="Retire-Rich">Retire rich</button></div>
+
+                                <div class="mr-2"><button type="button" class="rising-star1 kotak-btn kotak-btn-sm kotak-btn-secondary visit-link" data-url="Rising-Star">Secure your child’s future</button></div>
+
+
+                            </div>
+                            <div class="field_row dd-control">
+                                <label>Investment amount <span class="tooltip"><img src="img/tooltip.svg"><span class="tooltiptext">Amount you will invest in this plan</span></span></label>
+                                <input type="text" class="investmentAmount" id="annualincome" placeholder="Enter investment amount" value="5,000" />
+                                <p class="error-msg">Please enter your investment amount</p>
+                                <div class="dropdown_container">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Monthly
+                                  </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item customDD" href="#" data-value="Annually">Annually</a>
+                                            <a class="dropdown-item customDD" href="#" data-value="Monthly">Monthly</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="monthly_description custom_monthly_desc">2 months investment amount to be collected upfront for monthly mode policies.</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="field_row col-6 col-lg-6">
+                                    <label>Policy term <span class="tooltip"><img src="img/tooltip.svg"><span class="tooltiptext">Period for which your insurance cover is active or valid</span></span></label>
+                                    <select>
+                                        <option value="0">20 years</option>
+                                        <option value="0">30 years</option>
+                                        <option value="0">40 years</option>
+                                        <option value="0">50 years</option>
+                                    </select>
+                                    <p class="error-msg">This is an error message.</p>
+                                </div>
+                                <div class="field_row col-6 col-lg-6">
+                                    <label>Pay for <span class="tooltip"><img src="img/tooltip.svg"><span class="tooltiptext">Number of years you are paying for this policy</span></span></label>
+                                    <select>
+                                        <option value="0">10 years</option>
+                                        <option value="0">20 years</option>
+                                        <option value="0">30 years</option>
+                                        <option value="0">40 years</option>
+                                    </select>
+                                    <p class="error-msg">This is an error message.</p>
+                                </div>
+                            </div>
+                            <div class="field_row" id="ChildDOB">
+                                <label>Date of birth of child</label>
+                                <input type="text" placeholder="DD/MM/YYYY" autocomplete="off" class="cdob date-field date-field-dob calendar" readonly>
+                                <p class="error-msg cdob_error_msg">Please enter valid date of birth</p>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-12 text-center p-0 mt-3 d-xl-block d-lg-block d-md-block d-none">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-4 mt-2 text-left">
+                                        <a href="#" class="arrow-back-black" onclick="window.location.href='index.html';">Back</a>
+                                    </div>
+                                    <button class="col-lg-8 col-md-8 col-sm-8 col-8 kotak-btn kotak-btn-primary w-100" id="applyBtn">Calculate</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mobile-proceed-calculate d-xl-none d-lg-none d-md-none d-block">
+                                <div class="col-lg-12">
+                                    <div class="row" style="overflow: hidden;">
+                                        <div class="col-4 mt-2">
+                                            <a href="#" class="arrow-back-black" onclick="window.location.href='index.html';">Back</a>
+                                        </div>
+                                        <button class="col-8 kotak-btn kotak-btn-primary w-100 mb-3" id="applyBtnMobile">CALCULATE</button>
+                                        <button class="col-8 kotak-btn kotak-btn-primary w-100 mb-3" id="proceedBtnMobile" onclick="window.location.href='Strategy.html';">SELECT FUNDS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-12 plan-page-load">
+                        <div class="plan_container" id="sideContent">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--     <main class="bgs-grey d-xl-none d-lg-none d-md-none d-block" style="padding-top: 48px;">
+        <div class="center_grid">
+            <div class="investment_container">
+                <div class="bgs-white d-flex justify-content-between align-items-center">
+                    <div class="invest_specification">
+                        <label for="">Investment amount</label>
+                        <h6>₹ 30,000</h6>
+                    </div>
+                    <div class="invest_specification">
+                        <label for="">Policy term</label>
+                        <h6>20 years</h6>
+                    </div>
+                    <div class="invest_specification">
+                        <button data-toggle="modal" data-target=".custom_policy_plan">
+                <h6><img src="./img/pensil-edit.svg" alt="" >Edit</h6>
+              </button>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12" id="mobileContainer">
+
+                        </div>
+
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-12 text-center p-0 mt-3 ">
+                            <a href="#" class="arrow-back-black" onclick="window.location.href='index.html';">Back</a>
+                        </div>
+                    </div>
+              
+                </div>
+            </div>
+        </div>
+
+
+    </main> -->
+    <!-- main -->
+    
+   <div class="terms__container">
+            <div class="terms_inner_container">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-11 col-lg-11 col-12">
+                            <div class="download_brochure" onClick="window.open('https://www.kotaklife.com/assets/images/uploads/insurance-plans/Kotak_e-Invest_-_Brochure1.pdf', '_blank'); return false;">
+
+                                <span style="width: 20px; height: 20px;"><img src="./img/download1.svg" alt="" style="width: 13.14px; height: 13.14px; margin: 0;"></span> &nbsp;
+                                <span class="headerstyle">Product Brochure</span>
+                            </div>
+                            <br>
+                            <div class="divclass" style="padding-bottom: 0;">
+                                <h6 class="headerstyle terms" style="margin-bottom: 0;">Terms &amp; Conditions</h6>
+                            </div>
+                            <div id="divwrapfooter" class="warp-footer ng-star-inserted active" style="height: auto;">
+                                <div class="warp-footer-inner foot-bg">
+                                    <div id="displayTC">
+                                        <!-- <ol id="TC"> -->
+                                        <!-- <li>This is Individual, Unit-Linked, Non-Par, Endowment Life Insurance</li> -->
+
+                                        <li style="font-size: 14px;"><strong>Kotak e-Invest:</strong> UIN - 107L121V01, Form No. - . This is an individual non-participating unit linked endowment plan. For more details on risk factors, terms and conditions please read sales brochure carefully before concluding a sale.
+                                            <br>
+                                            Plan Option needs to selected on inception of the policy. The premium payable is net of Goods and Services Tax and Cess, as applicable. Goods and Services Tax and Cess rates are subject to change from time to time as per the prevailing tax laws and/or any other laws. Tax benefits are subject to conditions specified under the Income-tax Act, 1961. Tax laws are subject to amendments from time to time. Customer is advised to take an independent view from tax consultant. 
+                                        </li>
+
+                                        <li style="font-size: 14px;"><strong>Risk Factors:</strong>
+                                           The Unit Linked Insurance Products do not offer any liquidity during the first five years of the contract. The policyholder will not be able to surrender /withdraw the monies invested in Unit Linked Insurance Products completely or partially till the end of the fifth year from inception. Unit Linked Life Insurance products are different from the traditional insurance products and are subject to the risk factors. The premium paid in Unit Linked Life Insurance policies are subject to investment risks associated with capital markets and the NAVs of the units may go up or down based on the performance of fund and factors influencing the capital market and the insured is responsible for his/her decisions. Kotak Mahindra Life Insurance Company Ltd. is only the name of the Insurance Company and Kotak e-Invest is only the name of the unit linked life insurance contract and does not in any way indicate the quality of the contract, its future prospects or returns. The various funds offered under this contract are the names of the funds and do not in any way indicate the quality of these funds, their future prospects and returns. The past performance of other Funds of the Company is not necessarily indicative of the future performance of the funds. Please know the associated risks and the applicable charges (along with the possibility of increase in charges), from your Insurance Agent / Corporate Agent / Insurance Broker / Intermediary or policy document of the insurer. All benefits payable under the Policy are subject to the Tax Laws and other financial enactments, as they exist from time to time.
+                                        </li>
+                                       
+                                    <!-- </ol> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="warp-footer2 mt-5" style="height: auto;">
+                                <div class="groove">
+                                    <p style="font-size: 13px; font-weight: 700; margin: 0 0 10px 0;">BEWARE OF SPURIOUS PHONE CALLS AND FICTITIOUS/ FRAUDULENT OFFERS</p>
+                                    <p style="font-size: 12px; font-weight: 400; margin-bottom: 0px;">IRDAI is not involved in activities like selling insurance policies, announcing bonus or investment of premiums. Public receiving such phone calls are requested to lodge a police complaint.</p>
+                                </div>
+                            </div>
+                            <div id="divwrapfooter" class="warp-footer2" style="height: auto;">
+                                <div class="warp-footer-inner foot-bg">
+                                    <div>
+                                        <p id="eterm">Regd. Office:
+Kotak Mahindra Life Insurance Company Ltd. Reg No. 107; CIN : U66030MH2000PLC128503; Regd. Office: 2nd Floor, Plot # C- 12, G- Block, BKC, Bandra (E), Mumbai – 400051 | Website: <a href="www.kotaklife.com" target="_blank" style="color: blue; cursor: pointer;">www.kotaklife.com</a> | WhatsApp: 9321003007 | Toll Free: 1800 209 8800 | Ref. No. </p>
+                                       <!--  <p id="eassured">Kotak e-Assured Savings Plan: UIN: 107N080V01, Form No.: N080, Kotak Term Benefit Rider-107B003V03, Form No.: B003, Kotak e-Accidental Death Benefit Rider-107B019V01 Form No.: B019, Ref. No.: KLI/17-18/E-PB/461</p>
+                                        <p id="InvestMaxima">Kotak Invest Maxima Plan - UIN: 107LO73V02</p> -->
+                                    </div>
+                                    <div>
+                                        <p>
+                                            Trade Logo displayed above belongs to Kotak Mahindra Bank Limited and is used by Kotak Mahindra Life Insurance Company Ltd. under license.
+                                        </p>
+                                       <!--  <p><a href="https://insurance.kotak.com/do-not-call-registry" target="_blank" style="color: blue; cursor: pointer;">Do Not Call Registry </a>• <a href="https://insurance.kotak.com/disclaimer" target="_blank" style="color: blue; cursor: pointer;">Disclaimer</a>                                            • <a href="https://insurance.kotak.com/common/privacy.php" target="_blank" style="color: blue; cursor: pointer;">Privacy Policy</a> • Visit Our: <a href="https://insurance.kotak.com/home/index.php" target="_blank"
+                                                style="color: blue; cursor: pointer;">Corporate Website</a> | <a href="https://customer.kotaklifeinsurance.com/kliportal/Selectlogin.aspx" target="_blank" style="color: blue; cursor: pointer;">Services Website</a></p>
+                                        <p> Kotak Mahindra Life Insurance Company Ltd. <br> Regd. Office: 2nd Floor, Plot # C-12, G-Block, BKC, Bandra (E), Mumbai - 400 051, India. All rights reserved. Registered with <a href="http://www.irda.gov.in/Defaulthome.aspx?page=H1"
+                                                target="_blank" style="color: blue; cursor: pointer;">Insurance Regulatory &amp; Development Authority (IRDA)</a> as Life Insurance Company. Regn. No. 107. CIN : U66030MH2000PLC128503. </p>
+                                        <p> Trade Logo displayed above belongs to Kotak Mahindra Bank Limited and is used by Kotak Mahindra Life Insurance Company Ltd. under license. <br> © 2012 Kotak Mahindra Group. All rights reserved. This site is best
+                                            viewed in 1024*768 resolution and in IE9 and above browsers. </p>
+ -->                                    </div>
+                                    <div class="clearstyle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- modal -->
+    <div class="modal fade custom_policy_plan" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="close" aria-label="close" data-dismiss="modal">
+              <span><img src="./img/close.svg" alt=""></span>
+            </button>
+                <div class="bgs-white">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <h6 class="title">Edit Investment details</h6>
+                                <div class="field_row dd-control">
+                                    <label>Enter Investment amount</label>
+                                    <input type="text" placeholder="Enter investment amount" value="34,500" class="investmentAmount" id="annualincome1" />
+                                    <p class="error-msg">Please enter investment amount</p>
+                                    <div class="dropdown_container">
+                                        <div class="dropdown">
+                                            <a class="dropdown-toggle" id="dropdownMenuButtonSm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Annually
+                          </a>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonSm">
+                                                <a class="dropdown-item" href="#">Annually</a>
+                                                <a class="dropdown-item" href="#">Monthly</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="field_row">
+                                            <label>Invest for</label>
+                                            <select>
+                              <option value="0">20 years</option>
+                              <option value="0">30 years</option>
+                              <option value="0">40 years</option>
+                              <option value="0">50 years</option>
+                          </select>
+                                            <p class="error-msg">This is an error message.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="field_row">
+                                            <label>Pay for</label>
+                                            <select>
+                              <option value="0">10 years</option>
+                              <option value="0">20 years</option>
+                              <option value="0">30 years</option>
+                              <option value="0">40 years</option>
+                          </select>
+                                            <p class="error-msg">This is an error message.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h6 class="title-light">Choose investment objective</h6>
+                                <div class="field_row">
+                                    <div><button type="button" class="kotak-btn kotak-btn-sm kotak-btn-secondary visit-link active" data-url="Maximizer" id="mmaximizer">Wealth creation</button></div>
+
+                                    <div><button type="button" class="kotak-btn kotak-btn-sm kotak-btn-secondary visit-link" data-url="Rising-Star" id="mRising-Star">Secure your child’s future</button></div>
+
+                                    <div><button type="button" class="kotak-btn kotak-btn-sm kotak-btn-secondary visit-link" data-url="Retire-Rich" id="mRetire-Rich">Retire rich</button></div>
+                                </div>
+                                <div class="field_row" id="ChildDOB1">
+                                    <label>DOB of nominee</label>
+                                    <input type="text" placeholder="Enter date of birth" autocomplete="off" class="cdob1 date-field date-field-dob calendar">
+                                    <p class="error-msg">Please enter valid date of birth</p>
+                                </div>
+                                <hr>
+                                <div class="col-12 text-center">
+                                    <button class="kotak-btn kotak-btn-primary applyBtn1" id="applyBtn1" data-dismiss="modal">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Custom jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+
+    <script src="js/kotak-digital-ulip.js"></script>
+
+
+    <script type="text/javascript">
+        var isStart = true;
+        var curPage = 'Maximizer';
+        // console.log("")
+        var dropdown_val = 'Monthly';
+        $(function() {
+            v1 = 0;
+            $("#ChildDOB1").css('display', 'none');
+
+            $("#sideContent").load(curPage + ".html");
+            $("#mobileContainer").load(curPage + ".html");
+
+            $("#proceedBtnMobile").css('display', 'block');
+            $("#applyBtnMobile").css('display', 'none');
+
+            $('#applyBtn').prop("disabled", true);
+            $('#applyBtn').removeClass('kotak-btn-primary');
+            $('#applyBtn').addClass('kotak-disabled');
+            
+          var dobAge = 1;
+            $('.date-field').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                showAnim: 'slideDown',
+                yearRange: '1945:' + (new Date).getFullYear(),
+                dateFormat: 'dd/mm/yy',
+                maxDate: 0,
+                beforeShow: function(input, inst) {
+                    $(document).off('focusin.bs.modal');
+                },
+                onClose: function() {
+                    $(document).on('focusin.bs.modal');
+                }
+            }).on('change', function() {
+                var age = getAge(this);
+                if (age < 18) {
+                    // cdob_error_msg
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    dobAge = 1;
+                }
+                else{
+                    dobAge = 0;
+                }
+            });
+
+            $('.dropdown_container a.dropdown-item').click(function() {
+                $('#dropdownMenuButton, #dropdownMenuButtonSm').html($(this).html());
+            });
+
+            $('#applyBtn').click(function() {
+
+                if (isStart) {
+                    isStart = false;
+                } else {
+                    // $("#sideContent").load(curPage+".html");
+                }
+
+                if (curPage == 'Rising-Star') {
+                    if (dobAge == 1) {
+                        $(this).prop("disabled", false);
+                        $(this).addClass('kotak-btn-primary');
+                        $(this).removeClass('kotak-disabled');
+
+                        $('#proceedBtn').prop("disabled", true);
+                        // $('#proceedBtn').attr("disabled", 'false');
+                        $('#proceedBtn').removeClass('kotak-btn-primary');
+                        $('#proceedBtn').addClass('kotak-disabled');
+                    }
+                    else{
+                        $(this).prop("disabled", true);
+                        $(this).removeClass('kotak-btn-primary');
+                        $(this).addClass('kotak-disabled');
+
+                        $('#proceedBtn').prop("disabled", false);
+                        // $('#proceedBtn').attr("disabled", 'false');
+                        $('#proceedBtn').addClass('kotak-btn-primary');
+                        $('#proceedBtn').removeClass('kotak-disabled');
+                    }
+                }
+                
+            });
+
+            $('.applyBtn1').click(function() {
+                // console.log("in apply 1 btn click function");
+                if (isStart) {
+                    isStart = false;
+                } else {
+                    // $("#sideContent").load(curPage+".html");
+                }
+
+                // if(curPage == 'Rising-Star'){
+                //  if ($('.cdob1').val() == "") {
+                //     $('#applyBtn1').prop("disabled", true);
+                //     $('#applyBtn1').removeClass('kotak-btn-primary');
+                //     $('#applyBtn1').addClass('kotak-disabled');
+                //   }
+                //   else{
+                //     $('#applyBtn1').prop("disabled", false);
+                //     $('#applyBtn1').addClass('kotak-btn-primary');
+                //     $('#applyBtn1').removeClass('kotak-disabled');
+                //   }
+                // }
+                // $(this).prop("disabled", true);
+                // $(this).removeClass('kotak-btn-primary');
+                // $(this).addClass('kotak-disabled');
+
+                $('#proceedBtn').prop("disabled", false);
+                // $('#proceedBtn').attr("disabled", 'false');
+                $('#proceedBtn').addClass('kotak-btn-primary');
+                $('#proceedBtn').removeClass('kotak-disabled');
+
+                $('#mobileContainer #proceedBtn').prop("disabled", false);
+                // $('#proceedBtn').attr("disabled", 'false');
+                $('#mobileContainer #proceedBtn').addClass('kotak-btn-primary');
+                $('#mobileContainer #proceedBtn').removeClass('kotak-disabled');
+
+                // $("#myModal").modal("hide");
+
+            });
+
+            $('.visit-link').click(function() {
+                $('.visit-link').removeClass('active');
+                $(this).addClass('active');
+
+                isStart = false;
+                curPage = $(this).data('url');
+                $('.visit-link').each(function(index) {
+                    if ($(this).data('url') == curPage) {
+                        $(this).addClass('active');
+                    }
+                });
+                $("#sideContent").load(curPage + ".html");
+                $("#mobileContainer").load(curPage + ".html");
+                // $('#proceedBtn').prop("disabled", true);
+                // $('#proceedBtn').removeClass('kotak-btn-primary');
+                // $('#proceedBtn').addClass('kotak-disabled');
+
+                if (curPage == 'Rising-Star') {
+                    $('#ChildDOB').css('display', 'block');
+                    $('#ChildDOB1').css('display', 'block');
+                    // console.log($('#ChildDOB').val())
+                    if ($('.cdob').val() == "") {
+
+                        // for mobile screen
+
+                        $('#applyBtn').prop("disabled", true);
+                        $('#applyBtn').removeClass('kotak-btn-primary');
+                        $('#applyBtn').addClass('kotak-disabled');
+                        // for mobile screen
+                        $("#proceedBtnMobile").css('display', 'none');
+                        $("#applyBtnMobile").css('display', 'block');
+                        $('#applyBtnMobile').prop("disabled", true);
+                        $('#applyBtnMobile').removeClass('kotak-btn-primary');
+                        $('#applyBtnMobile').addClass('kotak-disabled');
+
+                    } else {
+
+                        if (v1 == 0) {
+                            $('#applyBtn').prop("disabled", false);
+                            $('#applyBtn').addClass('kotak-btn-primary');
+                            $('#applyBtn').removeClass('kotak-disabled');
+                            $('#proceedBtn').prop("disabled", true);
+                            $('#proceedBtn').removeClass('kotak-btn-primary');
+                            $('#proceedBtn').addClass('kotak-disabled');
+
+                            $('#mobileContainer #proceedBtn').prop("disabled", true);
+                            $('#mobileContainer #proceedBtn').removeClass('kotak-btn-primary');
+                            $('#mobileContainer #proceedBtn').addClass('kotak-disabled');
+
+                            // for mobile screen
+                            $("#proceedBtnMobile").css('display', 'none');
+                            $("#applyBtnMobile").css('display', 'block');
+                            $('#applyBtnMobile').prop("disabled", false);
+                            $('#applyBtnMobile').addClass('kotak-btn-primary');
+                            $('#applyBtnMobile').removeClass('kotak-disabled');
+                        }
+                        else{
+                            $('#applyBtn').prop("disabled", true);
+                            $('#applyBtn').removeClass('kotak-btn-primary');
+                            $('#applyBtn').addClass('kotak-disabled');
+                            $('#proceedBtn').prop("disabled", false);
+                            $('#proceedBtn').addClass('kotak-btn-primary');
+                            $('#proceedBtn').removeClass('kotak-disabled');
+                        }
+                    }
+                    if ($('.cdob1').val() == "") {
+
+                        $('#applyBtn1').prop("disabled", true);
+                        $('#applyBtn1').removeClass('kotak-btn-primary');
+                        $('#applyBtn1').addClass('kotak-disabled');
+                    } else {
+
+                        $('#mobileContainer #applyBtn1').prop("disabled", false);
+                        $('#mobileContainer #applyBtn1').addClass('kotak-btn-primary');
+                        $('#mobileContainer #applyBtn1').removeClass('kotak-disabled');
+                    }
+                } else {
+                    $('#ChildDOB').css('display', 'none');
+                    $('#ChildDOB1').css('display', 'none');
+                }
+            });
+
+
+            $('.customDD').click(function() {
+                if ($(this).data('value') == 'Monthly') {
+                    dropdown_val = 'Monthly';
+                    $('.custom_monthly_desc').css('display', 'block');
+                    $('#annualincome').attr('value', '5,000');
+                } else {
+                    $('.custom_monthly_desc').css('display', 'none');
+                    $('#annualincome').attr('value', '');
+                    dropdown_val = 'Annually';
+
+                }
+            })
+
+
+            $(".visit-link").focus(function() {
+
+                // $('#proceedBtn').prop("disabled", true);
+                // $('#proceedBtn').attr("disabled", true);
+                // $('#proceedBtn').removeClass('kotak-btn-primary');
+                // $('#proceedBtn').addClass('kotak-disabled');
+                // $('#proceedBtn').addClass('kotak-disabled34343');
+                if (v1 == 0) {
+                    $('#applyBtn').prop("disabled", false);
+                    $('#applyBtn').addClass('kotak-btn-primary');
+                    $('#applyBtn').removeClass('kotak-disabled');
+                    $('#proceedBtn').prop("disabled", true);
+                    $('#proceedBtn').removeClass('kotak-btn-primary');
+                    $('#proceedBtn').addClass('kotak-disabled');
+
+                    $('#mobileContainer #proceedBtn').prop("disabled", true);
+                    $('#mobileContainer #proceedBtn').removeClass('kotak-btn-primary');
+                    $('#mobileContainer #proceedBtn').addClass('kotak-disabled');
+
+                    // for mobile screen
+                    $("#proceedBtnMobile").css('display', 'none');
+                    $("#applyBtnMobile").css('display', 'block');
+                    $('#applyBtnMobile').prop("disabled", false);
+                    $('#applyBtnMobile').addClass('kotak-btn-primary');
+                    $('#applyBtnMobile').removeClass('kotak-disabled');
+                }
+
+            });
+            $(".investmentAmount").on("keyup", function() {
+
+                if ($(this).val() == '') {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    $('#applyBtn').prop("disabled", true);
+                    $('#applyBtn').removeClass('kotak-btn-primary');
+                    $('#applyBtn').addClass('kotak-disabled');
+                    $('#proceedBtn').prop("disabled", true);
+                    $('#proceedBtn').removeClass('kotak-btn-primary');
+                    $('#proceedBtn').addClass('kotak-disabled');
+                    $('#applyBtn1').prop("disabled", true);
+                    $('#applyBtn1').removeClass('kotak-btn-primary');
+                    $('#applyBtn1').addClass('kotak-disabled');
+
+                    // for mobile screen
+                    $("#proceedBtnMobile").css('display', 'none');
+                    $("#applyBtnMobile").css('display', 'block');
+                    $('#applyBtnMobile').prop("disabled", true);
+                    $('#applyBtnMobile').removeClass('kotak-btn-primary');
+                    $('#applyBtnMobile').addClass('kotak-disabled');
+
+                    v1 = 1;
+
+                } else {
+                    if (curPage == 'Maximizer') {
+                        let valuewithoutcomma = parseInt(($(this).val().replace(',','')));
+                        if (valuewithoutcomma < 750 && dropdown_val == 'Monthly') {
+                           var error = $(this).siblings('p.error-msg');
+                            $(this).addClass("errorInput");
+                            error.addClass('error-msg-1').css('display', 'block');
+                            error.text("Investment amount can not be less then 750");
+
+                            $('#applyBtn').prop("disabled", true);
+                            $('#applyBtn').removeClass('kotak-btn-primary');
+                            $('#applyBtn').addClass('kotak-disabled');
+                            $('#proceedBtn').prop("disabled", true);
+                            $('#proceedBtn').removeClass('kotak-btn-primary');
+                            $('#proceedBtn').addClass('kotak-disabled');
+                            $('#applyBtn1').prop("disabled", true);
+                            $('#applyBtn1').removeClass('kotak-btn-primary');
+                            $('#applyBtn1').addClass('kotak-disabled');
+
+                            // for mobile screen
+                            $("#proceedBtnMobile").css('display', 'none');
+                            $("#applyBtnMobile").css('display', 'block');
+                            $('#applyBtnMobile').prop("disabled", true);
+                            $('#applyBtnMobile').removeClass('kotak-btn-primary');
+                            $('#applyBtnMobile').addClass('kotak-disabled');
+
+                            v1 = 1;
+
+                        }
+                        else if (valuewithoutcomma < 9000 && dropdown_val == 'Annually') {
+                            var error = $(this).siblings('p.error-msg');
+                            $(this).addClass("errorInput");
+                            error.addClass('error-msg-1').css('display', 'block');
+                            error.text("Investment amount can not be less then 9,000");
+
+                            $('#applyBtn').prop("disabled", true);
+                            $('#applyBtn').removeClass('kotak-btn-primary');
+                            $('#applyBtn').addClass('kotak-disabled');
+                            $('#proceedBtn').prop("disabled", true);
+                            $('#proceedBtn').removeClass('kotak-btn-primary');
+                            $('#proceedBtn').addClass('kotak-disabled');
+                            $('#applyBtn1').prop("disabled", true);
+                            $('#applyBtn1').removeClass('kotak-btn-primary');
+                            $('#applyBtn1').addClass('kotak-disabled');
+
+                            // for mobile screen
+                            $("#proceedBtnMobile").css('display', 'none');
+                            $("#applyBtnMobile").css('display', 'block');
+                            $('#applyBtnMobile').prop("disabled", true);
+                            $('#applyBtnMobile').removeClass('kotak-btn-primary');
+                            $('#applyBtnMobile').addClass('kotak-disabled');
+
+                            v1 = 1;
+
+                        }
+                        else{
+                            $('#applyBtn').prop("disabled", false);
+                            $('#applyBtn').addClass('kotak-btn-primary');
+                            $('#applyBtn').removeClass('kotak-disabled');
+                            $('#applyBtn1').prop("disabled", false);
+                            $('#applyBtn1').addClass('kotak-btn-primary');
+                            $('#applyBtn1').removeClass('kotak-disabled');
+                            $('#proceedBtn').prop("disabled", true);
+                            $('#proceedBtn').removeClass('kotak-btn-primary');
+                            $('#proceedBtn').addClass('kotak-disabled');
+                            var correct = $(this).siblings('p.error-msg');
+                            $(this).removeClass("errorInput");
+                            correct.removeClass('error-msg-1').css('display', 'none');
+
+                             correct.text("Please enter your investment amount");
+                            // for mobile screen
+                            $("#proceedBtnMobile").css('display', 'none');
+                            $("#applyBtnMobile").css('display', 'block');
+                            $('#applyBtnMobile').prop("disabled", false);
+                            $('#applyBtnMobile').addClass('kotak-btn-primary');
+                            $('#applyBtnMobile').removeClass('kotak-disabled');
+
+                            v1 = 0;
+                        }
+                    }
+                    else{
+                        let valuewithoutcomma = parseInt(($(this).val().replace(',','')));
+                        if (valuewithoutcomma < 2000 && dropdown_val == 'Monthly') {
+                           var error = $(this).siblings('p.error-msg');
+                            $(this).addClass("errorInput");
+                            error.addClass('error-msg-1').css('display', 'block');
+                            error.text("Investment amount can not be less then 2,000");
+
+
+                            $('#applyBtn').prop("disabled", true);
+                            $('#applyBtn').removeClass('kotak-btn-primary');
+                            $('#applyBtn').addClass('kotak-disabled');
+                            $('#proceedBtn').prop("disabled", true);
+                            $('#proceedBtn').removeClass('kotak-btn-primary');
+                            $('#proceedBtn').addClass('kotak-disabled');
+                            $('#applyBtn1').prop("disabled", true);
+                            $('#applyBtn1').removeClass('kotak-btn-primary');
+                            $('#applyBtn1').addClass('kotak-disabled');
+
+                            // for mobile screen
+                            $("#proceedBtnMobile").css('display', 'none');
+                            $("#applyBtnMobile").css('display', 'block');
+                            $('#applyBtnMobile').prop("disabled", true);
+                            $('#applyBtnMobile').removeClass('kotak-btn-primary');
+                            $('#applyBtnMobile').addClass('kotak-disabled');
+
+                            v1 = 1;
+
+                        }
+                        else if (valuewithoutcomma < 24000 && dropdown_val == 'Annually') {
+                            var error = $(this).siblings('p.error-msg');
+                            $(this).addClass("errorInput");
+                            error.addClass('error-msg-1').css('display', 'block');
+                            error.text("Investment amount can not be less then 24,000");
+
+                            $('#applyBtn').prop("disabled", true);
+                            $('#applyBtn').removeClass('kotak-btn-primary');
+                            $('#applyBtn').addClass('kotak-disabled');
+                            $('#proceedBtn').prop("disabled", true);
+                            $('#proceedBtn').removeClass('kotak-btn-primary');
+                            $('#proceedBtn').addClass('kotak-disabled');
+                            $('#applyBtn1').prop("disabled", true);
+                            $('#applyBtn1').removeClass('kotak-btn-primary');
+                            $('#applyBtn1').addClass('kotak-disabled');
+
+                            // for mobile screen
+                            $("#proceedBtnMobile").css('display', 'none');
+                            $("#applyBtnMobile").css('display', 'block');
+                            $('#applyBtnMobile').prop("disabled", true);
+                            $('#applyBtnMobile').removeClass('kotak-btn-primary');
+                            $('#applyBtnMobile').addClass('kotak-disabled');
+
+                            v1 = 1;
+
+                        }
+                        else{
+                            $('#applyBtn').prop("disabled", false);
+                            $('#applyBtn').addClass('kotak-btn-primary');
+                            $('#applyBtn').removeClass('kotak-disabled');
+                            $('#applyBtn1').prop("disabled", false);
+                            $('#applyBtn1').addClass('kotak-btn-primary');
+                            $('#applyBtn1').removeClass('kotak-disabled');
+                            $('#proceedBtn').prop("disabled", true);
+                            $('#proceedBtn').removeClass('kotak-btn-primary');
+                            $('#proceedBtn').addClass('kotak-disabled');
+                            var correct = $(this).siblings('p.error-msg');
+                            $(this).removeClass("errorInput");
+                            correct.removeClass('error-msg-1').css('display', 'none');
+                             correct.text("Please enter your investment amount");
+
+                            // for mobile screen
+                            $("#proceedBtnMobile").css('display', 'none');
+                            $("#applyBtnMobile").css('display', 'block');
+                            $('#applyBtnMobile').prop("disabled", false);
+                            $('#applyBtnMobile').addClass('kotak-btn-primary');
+                            $('#applyBtnMobile').removeClass('kotak-disabled');
+
+                            v1 = 0;
+                        }
+                    }
+                   
+                }
+            });
+
+            $("select,.date-field-dob").on("change", function() {
+                if (v1 == 0) {
+                    $('#applyBtn').prop("disabled", false);
+                    $('#applyBtn').addClass('kotak-btn-primary');
+                    $('#applyBtn').removeClass('kotak-disabled');
+                    $('#proceedBtn').prop("disabled", true);
+                    $('#proceedBtn').removeClass('kotak-btn-primary');
+                    $('#proceedBtn').addClass('kotak-disabled');
+                    // for mobile screen
+                    $("#proceedBtnMobile").css('display', 'none');
+                    $("#applyBtnMobile").css('display', 'block');
+                    $('#applyBtnMobile').prop("disabled", false);
+                    $('#applyBtnMobile').addClass('kotak-btn-primary');
+                    $('#applyBtnMobile').removeClass('kotak-disabled');
+                }
+            });
+
+            $(".cdob1").on("change", function() {
+                // console.log(getAge(this));
+                if (getAge(this) < 18 ) {
+
+                        $('#applyBtn1').prop("disabled", true);
+                        $('#applyBtn1').removeClass('kotak-btn-primary');
+                        $('#applyBtn1').addClass('kotak-disabled');
+                        $('#proceedBtn').prop("disabled", false);
+                        $('#proceedBtn').addClass('kotak-btn-primary');
+                        $('#proceedBtn').removeClass('kotak-disabled');
+                        // for mobile screen
+                        $("#proceedBtnMobile").css('display', 'block');
+                        $("#applyBtnMobile").css('display', 'none');
+                        $('#applyBtnMobile').prop("disabled", true);
+                        $('#applyBtnMobile').removeClass('kotak-btn-primary');
+                        $('#applyBtnMobile').addClass('kotak-disabled');
+                  
+                }
+                else{
+                    if (v1 == 0) {
+                        $('#applyBtn1').prop("disabled", false);
+                        $('#applyBtn1').addClass('kotak-btn-primary');
+                        $('#applyBtn1').removeClass('kotak-disabled');
+                        $('#proceedBtn').prop("disabled", true);
+                        $('#proceedBtn').removeClass('kotak-btn-primary');
+                        $('#proceedBtn').addClass('kotak-disabled');
+                        // for mobile screen
+                        $("#proceedBtnMobile").css('display', 'none');
+                        $("#applyBtnMobile").css('display', 'block');
+                        $('#applyBtnMobile').prop("disabled", false);
+                        $('#applyBtnMobile').addClass('kotak-btn-primary');
+                        $('#applyBtnMobile').removeClass('kotak-disabled');
+                    }
+                }
+            });
+        });
+
+        $("#applyBtnMobile").click(function() {
+            $("#proceedBtnMobile").css('display', 'block');
+            $("#applyBtnMobile").css('display', 'none');
+        })
+
+        // to add comma
+        $('#annualincome').keyup(function(event) {
+            if (event.which >= 37 && event.which <= 40) return;
+
+            // format number
+
+            $(this).val(function(index, value) {
+                return value
+                    .replace(/\D/g, '')
+                    .replace(/(\d)(?=(\d\d)+\d$)/g, "$1,");
+            });
+        });
+
+        // to add comma
+        $('#annualincome1').keyup(function(event) {
+            if (event.which >= 37 && event.which <= 40) return;
+
+            // format number
+
+            $(this).val(function(index, value) {
+                return value
+                    .replace(/\D/g, '')
+                    .replace(/(\d)(?=(\d\d)+\d$)/g, "$1,");
+            });
+        });
+        // if (curPage == 'Maximizer') {
+        //   console.log("Maximizer page function");
+        //   console.log($('#mobileContainer #proceedBtn'));
+        //   $('#mobileContainer .maxbtn').prop("disabled", false);
+        //   $('#mobileContainer .maxbtn').addClass('kotak-btn-primary');
+        //   $('#mobileContainer .maxbtn').removeClass('kotak-disabled');
+        // }
+
+
+        // $( document ).ready(function() {
+        //   $('#mobileContainer #proceedBtn').prop("disabled", true);
+        //   $('#mobileContainer #proceedBtn').removeClass('kotak-btn-primary');
+        //   $('#mobileContainer #proceedBtn').addClass('kotak-disabled');
+
+        //   if (curPage == 'Maximizer') {
+        //     console.log("mobile Maximizer");
+        //     $('#mobileContainer #proceedBtn').prop("disabled", false);
+        //     $('#mobileContainer #proceedBtn').addClass('kotak-btn-primary');
+        //     $('#mobileContainer #proceedBtn').removeClass('kotak-disabled');
+        //   }
+        // });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // $('#mobileContainer #proceedBtn').prop("disabled", true);
+            // $('#mobileContainer #proceedBtn').removeClass('kotak-btn-primary');
+            // $('#mobileContainer #proceedBtn').addClass('kotak-disabled');
+
+            if (curPage == 'Maximizer') {
+                console.log("mobile maximizer");
+                $('#mobileContainer #proceedBtn').prop("disabled", false);
+                $('#mobileContainer #proceedBtn').addClass('kotak-btn-primary');
+                $('#mobileContainer #proceedBtn').removeClass('kotak-disabled');
+
+                // $('#applyBtn').prop("disabled", true);
+                // $('#applyBtn').removeClass('kotak-btn-primary');
+                // $('#applyBtn').addClass('kotak-disabled');
+                // $('#proceedBtn').prop("disabled", false);
+                // // $('#proceedBtn').attr("disabled", 'false');
+                // $('#proceedBtn').addClass('kotak-btn-primary');
+                // $('#proceedBtn').removeClass('kotak-disabled');  
+            }
+        });
+
+        $('.ng-star-inserted').hide();
+        var click = false;
+        $('.divclass').click(function() {
+            click = !click;
+            if (click) {
+                $('.ng-star-inserted').show();
+                $('.divclass').addClass("active");
+            } else {
+                $('.ng-star-inserted').hide();
+                $('.divclass').removeClass("active");
+            }
+        });
+
+        $('#dropdownMenuButton').click(function() {
+            let a = $('#dropdownMenuButton').val();
+            console.log(a);
+        });
+
+        $('.wealth_creation').click(function(){
+                $('#applyBtn').prop("disabled", true);
+                $('#applyBtn').removeClass('kotak-btn-primary');
+                $('#applyBtn').addClass('kotak-disabled');
+                // $('#proceedBtn').prop("disabled", false);
+                // // $('#proceedBtn').attr("disabled", 'false');
+                // $('#proceedBtn').addClass('kotak-btn-primary');
+                // $('#proceedBtn').removeClass('kotak-disabled');  
+            });
+
+
+    </script>
+</body>
+
+</html>

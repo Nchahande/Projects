@@ -1,0 +1,19 @@
+<svg id="smiling" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.616 39.616">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e2e2e2;
+      }
+
+      .cls-2 {
+        fill: #757575;
+      }
+    </style>
+  </defs>
+  <circle id="Ellipse_701" data-name="Ellipse 701" class="cls-1" cx="19.808" cy="19.808" r="19.808" transform="translate(0 0)"/>
+  <g id="Group_4188" data-name="Group 4188" transform="translate(9.692 11.202)">
+    <circle id="Ellipse_702" data-name="Ellipse 702" class="cls-2" cx="3.059" cy="3.059" r="3.059" transform="translate(1.136 0)"/>
+    <circle id="Ellipse_703" data-name="Ellipse 703" class="cls-2" cx="3.059" cy="3.059" r="3.059" transform="translate(12.702 0)"/>
+    <path id="Path_2816" data-name="Path 2816" class="cls-2" d="M132.748,313.436a12.175,12.175,0,0,1-17.543-.074c-.69-.714-1.777.375-1.087,1.087a13.731,13.731,0,0,0,19.717.074C134.535,313.815,133.443,312.723,132.748,313.436Z" transform="translate(-113.898 -299.357)"/>
+  </g>
+</svg>

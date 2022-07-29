@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Roboto Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/kotak-ulip.css" />
+    <link rel="stylesheet" href="css/other.css">
+
+    <title>Digital Ulip</title>
+
+</head>
+
+<body>
+
+    <header></header>
+    <!-- header -->
+
+    <main class="bgs-grey">
+        <div class="center_grid">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-8 col-md-9 col-sm-10 col-11">
+                        <div class="stepper__container">
+                            <div class="stepper_items progrees">
+                                <div class="flex_div">
+                                    <div class="step_item">1</div>
+                                    <div class="step_caption"><div>Personal details</div></div>
+                                </div>
+                                <div class="step_count">1/5</div>
+                            </div>
+                            
+                            <div class="stepper_gap"></div>
+                            <div class="stepper_items">
+                                <div class="flex_div">
+                                    <div class="step_item">2</div>
+                                    <div class="step_caption">Health details</div>
+                                </div>
+                            </div>
+                            <div class="stepper_gap"></div>
+                            <div class="stepper_items">
+                                <div class="flex_div">
+                                    <div class="step_item">3</div>
+                                    <div class="step_caption">Payment & Benefit</div>
+                                </div>
+                            </div>
+                            <div class="stepper_gap"></div>
+                            <div class="stepper_items">
+                                <div class="flex_div">
+                                    <div class="step_item">4</div>
+                                    <div class="step_caption">Upload documents</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-7 col-md-10 col-12">
+                        <div class="form_left_container">
+                            <h2>Personal details</h2>
+
+                            <form  id="PersonalDetails">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="field_row pdform">
+                                            <label>Marital status<span class="imp_tag">*</span></label>
+                                            <select id="status" name="status" class="marital_status">
+                                                <option value="" disabled selected hidden style="font-weight: 400;">Select status</option>
+                                                <option value="Unmarried">Unmarried</option>
+                                                <option value="Married">Married</option>
+                                                <option value="Divorced">Divorced</option>
+                                                <option value="Widower">Widower</option>
+                                            </select>
+                                            <p class="error-msg marital_status_error_msg">Please select marital status.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Occupation<span class="imp_tag">*</span></label>
+                                            <select name="occupation" required class="occupation" id="occupation">
+                                                <option value="" disabled selected hidden style="font-weight: 400;">Select occupation</option>
+                                                <option value="Professional">Professional</option>
+                                                <option value="Self employed">Self employed</option>
+                                                <option value="Student">Student</option>
+                                                <option value="Housewife">Housewife</option>
+                                                <option value="Retired">Retired</option>
+                                                <option value="Salaried">Salaried</option>
+                                                <!-- <option value="Others">Others</option> -->
+                                            </select>
+                                            <p class="error-msg occupation_error_msg">Please select occupation.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 detail_other dn">
+                                        <div class="field_row">
+                                            <label>Occupation detail<span class="imp_tag">*</span></label>
+                                            <input type="text" placeholder="Enter occupation detail" name="occupation_detail_1" class="occupation_detail_1" />
+                                            <p class="error-msg occupation_detail_1_error_msg">Please enter occupation detail</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 detail_professional dn">
+                                        <div class="field_row">
+                                            <label>Occupation detail<span class="imp_tag">*</span></label>
+                                            <select name="occupation_detail_2" required>
+                                                <option value="Pvt Ltd">Pvt Ltd</option>
+                                                <option value="Public Ltd">Public Ltd</option>
+                                                <option value="Govt">Govt</option>
+                                                <option value="Trust">Trust</option>
+                                                <option value="Partner">Partner</option>
+                                                <option value="Propreitor">Propreitor</option>
+                                            </select>
+                                            <p class="error-msg">This is an error message.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 detail_self_employee dn">
+                                        <div class="field_row">
+                                            <label>Occupation detail<span class="imp_tag">*</span></label>
+                                            <select name="occupation_detail_3" required>
+                                                <option value="0">Trading</option>
+                                                <option value="0">Manufacturing</option>
+                                                <option value="0">Professional</option>
+                                            </select>
+                                            <p class="error-msg">This is an error message.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 detail_org_name dn">
+                                        <div class="field_row">
+                                            <label>Organization name<span class="imp_tag">*</span></label>
+                                            <input type="text" placeholder="Enter occupation detail" name="org_name" class="org_name" />
+                                            <p class="error-msg org_name_error_msg">Please enter organization name</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 detail_year dn">
+                                        <div class="field_row">
+                                            <label>No. of years in service<span class="imp_tag">*</span></label>
+                                            <input type="number" placeholder="Enter occupation detail" name="service_year" class="service_year" />
+                                            <p class="error-msg service_year_error_msg">Please enter no. of years in service</p>
+                                        </div>
+                                    </div>                                    
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Annual income<span class="imp_tag">*</span></label>
+                                            <input id="annualincome" type="text" pattern="\d*" placeholder="Annual income" name="income" maxlength="10" onkeypress="validate(event)" onkeyup="getAmount(this.value)" />
+                                            <p class="info-msg" id="annualIncome">₹ 0.00 lakh</p>
+                                            <p class="error-msg annualincome_error_msg" id="error-msg-income">Please enter annual income</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Education<span class="imp_tag">*</span></label>
+                                            <select name="education" required class="education">
+                                                <option value="" disabled selected hidden style="font-weight: 400;">Select education</option>
+                                                <option value="0">Professional</option>
+                                                <option value="0">Post-Graduate</option>
+                                                <option value="0">Graduate</option>
+                                                <option value="0">Diploma</option>
+                                                <option value="0">12th Pass</option>
+                                                <option value="0">10th Pass</option>
+                                                <option value="0">Below 10th</option>
+                                            </select>
+                                            <p class="error-msg education_error_msg">Please select education.</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Pan card number<span class="imp_tag">*</span></label>
+                                            <input type="text" placeholder="Enter pan card number" name="pan" class="pancard_text" />
+                                            <p class="error-msg pan_error_msg">Please enter valid pan card number</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Nationality<span class="imp_tag">*</span></label>
+                                            <select name="nationality" id="nationality" required>
+                                                <option value="" disabled selected hidden style="font-weight: 400;">Select nationality</option>
+                                                <option value="Resident">Resident</option>
+                                                <option value="Non-Resident">Non-Resident Indian</option>
+                                                <option value="Indian-Origin">Person of Indian Origin</option>
+                                                <option value="Foreign">Foreign National</option>
+                                            </select>
+                                            <p class="error-msg nationality_error_msg">Please select nationality.</p>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Mother’s full name<span class="imp_tag">*</span></label>
+                                            <input type="text" placeholder="Enter full name" name="mother" class="mother_text" />
+                                            <p class="error-msg mother_error_msg">Please enter full name</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label id="check_status">Father's/spouse’s full name<span class="imp_tag">*</span></label>
+                                            <input type="text" placeholder="Enter full name" name="father" class="father_text" />
+                                            <p class="error-msg father_error_msg">Please enter full name</p>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-xl-6" id="check_status">
+                                        <div class="field_row">
+                                            <label>Spouse Name</label>
+                                            <input type="text" placeholder="Spouse Name"/>
+                                            <p class="error-msg">This is an error message.</p>
+                                        </div>
+                                    </div>                                 -->
+                                </div>
+
+                                <div class="row">
+                                    <!-- <div class="col-xl-6">
+                                        <div class="field_row">
+                                            <label>Take a selfie</label>
+                                            <div class="upload__container">
+                                                <img src="img/upload-icon.svg" class="img-fluid mr-1"> UPLOAD PHOTO
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <div class="col-6">
+                                        <div class="field_row">
+                                            <label>Upload photo</label>
+                                            <div class="upload_button">
+                                                <img src="img/upload-icon.svg" class="img-fluid mr-1"> UPLOAD
+                                            </div>
+                                            <input type="file" name="pancard" class="upload_file" style="display: none;" />
+                                            <div class="upload__container_row">
+                                                <div class="upload__container">
+                                                    <div class="upload_image_container">
+                                                        <img src="" class="img-fluid">
+                                                    </div>
+                                                    <div class="upload_image_details">
+                                                        <p class="fileName"></p>
+                                                        <p class="fileSize"></p>
+                                                        <a href="#" class="delete_file">DELETE</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row align-items-center">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-4 align-self-center">
+                                        <a href="./Strategy.html" class="arrow-back-black">Back</a>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-8 text-right">
+                                        <button class="kotak-btn kotak-btn-primary proceedbtn" type="button">Proceed</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-5 col-12 d-xl-block d-lg-block d-none">
+                        <div class="aside_container mb-3">
+                            <div class="aside-cover-container d-block m-0">
+                                <div class="cover-container-full mb-3">
+                                    <div class="icon-block-caption">Your quotation ID</div>
+                                    <div class="icon-block-amount"><span>: </span>OT125780</div>
+                                </div>
+                                <div class="cover-container-full mb-3">
+                                    <div class="icon-block-caption">Plan selected</div>
+                                    <div class="icon-block-amount"><span>: </span>Maximizer</div>
+                                </div>
+                                <div class="cover-container-full mb-3">
+                                    <div class="icon-block-caption">You pay</div>
+                                    <div class="icon-block-amount"><span>: </span>₹ 35,000</div>
+                                </div>
+                                <div class="cover-container-full">
+                                    <div class="icon-block-caption">Premium frequency </div>
+                                    <div class="icon-block-amount"><span>: </span>Annually</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="aside_container">
+                            <h6 class="color-blue">Plan details</h6>
+
+                            <div class="aside-icon-container">
+                                <img src="img/bag-icon.svg" class="img-fluid">
+                                <div class="aside-icon-block pl-4">
+                                    <div class="icon-block-caption">Maturity value</div>
+                                    <div class="icon-block-value value-sm">₹ 3,49,600 <small>@ 8% p.a.</small></div>
+                                    <div class="icon-block-interest">@4% you get ₹ 1,34,000</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="title-circle">
+                                Additional benefits
+                            </div>
+                            <div class="aside-cover-container d-block">
+                                <div class="cover-container-full mb-3">
+                                    <div class="icon-block-caption">Life cover</div>
+                                    <div class="icon-block-amount"><span>&nbsp;: </span>₹ 6 Lakhs</div>
+                                </div>
+                            </div>
+                            <div class="title-circle-footer"><span>Pay for</span> <strong>10 years</strong> for a policy term of <strong>20 years</strong></div>
+                            <hr>
+                            <div class="viewFund">
+                                <img src="img/page-icon.png" class="img-fluid mr-2"> <a href="https://insurance.kotak.com/assets/images/uploads/fund-performance/pdfs/Kotak_Life_Individual_March_2021.pdf" target="_blank">View latest NAV</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <!-- main -->
+
+  <!-- modal  -->
+
+    <div class="modal fade occupation_error" id="occupation_error" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header pb-4 px-4 d-block mb-4">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Oops sorry!<img src="./img/close.svg" alt="" style="float: right; cursor: pointer;" data-dismiss="modal" aria-label="Close"></h5>
+                </div>
+                <div class="modal-body text-center" style="margin-top: 0 !important; padding-left: 15px;">
+                    Sorry we can not process your application any further
+                </div>
+                <div class="modal-footer col-lg-12">
+                    <div class="text-center col-lg-12">
+                      <!-- <button class="kotak-btn kotak-btn-primary" data-dismiss="modal" aria-label="Close">Ok</button> -->
+                      <button class="kotak-btn kotak-btn-primary" onclick="window.location.href='https://www.kotaklife.com/';">Go to home</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal end -->
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Custom jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/kotak-digital-ulip.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/dist/jquery.validate.js"></script>
+
+    <script>
+        var validForm = true;
+        var v1 = 0;
+        var v2 = 1;
+        var v3 = 1;
+        var v4 = 1;
+        var v5 = 1;
+        var v6 = 1;
+        var v7 = 1;
+        var v8 = 1;
+        var v9 = 1; //education
+        var showotherText = false;
+        var v10 = 1; //nationality
+        var v11 = 1; //marital_status
+        var v12 = 1; //occupation
+
+        $(document).ready(function() {
+            $('#PersonalDetails input').blur(function() {
+
+            }).trigger("focusout");
+
+            $("input").on("keyup", function() {
+                var correct = $(this).siblings('p.error-msg');
+                $(this).removeClass("errorInput");
+                correct.removeClass('error-msg-1').css('display', 'none');
+            });
+
+            // to add comma
+            $('#annualincome').keyup(function(event) {
+                if (event.which >= 37 && event.which <= 40) return;
+
+                // format number
+
+                $(this).val(function(index, value) {
+                    return value
+                        .replace(/\D/g, '')
+                        .replace(/(\d)(?=(\d\d)+\d$)/g, "$1,");
+                });
+            });
+
+
+            $("input").on("blur", function() {
+                validForm = true;
+                var valueofinput = $(this).val();
+                if ($(this).val() == '') {
+                    var error = $(this).siblings('p.error-msg');
+                    error.addClass('error-msg-1').css('display', 'block');
+                    $(this).addClass("errorInput");
+                    v1 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    $(this).removeClass("errorInput");
+                    v1 = 0;
+                }
+                if ($(this).attr('name') == "pan") {
+                    if (validatePancard(valueofinput) == true) {
+                        var correct = $(this).siblings('p.error-msg');
+                        $(this).removeClass("errorInput");
+                        correct.removeClass('error-msg-1').css('display', 'none');
+                        v2 = 0;
+                    } else {
+                        var error = $(this).siblings('p.error-msg');
+                        $(this).addClass("errorInput");
+                        error.addClass('error-msg-1').css('display', 'block');
+                        v2 = 1;
+
+                    }
+                }
+                if ($(this).attr('name') == "mother") {
+                    // console.log(valueofinput);
+                    if (validateName(valueofinput) == true) {
+                        var correct = $(this).siblings('p.error-msg');
+                        $(this).removeClass("errorInput");
+                        correct.removeClass('error-msg-1').css('display', 'none');
+                        v3 = 0;
+                    } else {
+                        var error = $(this).siblings('p.error-msg');
+                        // $(this).removeClass("errorInput");
+                        error.addClass('error-msg-1').css('display', 'block');
+                        $(this).addClass("errorInput");
+                        v3 = 1;
+                        // $(this).css('border','1px solid red');
+                    }
+                }
+                if ($(this).attr('name') == "father") {
+                    // console.log(valueofinput);
+                    if (validateName(valueofinput) == true) {
+                        var correct = $(this).siblings('p.error-msg');
+                        $(this).removeClass("errorInput");
+                        correct.removeClass('error-msg-1').css('display', 'none');
+                        v4 = 0;
+                    } else {
+                        var error = $(this).siblings('p.error-msg');
+                        // $(this).removeClass("errorInput");
+                        error.addClass('error-msg-1').css('display', 'block');
+                        $(this).addClass("errorInput");
+                        // $(this).css('border','1px solid red');
+                        v4 = 1;
+                    }
+                }
+            });
+
+        });
+    
+        // $(document).ready(function() { 
+        var i = 0;
+   
+        $(function() {
+
+            $(".proceedbtn").click(function() {
+            //     var status = $("select[name='nationality']").find(":selected").text();
+            //     if (status != "Resident") {
+            //         window.location.href = "Other-Resident.html";
+            // }
+
+            // $("#status").change(function() {
+            //     var status = $("select[name='status']").find(":selected").text();
+            //     if (status == "Married") {
+            //         $("#check_status").html("Father's Name/spouse Name");
+            //     } else {
+            //         $("#check_status").html("Father's Name");
+            //     }
+               validationCheck();
+            });
+
+            $('.upload_button').click(function(e) {
+                $(this).next('input').focus().trigger('click');
+
+                $(this).next('input').change(function(e) {
+
+                    f_name = e.target.files[0].name;
+                    f_size = Math.round(e.target.files[0].size / 1024) + 'kb';
+                    f_path = $(this).val();
+
+                    $(this).next('.upload__container_row').find('.upload__container').css(
+                        'display',
+                        'flex');
+                    $(this).prev('.upload_button').css('display', 'none');
+                    $(this).next('.upload__container_row').find(
+                        '.upload_image_container img').attr('src', URL.createObjectURL(e
+                        .target.files[0]));
+
+                    $(this).next('.upload__container_row').find(
+                        '.upload_image_details .fileName').html(f_name);
+                    $(this).next('.upload__container_row').find(
+                        '.upload_image_details .fileSize').html(f_size);
+
+                    $(this).parent().parent().parent().parent().prev('.card-header')
+                        .find('h4').addClass('active');
+                });
+
+                $('.delete_file').click(function() {
+                    $(this).parent().parent().parent().prev('.upload_file')[0]
+                        .value = ''
+                    $(this).parent().parent('.upload__container').css('display', 'none');
+                    $(this).parent().parent().parent().parent().find(
+                        '.upload_button').css('display', 'flex');
+                    $(this).parent().parent().parent().parent().parent().parent()
+                        .parent().prev('.card-header')
+                        .find('h4').removeClass('active')
+                    return false;
+                })
+            });
+        });
+
+         $('.education').change(function() {
+            if ($(this).val() == '') {
+                v9 = 1;
+               var error = $(this).siblings('p.error-msg');
+                // $(this).removeClass("errorInput");
+               error.addClass('error-msg').css('display', 'block');
+               $(this).addClass("errorInput");
+            }
+            else{
+                v9 = 0;
+                var correct = $(this).siblings('p.error-msg');
+                $(this).removeClass("errorInput");
+                correct.removeClass('error-msg').css('display', 'none');
+            }
+         });
+
+         $('#nationality').change(function() {
+            if ($(this).val() == '') {
+                v10 = 1;
+                var error = $(this).siblings('p.error-msg');
+                // $(this).removeClass("errorInput");
+               error.addClass('error-msg').css('display', 'block');
+               $(this).addClass("errorInput");
+            }
+            else{
+                v10 = 0;
+                var correct = $(this).siblings('p.error-msg');
+                $(this).removeClass("errorInput");
+                correct.removeClass('error-msg').css('display', 'none');
+            }
+         });
+
+         
+         $('.marital_status').change(function() {
+            if ($(this).val() == '') {
+                v11 = 1;
+                var error = $(this).siblings('p.error-msg');
+                // $(this).removeClass("errorInput");
+               error.addClass('error-msg').css('display', 'block');
+               $(this).addClass("errorInput");
+            }
+            else{
+                v11 = 0;
+                var correct = $(this).siblings('p.error-msg');
+                $(this).removeClass("errorInput");
+                correct.removeClass('error-msg').css('display', 'none');
+            }
+         });
+
+         $('#occupation').change(function() {
+            if ($(this).val() == '') {
+                v12 = 1;
+                var error = $(this).siblings('p.error-msg');
+                // $(this).removeClass("errorInput");
+               error.addClass('error-msg').css('display', 'block');
+               $(this).addClass("errorInput");
+            }
+            else{
+                v12 = 0;
+                var correct = $(this).siblings('p.error-msg');
+                $(this).removeClass("errorInput");
+                correct.removeClass('error-msg').css('display', 'none');
+            }
+         });
+
+        $('.occupation').change(function() {
+                if ($(this).val() == 'Others') {
+                    $('.detail_other').addClass('db');
+                    $('.detail_other').removeClass('dn');
+
+                    $('.detail_self_employee').addClass('dn');
+                    $('.detail_self_employee').removeClass('db');
+                    $('.detail_professional').addClass('dn');
+                    $('.detail_professional').removeClass('db');
+                    $('.detail_year').addClass('db');
+                    $('.detail_year').removeClass('dn');
+                    $('.detail_org_name').addClass('db');
+                    $('.detail_org_name').removeClass('dn');
+
+                    showotherText = true;
+                }
+
+                if ($(this).val() == 'Self employed') {
+                    $('.detail_self_employee').addClass('db');
+                    $('.detail_self_employee').removeClass('dn');
+
+                    $('.detail_other').addClass('dn');
+                    $('.detail_other').removeClass('db');
+                    $('.detail_professional').addClass('dn');
+                    $('.detail_professional').removeClass('db');
+                    $('.detail_year').addClass('db');
+                    $('.detail_year').removeClass('dn');
+                    $('.detail_org_name').addClass('db');
+                    $('.detail_org_name').removeClass('dn'); 
+                    showotherText = false;
+
+                }
+                if ($(this).val() == 'Professional' || $(this).val() == 'Retired' || $(this).val() == 'Salaried') {
+                    $('.detail_self_employee').addClass('dn');
+                    $('.detail_self_employee').removeClass('db');
+
+                    $('.detail_other').addClass('dn');
+                    $('.detail_other').removeClass('db');
+                    $('.detail_professional').addClass('db');
+                    $('.detail_professional').removeClass('dn');
+                    $('.detail_year').addClass('db');
+                    $('.detail_year').removeClass('dn');
+                    $('.detail_org_name').addClass('db');
+                    $('.detail_org_name').removeClass('dn'); 
+                    showotherText = false;
+
+                }
+                if ($(this).val() == 'Housewife' || $(this).val() == 'Student'){
+                    $('.detail_self_employee').addClass('dn');
+                    $('.detail_self_employee').removeClass('db');
+
+                    $('.detail_other').addClass('dn');
+                    $('.detail_other').removeClass('db');
+                    $('.detail_professional').addClass('dn');
+                    $('.detail_professional').removeClass('db');
+                    $('.detail_year').addClass('dn');
+                    $('.detail_year').removeClass('db');
+                    $('.detail_org_name').addClass('dn');
+                    $('.detail_org_name').removeClass('db'); 
+                    showotherText = false;
+
+                }
+        });
+
+        function validationCheck(){
+            // console.log("in click function");
+                if (v2 == 1) {
+                    // var abval = $(this).attr('name');
+                    // var error = $('p.error-msg');
+                    $('.pancard_text').addClass("errorInput");
+                    $('.pan_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v2 = 1;
+                }
+                else{
+                    v2 = 0;
+                }
+                if (v3 == 1) {
+                    $('.mother_text').addClass("errorInput");
+                    $('.mother_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v3 = 1;
+                }
+                else{
+                    v3 = 0;
+                }
+                if (v4 == 1) {
+                    $('.father_text').addClass("errorInput");
+                    $('.father_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v4 = 1;
+                }
+                else{
+                    v4 = 0;
+                }
+                if (showotherText == true) {
+                    if ($('.occupation_detail_1').val() == '') {
+                        $('.occupation_detail_1').addClass("errorInput");
+                        $('.occupation_detail_1_error_msg').addClass('error-msg-1').css('display', 'block');
+                        v5 = 1;
+                    }
+                    else{
+                        v5 = 0;
+                    }
+                }
+                else{
+                    v5 = 0;
+                }
+                if ($('.org_name').val() == '') {
+                    if (($('#occupation').val() == 'Student') || ($('#occupation').val() == 'Housewife')) {
+
+                        v6 = 0;
+                    }
+                    else{
+                        $('.org_name').addClass("errorInput");
+                        $('.org_name_error_msg').addClass('error-msg-1').css('display', 'block');
+                        v6 = 1;
+
+                    }
+
+                }
+                else{
+                    v6 = 0;
+                }
+                if ($('.service_year').val() == '') {
+                    
+                    if (($('#occupation').val() == 'Student') || ($('#occupation').val() == 'Housewife')) {
+                        // console.log("service year blank condition");
+                        v7 = 0;
+                    }
+                    else{
+                        $('.service_year').addClass("errorInput");
+                        $('.service_year_error_msg').addClass('error-msg-1').css('display', 'block');
+                        v7 = 1;
+                        // console.log("service year blank condition22222");
+
+                    }
+                }
+                else{
+                    v7 = 0;
+                }
+                if ($('#annualincome').val() == '') {
+                    
+                    if (($('#occupation').val() == 'Student') || ($('#occupation').val() == 'Housewife')) {
+                        v8 = 0;
+                        // console.log("inclome blank condition");
+
+                    }
+                    else{
+                        $('#annualincome').addClass("errorInput");
+                        $('.annualincome_error_msg').addClass('error-msg-1').css('display', 'block');
+                        v8 = 1;
+                        // console.log("inclome blank condition22222");
+
+                    }
+                }
+                else{
+                    v8 = 0;
+                }
+        
+                 if (v9 == 1) {
+                    // var abval = $(this).attr('name');
+                    // var error = $('p.error-msg');
+                    $('.education').addClass("errorInput");
+                    $('.education_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v9 = 1;
+                }
+                else{
+                    v9 = 0;
+                }
+                 if (v10 == 1) {
+                    // var abval = $(this).attr('name');
+                    // var error = $('p.error-msg');
+                    $('#nationality').addClass("errorInput");
+                    $('.nationality_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v10 = 1;
+                }
+                else{
+                    v10 = 0;
+                }
+                 if (v11 == 1) {
+                    // var abval = $(this).attr('name');
+                    // var error = $('p.error-msg');
+                    $('.marital_status').addClass("errorInput");
+                    $('.marital_status_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v11 = 1;
+                }
+                else{
+                    v11 = 0;
+                }
+                 if (v12 == 1) {
+                    // var abval = $(this).attr('name');
+                    // var error = $('p.error-msg');
+                    $('#occupation').addClass("errorInput");
+                    $('.occupation_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v12 = 1;
+                }
+                else{
+                    v12 = 0;
+                }
+               console.log(v2,v3,v4,v5,v6,v7,v8);
+                if (v2 ==0 && v3 == 0 && v5 == 0 && v6 ==0 && v7 == 0 && v8 == 0 && v9 == 0 && v10 ==0 && v11 == 0 && v12 == 0) {
+                    if (($('#occupation').val() == 'Student') || ($('#occupation').val() == 'Housewife') || ($('#nationality').val() == 'Non-Resident')) {
+                        jQuery.noConflict();
+                        $('#occupation_error').modal('show');
+                    }
+                   else{
+                     window.location = "kyc.html";
+                   }
+                }
+                else{
+
+                }
+        }
+    </script>
+
+</body>
+
+</html>

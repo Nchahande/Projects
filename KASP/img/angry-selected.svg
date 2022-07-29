@@ -1,0 +1,20 @@
+<svg id="angry-selected" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.616 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #497cb5;
+      }
+
+      .cls-2 {
+        fill: #e7f5fb;
+      }
+    </style>
+  </defs>
+  <ellipse id="Ellipse_686" data-name="Ellipse 686" class="cls-1" cx="19.808" cy="20" rx="19.808" ry="20" transform="translate(0)"/>
+  <g id="Group_4183" data-name="Group 4183" transform="translate(10.401 8.502)">
+    <path id="Path_2809" data-name="Path 2809" class="cls-2" d="M132.5,307.5a12.767,12.767,0,0,0-18.4,0c-.641.662.369,1.675,1.011,1.011a11.322,11.322,0,0,1,16.378,0C132.131,309.174,133.141,308.162,132.5,307.5Z" transform="translate(-113.893 -287.139)"/>
+    <circle id="Ellipse_687" data-name="Ellipse 687" class="cls-2" cx="2.844" cy="2.844" r="2.844" transform="translate(1.057 5.124)"/>
+    <circle id="Ellipse_688" data-name="Ellipse 688" class="cls-2" cx="2.844" cy="2.844" r="2.844" transform="translate(11.813 5.124)"/>
+    <path id="Path_2810" data-name="Path 2810" class="cls-2" d="M154.92,65.695l-6.575,2.1h1.011l-6.574-2.1c-.653-.208-1.664.114-1.011.323l6.574,2.1a1.97,1.97,0,0,0,1.011,0l6.575-2.1C156.584,65.81,155.572,65.487,154.92,65.695Z" transform="translate(-139.446 -65.628)"/>
+  </g>
+</svg>

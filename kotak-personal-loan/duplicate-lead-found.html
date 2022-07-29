@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link href="css/kotak-personal-loan.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/other.css">
+
+    <title>Kotak Personal Loan</title>
+
+    <style>
+        .btn-pl-primary{
+            width: 320px;
+        }
+    </style>
+  </head>
+  <body>
+    
+    <header>
+        <div class="center_grid">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="logo">
+                            <img src="img/kotak-bank-logo.svg" class="img-fluid" alt="Kotak Mahindra Bank Logo">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact Us</a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <p>Our experts are here to help you</p>
+                                <div class="dropdown_row">
+                                    <div class="dropdown_col">
+                                        Customer Care
+                                    </div>
+                                    <div class="dropdown_col text-right">
+                                        <a href="tel:1800 209 8800">1800 209 8800</a>
+                                    </div>
+                                </div>
+                                <div class="dropdown_row m-0 pb-0">
+                                    <div class="dropdown_col">
+                                        Email
+                                    </div>
+                                    <div class="dropdown_col text-right col_lg">
+                                        <a href="mailto:kli.einsurance@kotak.com">kli.einsurance@kotak.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main_kotak_container no-footer">
+        <div class="center_grid">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="main_container typography text-center">
+                            <img src="img/sorry-icon.svg" class="img-fluid mx-auto d-block">
+                            <h3>Duplicate Lead Found</h3>
+                            <p>Looks like we already have your application on record with these details.</p>
+                            <hr>
+                            <p class="sm">Status Update</p>
+                            <h5 class="mb-4">Application incomplete</h5>
+                            <button class="btn-pl-primary">Resume Application</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+   
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/kotak-personal-loan.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.city_container').click(function(){
+                $('.city_container').removeClass('selected');
+                $(this).addClass('selected');
+            });
+            $('.progress-block').css('width', $('.progress-block').data('value')+'%');
+        });
+
+    </script>
+    
+  </body>
+</html>

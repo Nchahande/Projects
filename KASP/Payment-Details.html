@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Roboto Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/kotak-ulip.css" />
+    <link rel="stylesheet" href="css/other.css" />
+    <link rel="stylesheet" href="css/gsp.css" />
+
+    <title>Digital Ulip</title>
+</head>
+
+<body>
+    <div class="loader__container">
+        <div class="mask"></div>
+        <div class="loader">
+            <img src="./img/kotak-defaultLoader-1.gif" alt="">
+        </div>
+    </div>
+
+    <header></header>
+    <!-- header -->
+
+    <main class="bgs-grey">
+        <div class="center_grid">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-8 col-md-9 col-sm-10 col-11">
+                        <!-- <div class="stepper__container">
+                    <div class="stepper_items progrees">
+                               <div class="flex_div">
+                                   <div class="step_item">1</div>
+                                   <div class="step_caption"><div>Review & payment</div></div>
+                               </div>
+                               <div class="step_count">3/3</div>
+                       </div>
+                   <div class="stepper_gap"></div>
+                   <div class="stepper_items ">
+                     <div class="flex_div">
+                       <div class="step_item">2</div>
+                       <div class="step_caption">Personal details</div>
+                     </div>
+                   </div>
+                   <div class="stepper_gap"></div>
+                   <div class="stepper_items">
+                           <div class="flex_div">
+                               <div class="step_item">3</div>
+                               <div class="step_caption">Health details</div>
+                           </div>
+                   </div>
+                   <div class="stepper_gap"></div>
+                   <div class="stepper_items">
+                           <div class="flex_div">
+                               <div class="step_item">4</div>
+                               <div class="step_caption">Upload documents</div>
+                           </div>
+                   </div>
+                 </div> -->
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-7 col-md-10 col-12">
+                        <div class="form_left_container">
+                            <h2>Payment Details</h2>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="premium_detail_container">
+                                        <p>Premium per <span>year</span></p>
+                                        <h2>₹ 28,587 <small style="font-size: 16px;">(incl. of taxes)</small></h2>
+                                        <p>For monthly mode, 2 months investment amount will be debited at the time of purchasing the policy</p>
+                                    </div>
+                                </div>
+                                <div class="m-2"></div>
+
+                                <div class="col-12">
+                                    <!-- <div class="option_container option-inline mb-3">
+                              <label>
+                                  <input type="checkbox" class="agree1check">
+                                  <span class="caption" style="font-weight: 500px; font-size: 14px;">I agree to setup a standing instruction with my credit card for Future Premium Payments</span>
+                                  <span class="checkmark"></span>
+                              </label>
+                            </div> -->
+                                </div>
+
+                                <div class="col-12">
+
+
+                                    <div class="panel-group" id="paymentAccordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne">
+                                                <h4 class="panel-title">
+                                                    <a role="button" class="custom-accord-tick collapseone" data-parent="#paymentAccordion">
+                                      Pay with your card/bank account
+                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne" class="show" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    <div class="col-12 p-0">
+                                                        <div class="option_container option-inline mb-3 field_row">
+                                                            <div class="mb-3">
+                                                                <label>
+                                              <input type="checkbox" class="agree1check">
+                                                <span class="caption">I accept that I am paying from my own Bank account/Credit/Debit card</span>
+                                                <span class="checkmark"></span>
+                                                <p class="error-msg agree1check_error_msg p-0">This field is required</p>
+                                            </label>
+                                                            </div>
+                                                            <!--  <div class="">
+                                              <label>
+                                                  <input type="checkbox" id="checkLifeInsured">
+                                                  <span class="caption">I have read and understood the terms and conditions of the Benefit Illustration.</span>
+                                                  <span class="checkmark"></span>
+                                                  <p class="error-msg checkLifeInsured_error_msg p-0">This field is required</p>
+                                              </label>
+                                            </div> -->
+                                                            <!--  <div class="col-12">
+                                                  <div class="upload_container mt-4" style="max-width: 100%;">
+                                                      <img  src="./img/download-small-carrot.svg" class="img-fluid mr-1"> DOWNLOAD BENEFIT ILLUSTRATION 
+                                                  </div>
+                                              </div> -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 p-0">
+
+                                                    </div>
+                                                    <!-- <div class="row">
+                                      <div class="col-xl-6 col-lg-6 col-md-7 col-sm-10 col-12">
+                                        <div class="field_row">
+                                          <input type="text" placeholder="Name on card">
+                                          <p class="error-msg">This is an error message.</p>
+                                        </div>
+                                      </div>
+                                    </div>   -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--  <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                  <h4 class="panel-title">
+                                  <a role="button" data-toggle="collapse" class="collapsetwo custom-accord-tick collapsed" data-parent="#paymentAccordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    Paying by others card or bank account
+                                  </a>
+                                </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                  <div class="panel-body">
+                                    <div class="row">
+                                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10 col-12">
+                                        <div class="field_row">
+                                          <label>Name of the payer<span class="imp_tag">*</span></label>
+                                          <input type="text" placeholder="Enter name" name="name_of_payor" class="name_of_payor" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)">
+                                          <p class="error-msg">Please enter valid name</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10 col-12">
+                                        <div class="field_row">
+                                          <label>Relation with you<span class="imp_tag">*</span></label>
+                                          <select required class="relationship" name="relationship">
+                                              <option value="" disabled selected hidden>Select relationship</option>
+                                                <option>Father</option>
+                                                <option>Son</option>
+                                                <option>Brother</option>
+                                                <option>Grandfather</option>
+                                                <option>Grandson</option>
+                                                <option>Daughter</option>
+                                                <option>Granddaughter</option>
+                                                <option>Grandmother</option>
+                                                <option>Sister</option>
+                                                <option>Wife</option>
+                                                <option>Mother</option>
+                                                <option>Husband</option>
+                                          </select>
+                                          <p class="error-msg">This is an error message.</p>
+                                      </div>
+                                      </div>
+                                      <div class="col-12">
+                                        <div class="option_container option-inline mb-3">
+                                          <label>
+                                              <input type="checkbox" id="checkLifeInsured">
+                                              <span class="caption">I have read and understood the terms and conditions of Third Party Payment.</span>
+                                              <span class="checkmark"></span>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>                           
+                                  </div>
+                                </div>
+                              </div> -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bottom__fixed">
+                                <div class="row align-items-center">
+                                    <!--  <div class="col-xl-6 col-lg-6 col-md-6 col-4 align-self-center">
+                                   <a href="./Bank-Verification.html" class="arrow-back-black">Back</a>
+                               </div> -->
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-12 text-right d-flex justify-content-center align-items-center">
+                                        <button class="kotak-btn kotak-btn-primary proceedbtn" type="button">Proceed</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-12">
+                        <div class="aside_container d-xl-block d-lg-block d-none mb-2">
+                            <div class="icon-block-caption highligh_blue">You get guranteed maturity benefit of</div>
+                            <div class="aside-icon-container">
+                                <img class="mr-3" src="img/bag-icon.svg" class="img-fluid">
+                                <div class="aside-icon-block">
+                                    <div class="icon-block-value value-sm">₹ 3,49,600 </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="aside-cover-container d-block m-0">
+                                <div class="icon-block-caption mt-3 mb-2">Death benefit</div>
+                                <div class="cover-container-full mb-2 fw-jcsb">
+                                    <div class="icon-block-caption mb-1">Benefit cover up to</div>
+                                    <div class="icon-block-amount"><b><span>₹</span>5,000</b></div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="aside-cover-container d-block m-0">
+
+                                <!-- <div class="icon-block-caption mt-3 mb-2">Benefits</div> -->
+                                <div class="icon-block-caption mt-3 mb-2">Your Riders</div>
+                                <div class="cover-container-full  fw-jcsb">
+                                    <div class="icon-block-caption mb-1">Kotak Term Benefit Rider</div>
+                                    <div class="icon-block-amount"><b><span>₹</span>5,000</b></div>
+                                    <!-- <div class="mb-2">
+                                  <div class="icon-block-caption mb-1">Accidental death</div>
+                                  <div class="icon-block-amount"><b><span>₹</span>6,000</b></div>
+                              </div>  -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside_container aside-cover-container d-xl-block d-lg-block d-md-block d-none">
+                            <div class="cover-container-full mb-2">
+                                <div class="icon-block-caption">Your quotation ID</div>
+                                <div class="icon-block-amount"><span>: </span>OT125780</div>
+                            </div>
+                            <div class="cover-container-full mb-2">
+                                <div class="icon-block-caption">You invest</div>
+                                <div class="icon-block-amount"><span> : </span>₹ 5,000 <small class="taxeLabel">(incl. of taxes)</small></div>
+                            </div>
+                            <div class="title-circle-footer mt-4"><span>Pay for</span> <strong>10 years</strong> for a policy term of <strong>20 years</strong></div>
+                        </div>
+
+                        <!--   
+                    <div class="d-xl-none d-lg-none d-md-none d-block" id="collaspse_mobile">
+                        <div class="float_button">
+                            <button id="for_expand"><img src="./img/expand.svg" alt=""></button>
+                        </div>
+                        <div class="aside_container bottom_sm_fixed more_details_fixed">
+                            <div id="after_expand">
+                                <h6 class="mb-3">Your returns</h6>
+                                <div class="aside_container">
+                                    <div class="aside-icon-container">
+                                        <img class="" src="img/bag-icon.svg" class="img-fluid">
+                                        <div class="aside-icon-block justify_sm_right pl-4">
+                                            <div class="icon-block-caption">Guaranteed returns</div>
+                                            <div class="icon-block-value value-sm">₹ 3,49,600</div>
+                                        </div> 
+                                    </div> 
+                                    <hr class="my-2">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p class="payment_main">You pay</p>
+                                            <p class="payment_main_amt"><span>₹ </span> 3,49,600</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="payment_main">You get</p>
+                                            <p class="payment_main_amt"><span>₹ </span> 2,19,200</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+
+                            <div id="before_expand">
+                                <div class="aside-icon-block">
+                                    <div class="icon-block-caption">Guaranteed returns</div>
+                                    <div class="icon-block-value value-sm">₹ 3,49,600 </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <!-- main -->
+
+    <!-- Modal Body -->
+    <!-- Modal 1-->
+    <div class="modal fade Paying_Other" id="SignAndSymtoms" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">List Of Diseases</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="modal-list pl-0">
+                        <li>Any ulceration, abnormal growth/node, lump, cyst in any part of body</li>
+                        <li>Unexplained weight loss &gt;5 kgs</li>
+                        <li>Recurrent cough, difficulty in swallowing or hoarseness of voice</li>
+                        <li>Sudden loss of vision, hearing or epileptic fits or persistent headache</li>
+                        <li>Any persistent loss of blood or unusual discharge from any body opening</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <div class="text-left">
+                        <div class="option_container option-inline">
+                            <label>
+                        <input type="radio" name="sample">
+                        <span class="caption">Yes</span>
+                        <span class="dotmark"></span>
+                    </label>
+                        </div>
+                        <div class="option_container option-inline">
+                            <label>
+                        <input type="radio" name="sample" checked="checked">
+                        <span class="caption">No</span>
+                        <span class="dotmark"></span>
+                    </label>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <button class="kotak-btn kotak-btn-primary" data-dismiss="modal">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2-->
+    <div class="modal fade Paying_Other" id="investigations" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">List Of Diseases</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="modal-list pl-0">
+                        <li>Tumor markers, biopsy, fine needle aspiration tests,</li>
+                        <li>Colonoscopy, endoscopy, CT/MRI/PET Scan</li>
+                        <li>*Mammography/Pap Smear? (*incuding normal results of health check- up, if any)</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <div class="text-left">
+                        <div class="option_container option-inline">
+                            <label>
+                        <input type="radio" name="sample">
+                        <span class="caption">Yes</span>
+                        <span class="dotmark"></span>
+                    </label>
+                        </div>
+                        <div class="option_container option-inline">
+                            <label>
+                        <input type="radio" name="sample" checked="checked">
+                        <span class="caption">No</span>
+                        <span class="dotmark"></span>
+                    </label>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <button class="kotak-btn kotak-btn-primary" data-dismiss="modal">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pay by other Modal -->
+
+
+    <div class="modal fade Paying_Other" id="PayingOther" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Terms & Conditions</h5>
+            </div> -->
+                <div class="modal-header pb-4 px-4 d-block">
+                    <h5 class="modal-title">Terms & Conditions
+                        <img src="./img/close.svg" alt="" style="float: right; cursor: pointer;" data-dismiss="modal" aria-label="Close">
+                    </h5>
+                </div>
+                <div class="modal-body text-center px-4" style="margin-top: 0px !important;">
+                    <p>I confirm that I am registered with KLI as third party premium payer for this policy and the bank account/card being used for payment belongs to me.</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div class="mb-4">
+                        <button class="kotak-btn kotak-btn-disagree" id="disagree" data-dismiss="modal">DISAGREE</button>
+                    </div>
+                    <div class="mb-4">
+                        <button class="kotak-btn kotak-btn-primary mr-4" id="agree" data-dismiss="modal">AGREE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Custom jQuery -->
+
+    <script src="js/kotak-digital-ulip.js"></script>
+    <script src="js/other.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/dist/jquery.validate.js"></script>
+
+
+    <script type="text/javascript">
+        var v1 = 1;
+        var v11 = 1;
+        var v2 = 1;
+        var v3 = 1;
+        var v4 = 1;
+        var showotherbankoption;
+        $(function() {
+            $('.custom-accord-tick').click(function() {
+                $('.custom-accord-tick').addClass('collapsed');
+                $('.panel-collapse').removeClass('show');
+            })
+
+            $('.agree1check').click(function() {
+                if ($(this).is(':checked')) {
+                    v4 = 0;
+                    // $('#PayingOther').modal('show');  
+
+                } else {
+                    v4 = 1;
+                }
+                changeofinput();
+            });
+        });
+
+        $("#disagree").click(function() {
+            v1 = 1;
+            changeofinput();
+        })
+
+        $('.agree1check').change(function() {
+            if ($(this).is(':checked')) {
+                v1 = 0;
+                // $('.proceedbtn').prop('disabled', true);
+                $("#disagree").click(function() {
+                    $('.agree1check').prop('checked', false);
+                })
+                $('.agree1check').removeClass("errorInput");
+                $('.agree1check_error_msg').removeClass('error-msg-1').css('display', 'none');
+            } else {
+                // $('.proceedbtn').prop('disabled', false);
+                v1 = 1;
+            }
+            changeofinput();
+        });
+
+
+
+        $('#checkLifeInsured').change(function() {
+            if ($(this).is(':checked')) {
+                v11 = 0;
+                // $('.proceedbtn').prop('disabled', true);
+                // $("#disagree").click(function(){
+                //   $('.agree1check').prop('checked', false);
+                // }) 
+                $('#checkLifeInsured').removeClass("errorInput");
+                $('.checkLifeInsured_error_msg').removeClass('error-msg-1').css('display', 'none');
+            } else {
+                // $('.proceedbtn').prop('disabled', false);
+                v11 = 1;
+            }
+            changeofinput();
+        });
+
+        $('.collapseone').click(function() {
+            // console.log("in click of headingtwo" + $('.collapsetwo').attr("aria-expanded"));
+            showotherbankoption = false;
+
+
+            changeofinput();
+
+        });
+        $('.collapsetwo').click(function() {
+            if ($('.collapsetwo').attr("aria-expanded") == "true") {
+                showotherbankoption = true;
+                if ($('.name_of_payor').val() == "") {
+                    isValid = false;
+                    v2 = 1;
+                    // $('.proceedbtn').prop('disabled', true);
+                }
+                if ($('.relationship').val() == "") {
+                    isValid = false;
+                    v3 = 1;
+                    // $('.proceedbtn').prop('disabled', true);  
+                }
+
+            } else {
+                showotherbankoption = false;
+            }
+
+            changeofinput();
+
+        });
+
+        $('.relationship').on("change", function() {
+            var valofrel = $('.relationship').val();
+            if (valofrel == "") {
+                var error = $(this).siblings('p.error-msg');
+                $(this).addClass("errorInput");
+                error.addClass('error-msg-1').css('display', 'block');
+                v3 = 1;
+            } else {
+                var correct = $(this).siblings('p.error-msg');
+                $(this).removeClass("errorInput");
+                correct.removeClass('error-msg-1').css('display', 'none');
+                v3 = 0;
+            }
+            changeofinput();
+        });
+        // keyup
+        $("input").on("blur", function() {
+
+            var valueofinput = $(this).val();
+            if ($(this).attr('name') == "name_of_payor") {
+                if (validateName(valueofinput) == false || valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v2 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v2 = 0;
+                }
+            }
+            changeofinput();
+        });
+
+        function changeofinput() {
+            // var isValid = true;
+            // $("input").each(function() {
+            //     var element = $(this);
+            //     if (showotherbankoption == true) {
+            //         if (v1 == 1) {
+            //           isValid = false;
+            //         }
+            //         else{
+            //             // isValid = true;
+            //         }
+            //     }
+            //     else{
+            //         if (v1 == 1) {
+            //           isValid = false;
+            //         }
+            //         else{
+            //             // isValid = true;
+            //         }
+            //     }
+            // });
+            // if (isValid != false) {
+            //     $('.proceedbtn').prop('disabled', false);
+            // }
+            // else{
+            //     $('.proceedbtn').prop('disabled', true);
+            // }
+
+        }
+
+        $(".proceedbtn").click(function() {
+
+            if (v1 == 1) {
+                $('.agree1check').addClass("errorInput");
+                $('.agree1check_error_msg').addClass('error-msg-1').css('display', 'block');
+                v1 = 1;
+            } else {
+                v1 = 0;
+                // window.location = "Nominee.Details.html";
+            }
+            if (v11 == 1) {
+                $('#checkLifeInsured').addClass("errorInput");
+                $('.checkLifeInsured_error_msg').addClass('error-msg-1').css('display', 'block');
+                v11 = 1;
+            } else {
+                v11 = 0;
+                // window.location = "Nominee.Details.html";
+            }
+
+            if (v1 == 0) {
+                window.location = "Verify-Application.html";
+            } else {
+
+            }
+        });
+    </script>
+
+</body>
+
+</html>

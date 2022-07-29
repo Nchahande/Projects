@@ -1,0 +1,1497 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width,
+    initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' />
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+    <title>Annuity</title>
+
+    <!--google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!--fontawesome fonts -->
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css?ver=5.4.1" rel="stylesheet" />
+
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/annuity.css">
+    <link rel="stylesheet" href="css/annuity-form-elements.css">
+
+    <style>
+        html,
+        body {
+            background-color: #F4F6FA;
+        }
+
+        .annuity__stepper {
+            display: none;
+        }
+
+        .popover .popover-body {
+            min-width: 180px;
+        }
+        header a.resume {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loader__container">
+        <div class="loader"></div>
+    </div>
+    <!--/.loader__container-->
+
+    <header>
+        <!-- <div class="kotak__grid">
+            <div class="inner__container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-5">
+                            <div class="logo">
+                                <a href="./">
+                                    <img src="img/common/kotak-logo.png" class="img-fluid" alt="Kotak Life Insurance Logo" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-7 align-self-center">
+                            <div class="header_right_block">
+                                <a href="#">Contact us</a>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Need Help</a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <p>Our experts are here to help you</p>
+                                        <div class="dropdown_row">
+                                        <div class="dropdown_col">
+                                            Customer Care
+                                        </div>
+                                        <div class="dropdown_col text-right">
+                                            <a href="tel:1800 209 8800">1800 209 8800</a>
+                                        </div>
+                                        </div>
+                                        <div class="dropdown_row m-0 pb-0">
+                                        <div class="dropdown_col">
+                                            Email
+                                        </div>
+                                        <div class="dropdown_col text-right col_lg">
+                                            <a href="mailto:kli.einsurance@kotak.com">kli.einsurance@kotak.com</a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </header>
+    <!-- /header -->
+
+    <main id="main">
+        <div class="kotak__grid">
+            <div class="inner__container">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="annuity__stepper stepper_nps">
+                                <div class="stepper_items completed">
+                                    <div class="step_item">1</div>
+                                    <div class="step_caption">Get Started</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items completed">
+                                    <div class="step_item">2</div>
+                                    <div class="step_caption">Personal Information</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items completed">
+                                    <div class="step_item">3</div>
+                                    <div class="step_caption">Nominee Details</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items completed">
+                                    <div class="step_item">4</div>
+                                    <div class="step_caption">Payout Information</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items">
+                                    <div class="step_item">5</div>
+                                    <div class="step_caption">Document Upload</div>
+                                </div>
+                            </div>
+                            <div class="annuity__stepper stepper_lti">
+                                <div class="stepper_items completed">
+                                    <div class="step_item">1</div>
+                                    <div class="step_caption">Personal Information</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items completed">
+                                    <div class="step_item">2</div>
+                                    <div class="step_caption">Nominee Details</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items completed">
+                                    <div class="step_item">3</div>
+                                    <div class="step_caption">Payout Information</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items">
+                                    <div class="step_item">4</div>
+                                    <div class="step_caption">Payment Details</div>
+                                </div>
+                                <div class="stepper_gap"></div>
+                                <div class="stepper_items">
+                                    <div class="step_item">5</div>
+                                    <div class="step_caption">Document Upload</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-8 col-md-10 col-12">
+                            <div class="pran__details__container">
+                                <div class="d-xl-block d-lg-block d-none">
+                                    <h2 class="mb-1">Review your details</h2>
+                                    <p class="mb-5">Your Quotation number - OT125780</p>
+                                </div>
+
+                                <div class="d-xl-none d-lg-none d-block">
+                                    <p class="mb-1">Your Quotation number - OT125780</p>
+                                    <h2 class="mb-3">Review your details</h2>
+
+                                    <p>You selected to get pension for yourself till life and cashback for nominee</p>
+                                    <div class="annuity_list mb-3">
+                                        <ul>
+                                            <li class="tick-black tick-black-small w-100">Return of investment amount of
+                                                <i class="fa fa-inr" aria-hidden="true"></i> 500000 to nominee on
+                                                death of pension holder</li>
+                                        </ul>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-7">
+                                            <div class="pran_aside_row_amount">
+                                                <span>Investment Amount</span><img src="img/common/info-icon.svg" class="annuity-popOvers ml-2" data-toggle="popover-click" data-content="Amount of single premium" data-original-title="" title="">
+                                                <p class="mb-3"><i class="fa fa-inr" aria-hidden="true"></i> 5,00,000 +
+                                                    <i class="fa fa-inr" aria-hidden="true"></i> 0 (Tax)</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-5">
+                                            <div class="pran_aside_row_amount">
+                                                <span>Pension Amount</span>
+                                                <p class="mb-3"><i class="fa fa-inr" aria-hidden="true"></i> 2,500 <span style="color: #000 !important;">/month</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="pran_aside_row_amount">
+                                                <span>Total amount of single premium to be paid (incl of taxes)</span>
+                                                <p class="mb-0"><i class="fa fa-inr" aria-hidden="true"></i> 5,00,000
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="mt-4 mb-4">
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="font-bold mb-4">Personal Details 
+                                            <!-- <a href="#" class="myEdit" data-value="personal_details">Edit</a> -->
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="row" id="personal_details_view">
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Your Name
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">Mahesh Jagtap</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                My Date of Birth
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">12/07/1970</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Gender
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">Male</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Marital Status
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">Married</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Occuptation
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">Salaried</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Annual Income
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">25 Lakhs</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Pan Card number
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">AWPRGH9378</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Nationality
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">Indian</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Mobile number
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">9820982017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Email address
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">mahesh@gmail.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row ">
+                                            <div class="form__field__caption label_sm">
+                                                Father’s Name
+                                            </div>
+                                            <div class="form_field">
+                                                <p class="field_values">Swapnil Jagtap</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row" id="personal_details_edit">
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Your Name
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="" value="Mahesh Jagtap">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                My Date of Birth
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" disabled value="12/07/1970">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Gender
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">Male</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Marital Status
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" disabled value="Married">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Occuptation
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <select>
+                                                    <option value="0" disabled="">Select Occupation
+                                                    </option>
+                                                    <option selected="">Salaried</option>
+                                                    <option>Salaried</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Annual Income (INR)
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="" onkeypress="validate(event)" value="25 Lakhs" class="income-value">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Pan Card number
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="" value="AWPRGH9378">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Nationality
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <select disabled="">
+                                                    <option value="0" disabled="">Select Nationality
+                                                    </option>
+                                                    <option selected="">Indian</option>
+                                                    <option>Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Mobile number
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" onkeypress="validate(event)" placeholder="" value="9820982017">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Email address
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="email" name="name" placeholder="" value="mahesh@gmail.com">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Father’s Name
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="Name" value="Swapnil Jagtap">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <a href="#" class="link_cancel">Cancel</a>
+                                        <button type="button" class="btn_annuity btn_red text-uppercase ml-4 form_save">Save</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <hr class="review_hr">
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="font-bold mb-4 mt-4">Communication details 
+                                            <!-- <a href="#" class="myEdit" data-value="communication_details">Edit</a> -->
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="row" id="communication_details_view">
+                                    <div class="col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Current Address
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">404, Azelia, Prestige Residency Waghbil Naka,
+                                                    Ghodbunder Rd, Kavesar, Thane, Maharashtra 400615</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form__row form_row_last">
+                                            <div class="form__field__caption label_sm">
+                                                Permanent Address ( Preferred Communication Address)
+                                            </div>
+                                            <div class="form_field">
+                                                <p class="field_values">4, ABC, Prestige Residency, Ghodbunder Rd,
+                                                    Majiwada, Thane, Maharashtra 400615</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="communication_details_edit">
+                                    <div class="col-12">
+                                        <div class="form__row mb-1">
+                                            <div class="form__field__caption label_sm">
+                                                Current Address
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="Address 1" value="404, Azelia, Prestige Residency">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="Address 2" value="Waghbil Naka, Ghodbunder Rd">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="" value="Kavesar, Thane">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" onkeypress="validate(event)" placeholder="Pincode" value="400615">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="City">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="State" value="Maharashtra">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12">
+                                        <div class="form__row mb-1">
+                                            <div class="form__field__caption label_sm">
+                                                Permanent Address ( Preferred Communication Address)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="Address 1" value="404, Azelia, Prestige Residency">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="Address 2" value="Waghbil Naka, Ghodbunder Rd">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="" value="Kavesar, Thane">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" onkeypress="validate(event)" placeholder="Pincode" value="400615">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="City">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="State" value="Maharashtra">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <a href="#" class="link_cancel">Cancel</a>
+                                        <button type="button" class="btn_annuity btn_red text-uppercase ml-4 form_save">Save</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <hr class="review_hr">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="font-bold mb-4 mt-4">Spouse Details 
+                                            <!-- <a href="#" class="myEdit" data-value="spouse_details">Edit</a> -->
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="row" id="spouse_details_view">
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Spouse Name
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">Priya Jagtap</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Spouse DOB
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">22/07/1974</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Gender
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">Female</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form__row form_row_last">
+                                            <div class="form__field__caption label_sm">
+                                                Spouse Address
+                                            </div>
+                                            <div class="form_field">
+                                                <p class="field_values">404, Azelia, Prestige Residency Waghbil Naka,
+                                                    Ghodbunder Rd, Kavesar, Thane, Maharashtra 400615</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="spouse_details_edit">
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Spouse Name
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="" value="Priya Jagtap">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Spouse DOB
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" disabled placeholder="" value="22/07/1974">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Gender
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" disabled placeholder="" value="Female">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form__row mb-1">
+                                                    <div class="form__field__caption label_sm">
+                                                        Current Address
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" placeholder="Address 1" value="404, Azelia, Prestige Residency">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" placeholder="Address 2" value="Waghbil Naka, Ghodbunder Rd">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" placeholder="" value="Kavesar, Thane">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" onkeypress="validate(event)" placeholder="Pincode" value="400615">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" placeholder="City">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" placeholder="State" value="Maharashtra">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <a href="#" class="link_cancel">Cancel</a>
+                                        <button type="button" class="btn_annuity btn_red text-uppercase ml-4 form_save">Save</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <hr class="review_hr">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="font-bold mb-4 mt-4">Nominee Details 
+                                            <!-- <a href="#" class="myEdit" data-value="nominee_details">Edit</a> -->
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="row" id="nominee_details_view">
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Full Name
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">Shruti Jagtap</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Relationship with You
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">Daughter</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Date of Birth
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">12/07/1988</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Nominee Share
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">70%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form__row form_row_last">
+                                            <div class="form__field__caption label_sm">
+                                                Current Address
+                                            </div>
+                                            <div class="form_field">
+                                                <p class="field_values">404, Azelia, Prestige Residency Waghbil Naka,
+                                                    Ghodbunder Rd, Kavesar, Thane, Maharashtra 400615</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="nominee_details_edit">
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Full Name
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="" value="Shruti Jagtap">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Relationship with You
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <select>
+                                                    <option value="0" disabled="">Select Relationship
+                                                    </option>
+                                                    <option selected>Daughter</option>
+                                                    <option>Son</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Date of Birth
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" disabled value="12/07/1988">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Nominee Share
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="" value="70%">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form__row mb-1">
+                                            <div class="form__field__caption label_sm">
+                                                Current Address
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" placeholder="Address 1" value="404, Azelia, Prestige Residency">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" placeholder="Address 2" value="Waghbil Naka, Ghodbunder Rd">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" placeholder="" value="Kavesar, Thane">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" onkeypress="validate(event)" placeholder="Pincode" value="400615">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" placeholder="City">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" placeholder="State" value="Maharashtra">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <a href="#" class="link_cancel">Cancel</a>
+                                        <button type="button" class="btn_annuity btn_red text-uppercase ml-4 form_save">Save</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <hr class="review_hr">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="font-bold mb-4 mt-4">Appointee Details 
+                                            <!-- <a href="#" class="myEdit" data-value="appointee_details">Edit</a> -->
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="row" id="appointee_details_view">
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Full Name
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">Priya Jagtap</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Relationship with You
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">Daughter</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Date of Birth
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">12/07/1970</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form__row form_row_last">
+                                            <div class="form__field__caption label_sm">
+                                                Current Address
+                                            </div>
+                                            <div class="form_field">
+                                                <p class="field_values">404, Azelia, Prestige Residency Waghbil Naka,
+                                                    Ghodbunder Rd, Kavesar, Thane, Maharashtra 400615</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="appointee_details_edit">
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Full Name
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="" value="Priya Jagtap">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Relationship with You
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <select>
+                                                    <option value="0" disabled="">Select Relationship
+                                                    </option>
+                                                    <option selected>Daughter</option>
+                                                    <option>Son</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Date of Birth
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" disabled value="12/07/1970">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form__row mb-1">
+                                            <div class="form__field__caption label_sm">
+                                                Current Address
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" placeholder="Address 1" value="404, Azelia, Prestige Residency">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" placeholder="Address 2" value="Waghbil Naka, Ghodbunder Rd">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" placeholder="" value="Kavesar, Thane">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" onkeypress="validate(event)" placeholder="Pincode" value="400615">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" placeholder="City">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                <div class="form__row">
+                                                    <div class="form_field mb-3">
+                                                        <input type="text" name="name" placeholder="State" value="Maharashtra">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <a href="#" class="link_cancel">Cancel</a>
+                                        <button type="button" class="btn_annuity btn_red text-uppercase ml-4 form_save">Save</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <hr class="review_hr">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="font-bold mb-4 mt-4">Pension to be deposited 
+                                            <!-- <a href="#" class="myEdit" data-value="pension_details">Edit</a> -->
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="row" id="pension_details_view">
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Account number
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">001245643580</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                IFSC Code
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">KMB78679</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Bank and Branch Name
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <p class="field_values">Kotak Mahindra Bank, Worli</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row form_row_last">
+                                            <div class="form__field__caption label_sm">
+                                                Name of A/C holder
+                                            </div>
+                                            <div class="form_field">
+                                                <p class="field_values">Mahesh Jagtap</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="pension_details_edit">
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Account number
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="" value="001245643580">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                IFSC Code
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="" value="KMB78679">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Bank and Branch Name
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="" value="Kotak Mahindra Bank, Worli">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                        <div class="form__row">
+                                            <div class="form__field__caption label_sm">
+                                                Name of A/C holder
+                                            </div>
+                                            <div class="form_field mb-3">
+                                                <input type="text" name="name" placeholder="" value="Mahesh Jagtap">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <a href="#" class="link_cancel">Cancel</a>
+                                        <button type="button" class="btn_annuity btn_red text-uppercase ml-4 form_save">Save</button>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2 class="mb-2 mt-4">Before proceeding, make sure you agree to the following
+                                        </h2>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="checkbox__container mr-3">
+                                            <input type="checkbox" class="declaration_popup1" name="mtd">
+                                            <span class="checkmark"></span>
+                                            <span class="caption font14">Declaration by the Proposer / Annuitant :</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="checkbox__container mr-3">
+                                            <input type="checkbox" class="declaration_popup2" name="mtd">
+                                            <span class="checkmark"></span>
+                                            <span class="caption font14">Declaration for Online Transactions Rights :</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="checkbox__container mr-3">
+                                            <input type="checkbox" class="declaration_popup3" name="mtd">
+                                            <span class="checkmark"></span>
+                                            <span class="caption font14">Section 45 Of The Insurance Act, 1938:</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="checkbox__container mr-3">
+                                            <input type="checkbox" class="declaration_popup4" name="mtd">
+                                            <span class="checkmark"></span>
+                                            <span class="caption font14">Free Look Period: </span>
+                                        </label>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="checkbox__container mr-3">
+                                            <input type="checkbox" class="declaration_popup5" name="mtd">
+                                            <span class="checkmark"></span>
+                                            <span class="caption font14">Declaration on AADHAR Details :</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-4 align-self-center">
+                                        <a href="bank-details.html" class="link_back">Back</a>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-8 text-right align-self-center">
+                                        <button type="button" class="btn_annuity btn_blue_outline verify_bank btn_proceed text-uppercase">Proceed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 d-xl-block d-lg-block d-none">
+                            <div class="pran__details__aside">
+                                <div class="pran_aside_row">
+                                    <div class="pran_aside_row_amount">
+                                        <span>Your Quotation ID</span>
+                                        <p>OT125780</p>
+                                    </div>
+                                </div>
+
+                                <div class="pran_aside_row">
+                                    <p>You selected to get pension for yourself till life and cashback for nominee</p>
+                                </div>
+
+                                <div class="pran_aside_row">
+                                    <div class="pran_aside_row_amount">
+                                        <span>You Pay</span><img src="img/common/info-icon.svg" class="annuity-popOvers ml-2" data-toggle="popover-click" data-content="Amount of single premium" data-original-title="" title="">
+                                        <p><i class="fa fa-inr" aria-hidden="true"></i> 5,00,000 + <i class="fa fa-inr" aria-hidden="true"></i> 0 (Tax)</p>
+                                    </div>
+                                    <div class="pran_aside_row_amount">
+                                        <span>Total amount of single premium to be paid (incl of taxes)</span>
+                                        <p><i class="fa fa-inr" aria-hidden="true"></i> 5,00,000</p>
+                                    </div>
+                                    <div class="pran_aside_row_amount">
+                                        <span>Pension Amount</span>
+                                        <p><i class="fa fa-inr" aria-hidden="true"></i> 2,500 <span style="color: #000 !important;">/month</span></p>
+                                    </div>
+                                </div>
+
+                                <div class="pran_aside_row">
+                                    <div class="pran_aside_row_amount">
+                                        <span>Best Feature</span>
+                                        <div class="annuity_list">
+                                            <ul>
+                                                <li class="tick-black tick-black-small w-100">Return of investment
+                                                    amount of
+                                                    <i class="fa fa-inr" aria-hidden="true"></i> 500000 to nominee on
+                                                    death of pension holder</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- /main -->
+
+
+    <div class="modal fade" id="declarationModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-close">
+                        <img src="img/common/close-icon.svg" class="img-fluid" data-dismiss="modal" aria-label="Close">
+                    </div>
+
+                    <h5 class="mb-3">Declaration by the Proposer / Annuitant :</h5>
+
+                    <div class="terms_container">
+                        <p>I understand that the annuity rates applicable at the date of Acceptance of proposal shall be applicable and guaranteed for the term of the policy. I declare that I have answered the questions in the Proposal Form after having fully understood the nature of the questions and the importance of disclosing all information while answering such questions. I also hereby declare that the answers given by me to all the questions in the proposal form are true and complete in every respect and that I have not withheld any material information or suppressed any fact.</p>
+
+                        <p>I also hereby authorize my employer, to divulge to the Company any information required by it in connection with this proposal form and the policy contract that may be issued pursuant to this proposal. I further declare that the statements/submissions made by me in this Proposal Form [including any addendum(s) thereto / all declarations, affidavits and other statements] and/or any information sought for by the Company from any person authorised by me to provide such information, relied upon by the Company to assess the risk on my life under this Proposal Form shall form a basis of the contract of Annuity between me and the Company. And if any untrue statement is contained in the Proposal Form [including any addendum(s) thereto] /any of the above documents or statements, or if there has been a non-disclosure of a material fact the Company shall have the right to vary the benefits/ treat the Policy as void and all premiums paid under the policy may be forfeited to the Company subject to the provisions of Section 45 of Insurance Act, 1938 as amended from time to time.</p>
+
+                        <p>I understand that the contract will be governed by the provisions of the Insurance Act, 1938 as amended from time to time, the IRDA Act, 1999 and the Regulations framed there under and that the contract will not commence until the Company's written acceptance of this Proposal Form is received. I hereby confirm that all premiums will be paid from bonafide sources and no premiums will be paid out of proceeds of crime related to any of the offence listed in Prevention of Money Laundering Act, 2002.</p>
+                    </div>
+                    <div class="terms_footer">
+                        <a href="#" class="modal_cancel" data-value="declaration_popup1" data-dismiss="modal" aria-label="Close">Close</a>
+                        <button type="button" class="btn_annuity btn_red text-uppercase ml-4" data-dismiss="modal" aria-label="Close">AGREE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- declaration modal 1 -->
+
+    <div class="modal fade" id="declarationModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-close">
+                        <img src="img/common/close-icon.svg" class="img-fluid" data-dismiss="modal" aria-label="Close">
+                    </div>
+
+                    <h5 class="mb-3">Declaration for Online Transactions Rights :</h5>
+
+                    <div class="terms_container">
+                        <p>I have read the terms and conditions of registration on Kotak Life Insurance website - <a href="http://insurance.kotak.com" target="_blank">http://insurance.kotak.com</a> and accept them. I understand that I will have to register on <a href="http://insurance.kotak.com" target="_blank">http://insurance.kotak.com</a> to receive my username and password. I agree that all transactions executed over the website <a href="http://insurance.kotak.com" target="_blank">http://insurance.kotak.com</a> under my username and password will be binding on me. I understand that I get transaction rights for proposal number mentioned above provided my application is accepted by Kotak Life Insurance.</p>
+                    </div>
+                    <div class="terms_footer">
+                        <a href="#" class="modal_cancel" data-value="declaration_popup2" data-dismiss="modal" aria-label="Close">Close</a>
+                        <button type="button" class="btn_annuity btn_red text-uppercase ml-4" data-dismiss="modal" aria-label="Close">AGREE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- declaration modal 2 -->
+
+    <div class="modal fade" id="declarationModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-close">
+                        <img src="img/common/close-icon.svg" class="img-fluid" data-dismiss="modal" aria-label="Close">
+                    </div>
+
+                    <h5 class="mb-3">Section 45 Of The Insurance Act, 1938:</h5>
+
+                    <div class="terms_container">
+                        <p>The provisions of Section 45 of the Insurance Act, 1968 are applicable in the above contract. Please refer to Section 45 either on our website or contact our intermediary or visit the nearest branch for the full text.</p>
+                    </div>
+                    <div class="terms_footer">
+                        <a href="#" class="modal_cancel" data-value="declaration_popup3" data-dismiss="modal" aria-label="Close">Close</a>
+                        <button type="button" class="btn_annuity btn_red text-uppercase ml-4" data-dismiss="modal" aria-label="Close">AGREE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- declaration modal 3 -->
+
+    <div class="modal fade" id="declarationModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-close">
+                        <img src="img/common/close-icon.svg" class="img-fluid" data-dismiss="modal" aria-label="Close">
+                    </div>
+
+                    <h5 class="mb-3">Free Look Period</h5>
+
+                    <div class="terms_container">
+                        <p>The policyholder is offered 30 days free look period for a policy from the date of receipt of the policy document wherein the policyholder may choose to return the policy within 30 days of receipt if s/he is no agreeable with any of the terms and conditions of the plan and receive the applicable refund amount.</p>
+
+                        <p>Note: Proposer is advised to read and understand the product features, benefits & risk factors, structure of charges, terms and conditions of the proposed plan as set forth in the related brochure(s) available on the Company’s website www.insurance.kotak.com.</p>
+
+                        <p>I have read and understood the terms and conditions of Proposal Form.</p>
+
+                        <p>I further understand that the final annuity amount payable, will be based on the amount transferred by the NPS authority to Kotak Mahindra Life Insurance Company Ltd, so my Benefit Illustration & Proposal Form will be updated accordingly. I also agree, I should be eligible for only Monthly Annuity Payout as authorized by PFRDA.</p>
+
+                    </div>
+                    <div class="terms_footer">
+                        <a href="#" class="modal_cancel" data-value="declaration_popup4" data-dismiss="modal" aria-label="Close">Close</a>
+                        <button type="button" class="btn_annuity btn_red text-uppercase ml-4" data-dismiss="modal" aria-label="Close">AGREE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- declaration modal 4 -->
+
+    <div class="modal fade" id="declarationModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-close">
+                        <img src="img/common/close-icon.svg" class="img-fluid" data-dismiss="modal" aria-label="Close">
+                    </div>
+
+                    <h5 class="mb-3">Declaration on AADHAR Details :</h5>
+
+                    <div class="terms_container">
+                        <p>I hereby voluntarily submit at my own discretion to Kotak Mahindra Life Insurance Company Limited (hereinafter referred to as “Kotak Life”) a copy of Aadhaar card, as issued by UIDAI, for the purpose of establishing my identity.</p>
+
+                        <p>I hereby give my consent to Kotak Life to verify my Aadhaar to establish its genuineness through Quick Response (QR) code (embedded in the Aadhaar card), e-verification or through other such acceptable manner as per UIDAI guidelines or under any Act or law from time to time.</p>
+
+                        <p>My Aadhaar details will be used for KYC (Know Your Customer) purposes only for all policies that I may procure from Kotak Life and that the information submitted to Kotak Life shall not be used for any other purpose, unless the same is required under any law. During offline verification process, my information such as Name, Age, Gender and address may be verified by Kotak Life. I may submit any other officially valid identity document in place of Aadhaar.</p>
+
+                        <p>I have read and understood the Terms and Conditions for sharing Aadhar details.</p>
+
+                    </div>
+                    <div class="terms_footer">
+                        <a href="#" class="modal_cancel" data-value="declaration_popup5" data-dismiss="modal" aria-label="Close">Close</a>
+                        <button type="button" class="btn_annuity btn_red text-uppercase ml-4" data-dismiss="modal" aria-label="Close">AGREE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- declaration modal 5 -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+
+    <!-- custom script -->
+    <script src="js/comma.js"></script>
+    <script src="js/annuity.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            $('.annuity-popOvers').popover({
+                html: true,
+                trigger: 'click',
+                placement: 'top',
+                content: function() {
+                    return '<p>' + $(this).data('content') + '</p>';
+                }
+            });
+
+            var plan = localStorage.getItem('plan');
+            $('.stepper_' + plan).css('display', 'flex');
+
+            $('.btn_proceed').click(function() {
+                if (localStorage.getItem('plan') == 'nps') {
+                    location.href = 'payout-information.html';
+                } else {
+                    location.href = 'payment-method.html';
+                }
+            });
+
+            $('.myEdit').click(function() {
+                var editForm = $(this).data('value');
+                $('#' + editForm + '_view').css('display', 'none');
+                $('#' + editForm + '_edit').css('display', 'flex');
+                return false;
+            });
+
+            $('.link_cancel, .form_save').click(function() {
+                var editForm = $(this).parent().parent('.row').attr('id');
+                var arr = editForm.split('_');
+                editForm = arr[0] + '_' + arr[1];
+                $('#' + editForm + '_view').css('display', 'flex');
+                $('#' + editForm + '_edit').css('display', 'none');
+                return false;
+            });
+            $('.modal_cancel').click(function(e) {
+                var chkValue = $(this).data('value');
+                $('.' + chkValue).prop("checked", false);
+                console.log(chkValue);
+            });
+            $('.declaration_popup1').click(function() {
+                if ($(this).is(':checked')) {
+                    $('#declarationModal1').modal('show');
+                }
+            });
+            $('.declaration_popup2').click(function() {
+                if ($(this).is(':checked')) {
+                    $('#declarationModal2').modal('show');
+                }
+            });
+            $('.declaration_popup3').click(function() {
+                if ($(this).is(':checked')) {
+                    $('#declarationModal3').modal('show');
+                }
+            });
+            $('.declaration_popup4').click(function() {
+                if ($(this).is(':checked')) {
+                    $('#declarationModal4').modal('show');
+                }
+            });
+            $('.declaration_popup5').click(function() {
+                if ($(this).is(':checked')) {
+                    $('#declarationModal5').modal('show');
+                }
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

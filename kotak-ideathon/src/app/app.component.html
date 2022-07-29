@@ -1,0 +1,21 @@
+<app-header (idea_submitted) = "show_toast()"></app-header>
+
+<div class="main-container position-relative">
+  <router-outlet></router-outlet>
+  <div class="toast_container" *ngIf="toast_state">
+    <div class="position-relative">
+      <div class="d-flex justify-content-around align-items-center">
+        <div class="toast_icon">
+          🎉
+        </div>
+        <div class="toast_text_container">
+          <span class="toast_text_heading">Congratulations!!</span><br>
+          <p class="toast_text">Idea Successfully Submitted.</p>
+        </div>
+      </div>
+      <div class="close_toast" (click)="close_toast()">
+        <img src="assets/images/close.svg" alt="close">
+      </div>
+    </div>
+  </div>
+</div>

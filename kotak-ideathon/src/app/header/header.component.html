@@ -1,0 +1,137 @@
+<header>
+  <div class="center-grid">
+    <nav class="navbar navbar-expand-lg">
+      <div class=" navbar-brand logo_container d-flex justify-content-start align-items-center" routerLink="/">
+        <img src="assets/images/kotak-logo-white.svg" class="logo_img" alt="logo" />
+        <img src="assets/images/menu.png" class="mobile_menu" alt="menu" />
+        <div class="logo_seperator"></div>
+        <p class="logo_text">IDEATHON</p>
+      </div>
+      <div class="navbar-toggler">
+        <div class="d-flex justify-content-end align-items-center">
+          <div class="dropdown">
+            <button class="dropdown_btn" type="button" id="user_dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <img src="assets/images/account-logo-white.svg" class="account_logo" alt="account-circle" />
+              <img src="assets/images/chevron-down-white.svg" class="expand_user_menu  ms-1" alt="account-circle" />
+            </button>
+            <div class="dropdown-menu user_dropdown" aria-labelledby="user_dropdown">
+              <app-employee-info></app-employee-info>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="header_nav_container d-flex justify-content-center align-items-center">
+          <p *ngIf="route_path === ''" class="header_nav_text" [routerLink]="['/']" routerLinkActive="header_nav_active"
+            [routerLinkActiveOptions]="{ exact: true }">
+            My Ideas
+          </p>
+          <p *ngIf="route_path === 'reviewer'" class="header_nav_text" [routerLink]="['/reviewer']"
+            routerLinkActive="header_nav_active" [routerLinkActiveOptions]="{ exact: true }">
+            Review ({{ "0" }})
+          </p>
+          <p *ngIf="route_path === 'admin'" class="header_nav_text" [routerLink]="['/admin']"
+            routerLinkActive="header_nav_active" [routerLinkActiveOptions]="{ exact: true }">
+            Admin
+          </p>
+          <p *ngIf="route_path === 'admin'" class="header_nav_text" [routerLink]="['/admin/settings']"
+            routerLinkActive="header_nav_active" [routerLinkActiveOptions]="{ exact: true }">
+            Settings
+          </p>
+        </div>
+        <div class="account_container d-flex justify-content-end align-items-center">
+          <button class="share_idea_btn" type="button" data-bs-toggle="modal" data-bs-target="#idea_form">+
+            Share an idea
+          </button>
+          <div class="dropdown" style="margin-bottom: -5px;">
+            <button class="dropdown_btn" type="button" id="user_dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="assets/images/account-logo-white.svg" class="account_logo" alt="account-circle" />
+                <p class="username">Swapnil</p>
+                <img src="assets/images/chevron-down-white.svg" class="expand_user_menu" alt="account-circle" />
+              </div>
+            </button>
+            <div class="dropdown-menu user_dropdown" aria-labelledby="user_dropdown">
+              <app-employee-info></app-employee-info>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+</header>
+<div class="modal fade" id="idea_form" tabindex="-1" role="dialog" aria-labelledby="idea_form_label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="d-flex justify-content-between align-items-center pb-4">
+        <h5 class="modal-title" id="idea_form_label">Share a new idea</h5>
+        <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close">
+          <span>&#10006;</span>
+        </button>
+      </div>
+      <div class="idea_form_container">
+        <form [formGroup]="idea_form" (ngSubmit)="onsubmit()">
+          <div class="form-group mb-3">
+            <input type="text" class="form-control idea_title_field" id="idea_title" aria-describedby="title_help"
+              name="title" placeholder="Title of idea *" formControlName="title">
+            <small *ngIf="this.idea_form.get('title')?.touched && !this.idea_form.get('title')?.dirty" id="title_help"
+              class="form-text text-danger">Please Enter Idea Title</small>
+          </div>
+
+          <div class="form-group mb-3">
+            <textarea style="max-height: 122px;min-height: 122px;" type="text" name="description"
+              class="form-control idea_desc_field" id="idea_desc" aria-describedby="desc_help"
+              placeholder="Idea description *" formControlName="description"></textarea>
+            <small *ngIf="this.idea_form.get('description')?.touched && !this.idea_form.get('description')?.dirty"
+              id="desc_help" class="form-text text-danger">Please Enter Idea Description</small>
+          </div>
+
+          <div class="form-group mb-3">
+            <select style="width: 100%;" class="filter-control" id="department_select" name="department"
+              formControlName="department">
+              <option [value]="null" selected disabled>Beneficiary Department *</option>
+              <option value="HR">HR</option>
+              <option value="Administration">Administration</option>
+              <option value="Operations">Operations</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Information technology">Information technology</option>
+            </select>
+            <small *ngIf="this.idea_form.get('department')?.touched && !this.idea_form.get('department')?.dirty"
+              id="title_dept" class="form-text text-danger">Please Select Department</small>
+          </div>
+
+          <div class="form-group mb-3">
+            <select style="width: 100%;" class="filter-control" id="categoy_select" name="category"
+              formControlName="category">
+              <option [value]="null" selected disabled>Beneficiary Category *</option>
+              <option value="Process Efficiency">Process Efficiency</option>
+              <option value="Core values">Core values</option>
+              <option value="Value proposition">Value proposition</option>
+              <option value="Technology">Technology</option>
+            </select>
+            <small *ngIf="this.idea_form.get('category')?.touched && !this.idea_form.get('category')?.dirty"
+              id="title_category" class="form-text text-danger">Please Select Category</small>
+          </div>
+
+          <div class="form-group mb-3">
+            <div class="upload_btn mb-4">
+              <input type="file" id="upload_idea" class="upload_idea_input" name="upload_idea">
+              <label for="upload_idea" class="upload_idea_label">
+                <span><img src="assets/images/upload.svg" alt=""></span>
+                Upload if any files (Max. 2mb)
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group mb-3">
+            <button [disabled]="!this.idea_form.valid" style="width:100%;" type="submit" class="submit_btn"
+              data-bs-dismiss="modal" aria-label="Close">Submit Idea</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

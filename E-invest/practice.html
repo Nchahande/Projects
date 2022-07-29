@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Roboto Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <title>End</title>
+
+    <style>
+        .errorMsg {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <form method="POST" action="" id="_form_5DDD41D9874FC_" class="_form _form_8 _inline-form  _dark" novalidate="" data-hs-cf-bound="true">
+            <div class="_form-content">
+                <div class="_form_element _x78314691 _full_width _clear">
+                <div class="_form-title">Get in touch</div>
+            </div>
+                <div class="_form_element _x46756288 _full_width ">
+                <label class="_form-label">Full Name*</label>
+            <div class="_field-wrapper">
+            <input type="text" name="fullname" placeholder="Enter full name" data-name="fullname">
+            <p class="errorMsg">Please enter your fullname</p></div>
+            </div>
+                <div class="_form_element _x95427126 _full_width ">
+                <label class="_form-label">Business Name*</label>
+            <div class="_field-wrapper">
+            <input type="text" name="organization" placeholder="Business Name" data-name="organization">
+            <p class="errorMsg">Please enter your business name</p></div>
+            </div>
+                <div class="_form_element _x84536259 _full_width ">
+                <label class="_form-label">Business Email*</label>
+            <div class="_field-wrapper">
+            <input type="text" name="email" placeholder="Email address" required="" data-name="email">
+            <p class="errorMsg">Please enter your email</p></div>
+            </div>
+                <div class="_form_element _x39746554 _full_width ">
+                <label class="_form-label">Phone number*</label>
+            <div class="_field-wrapper">
+            <input type="text" name="phone" placeholder="Phone number" data-name="phone">
+            <p class="errorMsg">Please enter your phone number</p></div>
+            </div>
+                <div class="_form_element _field10 _full_width ">
+                <label class="_form-label">How can we help you?*</label>
+            <div class="_field-wrapper">
+            <textarea name="field[10]" placeholder="" data-name="enquiry_box_large"></textarea>
+            <p class="errorMsg">Please help us to help you</p></div>
+            </div>
+            <div class="_button-wrapper _full_width"><button id="_form_8_submit" class="_submit" type="button">Send Enquiry<style>#_form_5DDD41D9874FC_ ._submit { background-color: transparent !important; color: #0f0 !important; width: 100%;}</style></button></div>		<div class="_clear-element"></div>
+            </div>
+            <div class="_form-thank-you" style="display:none;"></div>
+            </form>
+    </main>
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+        <!-- Custom jQuery -->
+        <script src="js/kotak-digital-ulip.js"></script>
+
+
+        <script>
+            $( "<style>#_form_5DDD41D9874FC_ p.errorMsg { display: none; }</style>" ).appendTo( "#_form_5DDD41D9874FC_" );
+            $("input[name=phone]").attr({
+                pattern:"\d*", 
+                maxlength:"10",
+                onkeypress:"validate(event)" // attributes which contain dash(-) should be covered in quotes.
+            });
+            profile_img
+
+            $(".profile_img")
+            .append(
+                $('<img/>').attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhW8b0LPFmij-bk9cyYYO4jdFN-1AYlEE75qEXzQqJS55MfelYNdF4YeebTMFz1_9catY&usqp=CAU")
+            );
+
+            var v1 = 1;
+            var v2 = 1;
+            var v3 = 1;
+            var v4 = 1;
+            var v5 = 1;
+
+            function validate(evt) {
+                var theEvent = evt || window.event;
+                var key = theEvent.keyCode || theEvent.which;
+                key = String.fromCharCode(key);
+                var regex = /[0-9]|\./;
+                if (!regex.test(key)) {
+                    theEvent.returnValue = false;
+                    if (theEvent.preventDefault) theEvent.preventDefault();
+                }
+            }
+
+            //Minimun length
+            function minCharacter(val){
+                if (re=/^.{3,}$/.test(val))
+                {
+                    return (true)
+                }
+                return (false)
+            }
+            // Validate mobile
+            function validateMobile(phone){
+                if (re=/^.{10,}$/.test(phone))
+                {
+                    return (true)
+                }
+                return (false)
+             }
+            //  Validate Email
+            function ValidateEmail(mail) 
+            {
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+                {
+                    return (true)
+                }
+                    return (false)
+            }
+
+
+
+            $("#_form_5DDD41D9874FC_ input, #_form_5DDD41D9874FC_ textarea").on("keyup", function(){
+                var valueofinput = $(this).val();
+                if ($(this).attr('name') == "fullname") {
+                    if (minCharacter(valueofinput) == false || valueofinput == " ") {
+                        $(this).siblings('.errorMsg').css('display', 'block');
+                        v1 = 1;
+                    } else {
+                        $(this).siblings('.errorMsg').css('display', 'none');
+                        v1 = 0;
+                    }
+                }
+
+                if ($(this).attr('name') == "organization") {
+                    if (minCharacter(valueofinput) == false || valueofinput == " ") {
+                        $(this).siblings('.errorMsg').css('display', 'block');
+                        v2 = 1;
+                    } else {
+                        $(this).siblings('.errorMsg').css('display', 'none');
+                        v2 = 0;
+                    }
+                }
+
+                if ($(this).attr('name') == "email") {
+                    if (ValidateEmail(valueofinput) == false || valueofinput == " ") {
+                        $(this).siblings('.errorMsg').css('display', 'block');
+                        v3 = 1;
+                    } else {
+                        $(this).siblings('.errorMsg').css('display', 'none');
+                        v3 = 0;
+                    }
+                }
+
+                if ($(this).attr('name') == "phone") {
+                    if (validateMobile(valueofinput) == false || valueofinput == " ") {
+                        $(this).siblings('.errorMsg').css('display', 'block');
+                        v4 = 1;
+                    } else{
+                        $(this).siblings('.errorMsg').css('display', 'none');
+                        v4 = 0;
+                    }
+                }
+
+                if ($(this).attr('data-name') == "enquiry_box_large") {
+                    if (minCharacter(valueofinput) == false || valueofinput == " ") {
+                        $(this).siblings('.errorMsg').css('display', 'block');
+                        v5 = 1;
+                    } else {
+                        $(this).siblings('.errorMsg').css('display', 'none');
+                        v5 = 0;
+                    }
+                }
+            });
+
+            
+            function changeofinput() {
+                //fullname
+                if (v1 == 1) {
+                    $("input[name=fullname]").siblings('.errorMsg').css('display', 'block');
+                    v1 = 1;
+                }else {
+                    v1 = 0;
+                }
+                //organization
+                if (v2 == 1) {
+                    $("input[name=organization]").siblings('.errorMsg').css('display', 'block');
+                    v2 = 1;
+                }else {
+                    v2 = 0;
+                }
+                //email
+                if (v3 == 1) {
+                    $("input[name=email]").siblings('.errorMsg').css('display', 'block');
+                    v3 = 1;
+                }else {
+                    v3 = 0;
+                }
+                //phone
+                if (v4 == 1) {
+                    $("input[name=phone]").siblings('.errorMsg').css('display', 'block');
+                    v4 = 1;
+                }else {
+                    v4 = 0;
+                }
+                //enquiry_box_large
+                if (v5 == 1) {
+                    $("textarea[data-name='enquiry_box_large']").siblings('.errorMsg').css('display', 'block');
+                    v5 = 1;
+                }else {
+                    v5 = 0;
+                }
+                if (v1 == 0 && v2 ==0 && v3 == 0 && v5 == 0) {
+                    alert("form Validate")
+                    $('.anim-appear-line').addClass('active');
+
+                    setTimeout(function() {
+                        $('.title-anim-appear-line').addClass('active');
+                    }, 0);
+                }
+                else{
+                    $('html, body').animate({
+                        scrollTop: ($('.errorMsg').offset().top - 300)
+                    }, 2000);
+                    alert("Error")
+                }
+            }
+
+            $('#_form_8_submit').click(function(){
+                changeofinput();                
+            })
+
+//             $('#_form_8_submit').click(function() {
+
+// });
+
+        </script>
+
+
+</body>
+
+</html>

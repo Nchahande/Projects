@@ -1,0 +1,214 @@
+<div class="center-grid">
+  <div class="page_heading_container">
+    <h3 class="page_heading">Settings</h3>
+  </div>
+  <div class="roles_rights_container">
+    <p class="settings_text">Roles and Rights</p>
+    <div class="role_btn_container">
+      <!-- Button trigger modal -->
+      <button type="button" class="role_btn" data-bs-toggle="modal" data-bs-target="#category_modal">
+        + New Category
+      </button>
+      <button type="button" class="role_btn" data-bs-toggle="modal" data-bs-target="#department_modal">
+        + New department
+      </button>
+      <button type="button" class="role_btn" data-bs-toggle="modal" data-bs-target="#reviewer_modal">
+        + Add reviewers
+      </button>
+      <button type="button" class="role_btn" data-bs-toggle="modal" data-bs-target="#admin_modal">
+        + Admin
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="category_modal" tabindex="-1" role="dialog" aria-labelledby="category_modal_label"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="d-flex justify-content-between align-items-center pb-4">
+        <h5 class="modal-title" id="category_modal_label">Add new category</h5>
+        <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close">
+          <span>&#10006;</span>
+        </button>
+      </div>
+      <div class="category_form_container">
+        <form [formGroup]="category_form" (ngSubmit)="onsubmit()">
+          <div class="form-group mb-3">
+            <input type="text" class="form-control" id="idea_title" aria-describedby="category_help" name="category"
+              placeholder="New category name" formControlName="category">
+            <small *ngIf="this.category_form.get('category')?.touched && !this.category_form.get('category')?.dirty"
+              id="category_help" class="form-text text-danger">Please Enter Idea Category</small>
+          </div>
+          <div class="form-group mb-3">
+            <button [disabled]="!this.category_form.valid" style="width:100%;" type="submit" class="submit_btn"
+              data-bs-dismiss="modal" aria-label="Close">Save</button>
+          </div>
+        </form>
+        <p class="category_form_heading mb-3">Categories</p>
+        <p class="category_title mb-3">Categories</p>
+        <p class="category_title mb-3">Company Profit</p>
+        <p class="category_title mb-3">Core Values</p>
+        <p class="category_title mb-3">Customer Engagement</p>
+        <p class="category_title mb-3">Internal Department & efficiency</p>
+        <p class="category_title mb-3">Marketing Strategy</p>
+        <p class="category_title mb-3">Process Efficiency</p>
+        <p class="category_title mb-3">Process Re-engineering</p>
+        <p class="category_title mb-3">Product Branding</p>
+        <p class="category_title mb-3">Technology</p>
+        <p class="category_title mb-3">Value Proposition</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="department_modal" tabindex="-1" role="dialog" aria-labelledby="department_modal_label"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="d-flex justify-content-between align-items-center pb-4">
+        <h5 class="modal-title" id="department_modal_label">Add new department</h5>
+        <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close">
+          <span>&#10006;</span>
+        </button>
+      </div>
+      <div class="department_form_container">
+        <form [formGroup]="department_form" (ngSubmit)="onsubmit()">
+          <div class="form-group mb-3">
+            <input type="text" class="form-control" id="idea_title" aria-describedby="department_help" name="department"
+              placeholder="New department name" formControlName="department">
+            <small
+              *ngIf="this.department_form.get('department')?.touched && !this.department_form.get('department')?.dirty"
+              id="department_help" class="form-text text-danger">Please Enter Idea Department</small>
+          </div>
+          <div class="form-group mb-3">
+            <button [disabled]="!this.department_form.valid" style="width:100%;" type="submit" class="submit_btn"
+              data-bs-dismiss="modal" aria-label="Close">Save</button>
+          </div>
+        </form>
+        <p class="category_form_heading mb-3">Departments</p>
+        <p class="category_title mb-3">Accounts</p>
+        <p class="category_title mb-3">Administration</p>
+        <p class="category_title mb-3">Digital Transformation</p>
+        <p class="category_title mb-3">Distribution</p>
+        <p class="category_title mb-3">Executive Office</p>
+        <p class="category_title mb-3">Human Resources</p>
+        <p class="category_title mb-3">Information Technology</p>
+        <p class="category_title mb-3">Marketing</p>
+        <p class="category_title mb-3">Operations</p>
+        <p class="category_title mb-3">Technology</p>
+        <p class="category_title mb-3">Underwriting</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="reviewer_modal" tabindex="-1" role="dialog" aria-labelledby="reviewer_modal_label"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="d-flex justify-content-between align-items-center pb-4">
+        <h5 class="modal-title" id="reviewer_modal_label">View Reviewers</h5>
+        <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close">
+          <span>&#10006;</span>
+        </button>
+      </div>
+      <div class="reviewer_form_container">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="reviewer_list_item">
+            <p class="add_reviewer_emp_name">Mehul Oza</p>
+            <p class="add_reviewer_emp_code">76004</p>
+            <p class="add_reviewer_department">Marketing</p>
+          </div>
+          <div>
+            <img class="delete_btn" src="assets/images/delete.svg" alt="delete">
+          </div>
+        </div>
+        <div *ngIf="add_reviewer_state">
+          <hr>
+          <h5 class="modal-title mb-3" id="reviewer_modal_label">Add Reviewers</h5>
+          <form [formGroup]="add_reviewer_form" (ngSubmit)="onsubmit()" autocomplete="off">
+            <div class="form-group mb-3">
+              <label for="add_admin_emp_code" class="add_admin_ecode_label">E code</label>
+              <input type="text" class="form-control" id="add_admin_emp_code" aria-describedby="category_help"
+                name="category" formControlName="add_admin_emp_code" placeholder="E code" autocomplete="off">
+              <small
+                *ngIf="this.category_form.get('add_admin_emp_code')?.touched && !this.category_form.get('add_admin_emp_code')?.dirty"
+                id="category_help" class="form-text text-danger">Please Enter Employee Code</small>
+            </div>
+            <div *ngIf="this.add_reviewer_form.get('add_admin_emp_code').dirty">
+              <div class="form-group mb-3">
+                <input type="text" class="form-control" id="add_admin_emp_name" aria-describedby="category_help"
+                  name="category" formControlName="add_admin_emp_name"
+                  disabled="this.add_admin_form.get('add_admin_emp_code').dirty">
+              </div>
+              <div class="form-group mb-3">
+                <input type="text" class="form-control" id="add_admin_emp_department" aria-describedby="category_help"
+                  name="category" formControlName="add_admin_emp_department"
+                  disabled="this.add_admin_form.get('add_admin_emp_code').dirty">
+              </div>
+              <div class="form-group mb-3">
+                <input type="text" class="form-control" id="add_admin_emp_designation" aria-describedby="category_help"
+                  name="category" formControlName="add_admin_emp_designation"
+                  disabled="this.add_admin_form.get('add_admin_emp_code').dirty">
+              </div>
+            </div>
+            <div class="form-group">
+              <button [disabled]="!this.category_form.valid" style="width:100%;" type="submit" class="submit_btn mb-3"
+                data-bs-dismiss="modal" aria-label="Close">Save</button>
+              <button (click)="add_reviewer_state = false" [disabled]="!this.category_form.valid" style="width:100%;" type="submit" class="cancel_btn"
+                data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <button class="add_admin_btn" (click)="add_reviewer_state = true">
+        + Add
+      </button>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="admin_modal" tabindex="-1" role="dialog" aria-labelledby="admin_modal_label"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="d-flex justify-content-between align-items-center pb-4">
+        <h5 class="modal-title" id="admin_modal_label">Add Admin</h5>
+        <button type="button" class="close_btn" data-bs-dismiss="modal" aria-label="Close">
+          <span>&#10006;</span>
+        </button>
+      </div>
+      <div class="reviewer_form_container">
+        <form [formGroup]="add_admin_form" (ngSubmit)="onsubmit()" autocomplete="off">
+          <div class="form-group mb-3">
+            <label for="add_admin_emp_code" class="add_admin_ecode_label">E code</label>
+            <input type="text" class="form-control" id="add_admin_emp_code" aria-describedby="category_help"
+              name="category" formControlName="add_admin_emp_code" placeholder="E code" autocomplete="off">
+            <small
+              *ngIf="this.category_form.get('add_admin_emp_code')?.touched && !this.category_form.get('add_admin_emp_code')?.dirty"
+              id="category_help" class="form-text text-danger">Please Enter Employee Code</small>
+          </div>
+          <div *ngIf="this.add_admin_form.get('add_admin_emp_code').dirty">
+            <div class="form-group mb-3">
+              <input type="text" class="form-control" id="add_admin_emp_name" aria-describedby="category_help"
+                name="category" formControlName="add_admin_emp_name"
+                disabled="this.add_admin_form.get('add_admin_emp_code').dirty">
+            </div>
+            <div class="form-group mb-3">
+              <input type="text" class="form-control" id="add_admin_emp_department" aria-describedby="category_help"
+                name="category" formControlName="add_admin_emp_department"
+                disabled="this.add_admin_form.get('add_admin_emp_code').dirty">
+            </div>
+            <div class="form-group mb-3">
+              <input type="text" class="form-control" id="add_admin_emp_designation" aria-describedby="category_help"
+                name="category" formControlName="add_admin_emp_designation"
+                disabled="this.add_admin_form.get('add_admin_emp_code').dirty">
+            </div>
+          </div>
+          <div class="form-group mb-3">
+            <button [disabled]="!this.category_form.valid" style="width:100%;" type="submit" class="submit_btn"
+              data-bs-dismiss="modal" aria-label="Close">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

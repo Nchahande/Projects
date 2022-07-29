@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="363" fill="none" viewBox="0 0 375 363">
+    <mask id="prefix__a" width="375" height="363" x="0" y="0" maskUnits="userSpaceOnUse">
+        <path fill="#C4C4C4" d="M0 0H375V363H0z"/>
+    </mask>
+    <g fill-opacity=".8" mask="url(#prefix__a)">
+        <path fill="url(#prefix__pattern0)" d="M2.146-128.299h372.547V363H2.146v-491.299z"/>
+        <path fill="url(#prefix__pattern1)" d="M-52-273h452v636H-52v-636z"/>
+    </g>
+    <defs>
+        <pattern id="prefix__pattern0" width="1" height="1" patternContentUnits="objectBoundingBox">
+            <use transform="matrix(.00117 0 0 .00083 0 -.012)" xlink:href="#prefix__image0"/>
+        </pattern>
+        <pattern id="prefix__pattern1" width="1" height="1" patternContentUnits="objectBoundingBox">
+            <use transform="matrix(.00117 0 0 .00083 0 -.012)" xlink:href="#prefix__image0"/>
+        </pattern>
+    </defs>
+</svg>

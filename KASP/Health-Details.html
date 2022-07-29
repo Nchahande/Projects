@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Roboto Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/kotak-ulip.css" />
+    <link rel="stylesheet" href="css/gsp.css" />
+    <link rel="stylesheet" href="css/other.css" />
+
+    <title>Digital Ulip</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="loader__container">
+        <div class="mask"></div>
+        <div class="loader">
+            <img src="./img/kotak-defaultLoader-1.gif" alt="">
+        </div>
+    </div>
+
+    <header></header>
+    <!-- header -->
+
+    <main class="bgs-grey">
+        <div class="center_grid">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-8 col-md-9 col-sm-10 col-11">
+                        <div class="stepper__container">
+                            <div class="stepper_items completed">
+                                <div class="flex_div">
+                                    <div class="step_item">1</div>
+                                    <div class="step_caption">Personal details</div>
+                                </div>
+                            </div>
+                            <div class="stepper_gap"></div>
+                            <div class="stepper_items progrees">
+                                <div class="flex_div">
+                                    <div class="step_item">2</div>
+                                    <div class="step_caption">Health details</div>
+                                </div>
+                                <div class="step_count">1/3</div>
+                            </div>
+                            <div class="stepper_gap"></div>
+                            <div class="stepper_items">
+                                <div class="flex_div">
+                                    <div class="step_item">3</div>
+                                    <div class="step_caption">
+                                        <div>Benefits & Review</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stepper_gap"></div>
+                            <div class="stepper_items">
+                                <div class="flex_div">
+                                    <div class="step_item">4</div>
+                                    <div class="step_caption">Upload documents</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-7 col-md-10 col-12">
+                        <div class="form_left_container">
+                            <h2>Health details</h2>
+
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-5 col-12">
+                                    <div class="field_row">
+                                        <label>Height <span>(feet & inches)</span><span class="imp_tag">*</span></label>
+                                        <select required class="height" name="height">
+                                            <option value="" disabled selected hidden>Select height</option>
+                                            <option value="0">4 ft</option>
+                                            <option value="0">4 ft 1 inch</option>
+                                            <option value="0">4 ft 2 inches</option>
+                                            <option value="0">4 ft 3 inches</option>
+                                            <option value="0">4 ft 4 inches</option>
+                                            <option value="0">4 ft 5 inches</option>
+                                            <option value="0">4 ft 6 inches</option>
+                                            <option value="0">4 ft 7 inches</option>
+                                            <option value="0">4 ft 8 inches</option>
+                                            <option value="0">4 ft 9 inches</option>
+                                            <option value="0">4 ft 10 inches</option>
+                                            <option value="0">4 ft 11 inches</option>
+                                            <option value="0">5 ft</option>
+                                            <option value="0">5 ft 1 inch</option>
+                                            <option value="0">5 ft 2 inches</option>
+                                            <option value="0">5 ft 3 inches</option>
+                                            <option value="0">5 ft 4 inches</option>
+                                            <option value="0">5 ft 5 inches</option>
+                                            <option value="0">5 ft 6 inches</option>
+                                            <option value="0">5 ft 7 inches</option>
+                                            <option value="0">5 ft 8 inches</option>
+                                            <option value="0">5 ft 9 inches</option>
+                                            <option value="0">5 ft 10 inches</option>
+                                            <option value="0">5 ft 11 inches</option>
+                                            <option value="0">6 ft</option>
+                                            <option value="0">6 ft 1 inch</option>
+                                            <option value="0">6 ft 2 inches</option>
+                                            <option value="0">6 ft 3 inches</option>
+                                            <option value="0">6 ft 4 inches</option>
+                                            <option value="0">6 ft 5 inches</option>
+                                            
+                                        </select>
+                                        <p class="error-msg height_error_msg">Please select proper hight</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-5 col-12">
+                                    <div class="field_row">
+                                        <label>Weight <span>(in kgs)</span><span class="imp_tag">*</span></label>
+                                        <div class="number">
+                                            <div class="minus">
+                                                <img src="img/minus-icon.png" class="img-fluid" />
+                                            </div>
+                                            <input type="number" class="weight" name="weight" placeholder="Enter weight" />
+                                            <div class="plus">
+                                                <img src="img/plus-icon.png" class="img-fluid" />
+                                            </div>
+                                        </div>
+                                        <p class="error-msg weight_error_msg">Please enter proper weight</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="toggle_container">
+                                        <p>Have you gained / lost weight of more than 10 Kgs in the last 1 year or have you ever had persistent fever / unexplained infection?</p>
+                                        <div class="option_container option-inline">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="toggle-caption">&nbsp;</span>
+                                                <span class="togglemark"></span>
+                                            </label>
+                                        </div>
+                                        <!-- <div  class="radio__group mt-2">
+                                            <label  class="radio__container">
+                                                <input  type="radio" value="Yes" name="persistent" class="">
+                                                <span  class="checkmark"></span>
+                                                <span  class="caption">Yes</span>
+                                            </label>
+                                            <label  class="radio__container">
+                                                <input  type="radio" value="No" name="persistent" class="">
+                                                <span  class="checkmark"></span>
+                                                <span  class="caption">No</span>
+                                            </label>
+                                        </div> -->
+                                    </div>
+                                </div>
+
+                                <!-- <div class="col-12">
+                                    <div class="toggle_container">
+                                        <p>Do you consume any narcotics (for medical/recreational purposes)?</p>
+                                        <div class="option_container option-inline">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="toggle-caption">&nbsp;</span>
+                                                <span class="togglemark"></span>
+                                            </label>
+                                        </div>
+                                        <div  class="radio__group mt-2">
+                                            <label  class="radio__container">
+                                                <input  type="radio" value="Yes" name="narcotics" class="">
+                                                <span  class="checkmark"></span>
+                                                <span  class="caption">Yes</span>
+                                            </label>
+                                            <label  class="radio__container">
+                                                <input  type="radio" value="No" name="narcotics" class="">
+                                                <span  class="checkmark"></span>
+                                                <span  class="caption">No</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>  -->
+
+                                <!-- <div class="col-12">
+                                    <div class="toggle_container">
+                                        <p>Has any of your insurance application or reinstatement application ever been declined, postponed or accepted at extra premium or modified terms due to medical/ health grounds?
+                                        </p>
+                                        <div class="option_container option-inline">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="toggle-caption">&nbsp;</span>
+                                                <span class="togglemark"></span>
+                                            </label>
+                                        </div>
+                                        <div  class="radio__group mt-2">
+                                            <label  class="radio__container">
+                                                <input  type="radio" value="Yes" name="healthGrounds" class="">
+                                                <span  class="checkmark"></span>
+                                                <span  class="caption">Yes</span>
+                                            </label>
+                                            <label  class="radio__container">
+                                                <input  type="radio" value="No" name="healthGrounds" class="">
+                                                <span  class="checkmark"></span>
+                                                <span  class="caption">No</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>  -->
+
+                                <!-- <div class="col-12">
+                                    <div class="toggle_container">
+                                        <p>Do you hold a green card of US or any similar card for any other country?</p>
+                                        <div class="option_container option-inline">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="toggle-caption">&nbsp;</span>
+                                                <span class="togglemark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>  -->
+
+                                <!-- <div class="col-12">
+                                    <div class="toggle_container">
+                                        <p>Have you ever suffered from or diagnosed with or treated for HIV/AIDS infection?</p>
+                                        <div class="option_container option-inline">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="toggle-caption">&nbsp;</span>
+                                                <span class="togglemark"></span>
+                                            </label>
+                                        </div>
+                                        <div  class="radio__group mt-2">
+                                            <label  class="radio__container">
+                                                <input  type="radio" value="Yes" name="diagnosed" class="">
+                                                <span  class="checkmark"></span>
+                                                <span  class="caption">Yes</span>
+                                            </label>
+                                            <label  class="radio__container">
+                                                <input  type="radio" value="No" name="diagnosed" class="">
+                                                <span  class="checkmark"></span>
+                                                <span  class="caption">No</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>  -->
+                            </div>
+                            <div class="row" id="onlyIfFemale">
+                                <div class="col-12">
+                                    <div class="toggle_container">
+                                        <p>Do you consume alcohol?</p>
+                                        <div class="option_container option-inline">
+                                            <label>
+                                                <input type="checkbox" id="consumeAlcohol">
+                                                <span class="toggle-caption">&nbsp;</span>
+                                                <span class="togglemark"></span>
+                                            </label>
+                                        </div>
+                                        <!-- <div  class="radio__group mt-2">
+                                            <label  class="radio__container">
+                                                <input  type="radio" value="Yes" name="alcoholConsume" id="consumeAlcohol" class="">
+                                                <span  class="checkmark"></span>
+                                                <span  class="caption">Yes</span>
+                                            </label>
+                                            <label  class="radio__container">
+                                                <input  type="radio" value="No" name="alcoholConsume" class="">
+                                                <span  class="checkmark"></span>
+                                                <span  class="caption">No</span>
+                                            </label>
+                                        </div> -->
+                                    </div>
+                                </div>
+
+                                <div class="col-12 consumeAlcohol toggle_container">
+                                    <div>
+                                        <p>Do you drink/or had a history of drinking more than <b>7 pints of beer or 210 ml</b> of alcohol on an average in a week?</p>
+                                        <div class="option_container option-inline">
+                                            <label>
+                                                <input type="checkbox" id="alcoholAverageweek">
+                                                <span class="toggle-caption">&nbsp;</span>
+                                                <span class="togglemark"></span>
+                                            </label>
+                                        </div>
+                                        <!-- <div  class="radio__group mt-2">
+                                            <label  class="radio__container">
+                                                <input  type="radio" value="Yes" name="averageWeekAlcohol" id="alcoholAverageweek" class="">
+                                                <span  class="checkmark"></span>
+                                                <span  class="caption">Yes</span>
+                                            </label>
+                                            <label  class="radio__container">
+                                                <input  type="radio" value="No" name="averageWeekAlcohol" class="">
+                                                <span  class="checkmark"></span>
+                                                <span  class="caption">No</span>
+                                            </label>
+                                        </div> -->
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 alcoholAverageweek mt-3">
+                                            <div class="row">
+                                                <div class="col-xl-8 col-lg-8 col-md-12 col-12">
+                                                    <label>Specify the type and quantity per week</label>
+                                                    <div class="row w-100 align-items-center mb-2">
+                                                        <div class="col-xl-6 col-lg-6 col-md-6 col-6">
+                                                            <div class="option_container option-inline">
+                                                                <label>
+                                                                    <input type="checkbox" class="beer">
+                                                                    <span class="caption">Beer</span>
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6 col-lg-6 col-md-6 col-6 pr-0">
+                                                            <div class="field_row" style="min-height: unset !important;">
+                                                                <input type="number" name="beerinput" placeholder="Quantity (ml)" class="beerinput" disabled>
+                                                                <p class="error-msg beer_error_msg">Please enter quantity</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row w-100 align-items-center mb-2">
+                                                        <div class="col-xl-6 col-lg-6 col-md-6 col-6">
+                                                            <div class="option_container option-inline">
+                                                                <label>
+                                                                    <input type="checkbox" class="whiskey">
+                                                                    <span class="caption">Whiskey</span>
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6 col-lg-6 col-md-6 col-6 pr-0">
+                                                            <div class="field_row" style="min-height: unset !important;">
+                                                                <input type="number" placeholder="Quantity (ml)" name="whiskeyinput" class="whiskeyinput" disabled>
+                                                                <p class="error-msg whiskey_error_msg">Please enter quantity</p>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row w-100 align-items-center mb-2">
+                                                        <div class="ccol-xl-6 col-lg-6 col-md-6 col-6">
+                                                            <div class="option_container option-inline">
+                                                                <label>
+                                                                    <input type="checkbox" class="liquor">
+                                                                    <span class="caption">Hard Liquor</span>
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6 col-lg-6 col-md-6 col-6 pr-0">
+                                                            <div class="field_row" style="min-height: unset !important;">
+                                                                <input type="number" placeholder="Quantity (ml)" name="liquorinput" class="liquorinput" disabled>
+                                                                <p class="error-msg liquor_error_msg">Please enter quantity</p>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="toggle_container">
+                                        <p>Have you consumed tobacco in any form in the past 12 months? (Tobacco Includes Cigarette, Beedi, Cigar, Hookah, chewable tobacco, tobacco toothpaste, Gutkha etc)</p>
+                                        <div class="option_container option-inline">
+                                            <label>
+                                                <input type="checkbox" id="averageWeekTobacco">
+                                                <span class="toggle-caption">&nbsp;</span>
+                                                <span class="togglemark"></span>
+                                            </label>
+                                        </div>
+                                        <!-- <div  class="radio__group mt-2">
+                                            <label  class="radio__container">
+                                                <input  type="radio" value="Yes" name="averageWeekTobacco" id="tobaccoAverageweek" class="">
+                                                <span  class="checkmark"></span>
+                                                <span  class="caption">Yes</span>
+                                            </label>
+                                            <label  class="radio__container">
+                                                <input  type="radio" value="No" name="averageWeekTobacco" class="">
+                                                <span  class="checkmark"></span>
+                                                <span  class="caption">No</span>
+                                            </label>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <!-- <div class="col-12">
+                                    <div class="row ">
+                                        
+                                    </div>
+                                </div> -->
+                                <div class="col-xl-8 col-lg-8 col-12 tobaccoAverageweek toggle_container">
+                                    <label>Specify the type and quantity per week</label>
+                                    <div class="row w-100 align-items-center mb-2">
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-6">
+                                            <div class="option_container option-inline">
+                                                <label>
+                                                    <input type="checkbox" class="cigarette">
+                                                    <span class="caption">Cigarette</span>
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-6 pr-0">
+                                            <div class="field_row" style="min-height: unset !important;">
+                                                <input type="number" placeholder="Quantity" class="cigaretteinput" name="cigaretteinput" disabled>
+                                                <p class="error-msg cigarette_error_msg">Please enter quantity</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row w-100 align-items-center mb-2">
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-6">
+                                            <div class="option_container option-inline">
+                                                <label>
+                                                    <input type="checkbox" class="beedi">
+                                                    <span class="caption">Beedi</span>
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-6 pr-0">
+                                            <div class="field_row" style="min-height: unset !important;">
+                                                <input type="number" placeholder="Quantity" class="beediinput" name="beediinput" disabled>
+                                                <p class="error-msg beedi_error_msg">Please enter quantity</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row w-100 align-items-center mb-2">
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-6 ">
+                                            <div class="option_container option-inline">
+                                                <label>
+                                                    <input type="checkbox" class="cigar">
+                                                    <span class="caption">Cigar/ Pipe</span>
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-6 pr-0">
+                                            <div class="field_row" style="min-height: unset !important;">
+                                                <input type="number" placeholder="Quantity" class="cigarinput" name="cigarinput" disabled>
+                                                <p class="error-msg cigar_error_msg">Please enter quantity</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row w-100 align-items-center mb-2">
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-6">
+                                            <div class="option_container option-inline">
+                                                <label>
+                                                    <input type="checkbox" class="gutkha">
+                                                    <span class="caption">Gutkha/
+                                                        Khaini</span>
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-6 pr-0">
+                                            <div class="field_row" style="min-height: unset !important;">
+                                                <input type="text" placeholder="Quantity" class="gutkhainput" name="gutkhainput" disabled>
+                                                <p class="error-msg gutkha_error_msg">Please enter quantity</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="toggle_container">
+                                        <p>In the past 5 years, have you injected or otherwise used illegal drugs? (Includes Cannabis Pot, Dope, Weed, Grass, Marijuana, Hash or any other illegal drug)</p>
+                                        <div class="option_container option-inline">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span class="toggle-caption">&nbsp;</span>
+                                                <span class="togglemark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bottom__fixed">
+                                <div class="row align-items-center">
+                                    <div class="col-12 text-right d-flex align-items-center justify-content-between">
+                                        <a href="./Personal-Details.html" class="arrow-back-black mr-4">Back</a>
+                                        <button class="kotak-btn kotak-btn-primary proceedbtn" type="button">Proceed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-5 col-12">
+                        <div class="aside_container d-xl-block d-lg-block d-none mb-2">
+                            <div class="icon-block-caption highligh_blue">You get guranteed maturity benefit of</div>
+                            <div class="aside-icon-container">
+                                <img class="mr-3" src="img/bag-icon.svg" class="img-fluid">
+                                <div class="aside-icon-block">
+                                    <div class="icon-block-value value-sm">₹ 3,49,600 </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="aside-cover-container d-block m-0">
+                                <div class="icon-block-caption mt-3 mb-2">Death benefit</div>
+                                <div class="cover-container-full mb-2 fw-jcsb">
+                                    <div class="icon-block-caption mb-1">Benefit cover up to</div>
+                                    <div class="icon-block-amount"><b><span>₹</span>5,000</b></div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="aside-cover-container d-block m-0">
+
+                                <!-- <div class="icon-block-caption mt-3 mb-2">Benefits</div> -->
+                                <div class="icon-block-caption mt-3 mb-2">Your Riders</div>
+                                <div class="cover-container-full  fw-jcsb">
+                                    <div class="icon-block-caption mb-1">Kotak Term Benefit Rider</div>
+                                    <div class="icon-block-amount"><b><span>₹</span>5,000</b></div>
+                                    <!-- <div class="mb-2">
+                                        <div class="icon-block-caption mb-1">Accidental death</div>
+                                        <div class="icon-block-amount"><b><span>₹</span>6,000</b></div>
+                                    </div>  -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside_container aside-cover-container d-xl-block d-lg-block d-md-block d-none">
+                            <div class="cover-container-full mb-2">
+                                <div class="icon-block-caption">Your quotation ID</div>
+                                <div class="icon-block-amount"><span>: </span>OT125780</div>
+                            </div>
+                            <div class="cover-container-full mb-2">
+                                <div class="icon-block-caption">You invest</div>
+                                <div class="icon-block-amount"><span> : </span>₹ 5,000 <small class="taxeLabel">(incl. of taxes)</small></div>
+                            </div>
+                            <div class="title-circle-footer mt-4"><span>Pay for</span> <strong>10 years</strong> for a policy term of <strong>20 years</strong></div>
+                        </div>
+
+                        <!--   
+                        <div class="d-xl-none d-lg-none d-md-none d-block" id="collaspse_mobile">
+                            <div class="float_button">
+                                <button id="for_expand"><img src="./img/expand.svg" alt=""></button>
+                            </div>
+                            <div class="aside_container bottom_sm_fixed more_details_fixed">
+                                <div id="after_expand">
+                                    <h6 class="mb-3">Your returns</h6>
+                                    <div class="aside_container">
+                                        <div class="aside-icon-container">
+                                            <img class="" src="img/bag-icon.svg" class="img-fluid">
+                                            <div class="aside-icon-block justify_sm_right pl-4">
+                                                <div class="icon-block-caption">Guaranteed returns</div>
+                                                <div class="icon-block-value value-sm">₹ 3,49,600</div>
+                                            </div> 
+                                        </div> 
+                                        <hr class="my-2">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="payment_main">You pay</p>
+                                                <p class="payment_main_amt"><span>₹ </span> 3,49,600</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <p class="payment_main">You get</p>
+                                                <p class="payment_main_amt"><span>₹ </span> 2,19,200</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                            
+    
+                                <div id="before_expand">
+                                    <div class="aside-icon-block">
+                                        <div class="icon-block-caption">Guaranteed returns</div>
+                                        <div class="icon-block-value value-sm">₹ 3,49,600 </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <!-- main -->
+
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Custom jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/kotak-digital-ulip.js"></script>
+    <script src="js/other.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+        var v1 = 1;
+        var v2 = 1;
+        var beer = 0;
+        var whiskey = 0;
+        var liquor = 0;
+        var cigarette = 0;
+        var beedi = 0;
+        var cigar = 0;
+        var gutkha = 0;
+        $("input").on("keyup", function() {
+            var correct = $(this).siblings('p.error-msg');
+            $(this).removeClass("errorInput");
+            correct.removeClass('error-msg-1').css('display', 'none');
+            $('.weight_error_msg').removeClass('error-msg-1').css('display', 'none');
+
+        });
+        // $("input").on("change", function() {
+        //         var correct = $(this).siblings('p.error-msg');
+        //         $(this).removeClass("errorInput");
+        //         correct.removeClass('error-msg-1').css('display', 'none');
+        //         $('.weight_error_msg').removeClass('error-msg-1').css('display', 'none');
+
+        // });
+
+        $('.height').on("change", function() {
+            var valofheight = $('.height').val();
+            if (valofheight == null) {
+                var error = $(this).siblings('p.error-msg');
+                $(this).addClass("errorInput");
+                error.addClass('error-msg-1').css('display', 'block');
+                v1 = 1;
+            } else {
+                var correct = $(this).siblings('p.error-msg');
+                $(this).removeClass("errorInput");
+                correct.removeClass('error-msg-1').css('display', 'none');
+                v1 = 0;
+            }
+            // changeofinput();
+        });
+        $("input").on("blur", function() {
+            var valueofinput = $(this).val();
+            if ($(this).attr('name') == "beerinput") {
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    beer = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    beer = 0;
+                }
+            }
+            if ($(this).attr('name') == "whiskeyinput") {
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    whiskey = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    whiskey = 0;
+                }
+            }
+            if ($(this).attr('name') == "liquorinput") {
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    liquor = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    liquor = 0;
+                }
+            }
+            if ($(this).attr('name') == "cigaretteinput") {
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    cigarette = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    cigarette = 0;
+                }
+            }
+            if ($(this).attr('name') == "cigarinput") {
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    cigar = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    cigar = 0;
+                }
+            }
+            if ($(this).attr('name') == "beediinput") {
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    beedi = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    beedi = 0;
+                }
+            }
+            if ($(this).attr('name') == "gutkhainput") {
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    gutkha = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    gutkha = 0;
+                }
+            }
+            // changeofinput();
+        });
+
+        $(".kotak-btn-primary").click(function() {
+            console.log($('.height').val());
+            if ($('.height').val() == null) {
+                $('.height').addClass("errorInput");
+                $('.height_error_msg').addClass('error-msg-1').css('display', 'block');
+                v1 = 1;
+            } else {
+                v1 = 0;
+                // window.location = "Nominee.Details.html";
+            }
+            if ($('.weight').val() == "") {
+                $('.weight').addClass("errorInput");
+                $('.weight_error_msg').addClass('error-msg-1').css('display', 'block');
+                v2 = 1;
+            } else {
+                v2 = 0;
+
+            }
+
+            console.log(beer, whiskey, liquor, cigarette, beedi, cigar, gutkha);
+
+            if (v1 == 0 && v2 == 0 && beer == 0 && whiskey == 0 && liquor == 0 && cigarette == 0 && beedi == 0 && cigar == 0 && gutkha == 0) {
+                window.location = "Medical-History.html";
+            } else {
+                if (beer == 1) {
+                    $('.beerinput').addClass("errorInput");
+                    $('.beer_error_msg').addClass('error-msg-1').css('display', 'block');
+                }
+                if (whiskey == 1) {
+                    $('.whiskeyinput').addClass("errorInput");
+                    $('.whiskey_error_msg').addClass('error-msg-1').css('display', 'block');
+                }
+                if (liquor == 1) {
+                    $('.liquorinput').addClass("errorInput");
+                    $('.liquor_error_msg').addClass('error-msg-1').css('display', 'block');
+                }
+                if (cigarette == 1) {
+                    $('.cigaretteinput').addClass("errorInput");
+                    $('.cigarette_error_msg').addClass('error-msg-1').css('display', 'block');
+                }
+                if (beedi == 1) {
+                    $('.beediinput').addClass("errorInput");
+                    $('.beedi_error_msg').addClass('error-msg-1').css('display', 'block');
+                }
+                if (cigar == 1) {
+                    $('.cigarinput').addClass("errorInput");
+                    $('.cigar_error_msg').addClass('error-msg-1').css('display', 'block');
+                }
+                if (gutkha == 1) {
+                    $('.gutkhainput').addClass("errorInput");
+                    $('.gutkha_error_msg').addClass('error-msg-1').css('display', 'block');
+                }
+            }
+
+            $('html, body').animate({
+                scrollTop: ($('.errorInput').offset().top - 300)
+            }, 2000);
+        });
+
+        $('.consumeAlcohol').css('display', 'none');
+        $('#consumeAlcohol').click(function() {
+            if (this.checked) {
+                $('.consumeAlcohol').css('display', 'block');
+            } else {
+                $('.consumeAlcohol').css('display', 'none');
+                beer = 0;
+                whiskey = 0;
+                liquor = 0;
+                cigarette = 0;
+                cigar = 0;
+                beedi = 0;
+                gutkha = 0;
+            }
+        });
+
+        $('.alcoholAverageweek').css('display', 'none');
+        $('#alcoholAverageweek').click(function() {
+            if (this.checked) {
+                $('.alcoholAverageweek').css('display', 'block');
+            } else {
+                $('.alcoholAverageweek').css('display', 'none');
+                beer = 0;
+                whiskey = 0;
+                liquor = 0;
+                cigarette = 0;
+                cigar = 0;
+                beedi = 0;
+                gutkha = 0;
+            }
+        });
+
+        $('.tobaccoAverageweek').css('display', 'none');
+        $('#averageWeekTobacco').click(function() {
+            if (this.checked) {
+                $('.tobaccoAverageweek').css('display', 'block');
+            } else {
+                $('.tobaccoAverageweek').css('display', 'none');
+                beer = 0;
+                whiskey = 0;
+                liquor = 0;
+                cigarette = 0;
+                cigar = 0;
+                beedi = 0;
+                gutkha = 0;
+            }
+        });
+
+        $("input").on("keyup", function() {
+            var correct = $(this).siblings('p.error-msg');
+            $(this).removeClass("errorInput");
+            correct.removeClass('error-msg-1').css('display', 'none');
+        });
+
+        // $("input").on("keyup", function() {
+        //         var correct = $(this).siblings('p.error-msg');
+        //         $(this).removeClass("errorInput");
+        //         correct.removeClass('error-msg-1').css('display', 'none');
+        // });
+
+        // $("input").on("blur", function() {});
+
+        $("input").on("blur", function() {
+
+            var valueofinput = $(this).val();
+
+            if ($(this).attr('name') == "father") {
+                // console.log(valueofinput);
+                if (validateName(valueofinput) == true) {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v14 = 0;
+                } else {
+                    var error = $(this).siblings('p.error-msg');
+                    // $(this).removeClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    $(this).addClass("errorInput");
+                    // $(this).css('border','1px solid red');
+                    v14 = 1;
+                }
+            }
+        });
+
+        $(".beer").change(function() {
+            if ($(this).prop('checked')) {
+                $('.beerinput').prop("disabled", false);
+                beer = 1;
+                $('.beerinput').removeClass("errorInput");
+                $('.beer_error_msg').removeClass('error-msg-1').css('display', 'none');
+            } else {
+                $('.beerinput').prop("disabled", true);
+                $('.beerinput').val('');
+                beer = 0;
+                $('.beerinput').removeClass("errorInput");
+                $('.beer_error_msg').removeClass('error-msg-1').css('display', 'none');
+            }
+        });
+
+
+        $(".whiskey").change(function() {
+            if ($(this).prop('checked')) {
+                $('.whiskeyinput').prop("disabled", false);
+                whiskey = 1;
+                $('.whiskeyinput').removeClass("errorInput");
+                $('.whiskey_error_msg').removeClass('error-msg-1').css('display', 'none');
+            } else {
+                $('.whiskeyinput').prop("disabled", true);
+                $('.whiskeyinput').val('');
+                whiskey = 0;
+                $('.whiskeyinput').removeClass("errorInput");
+                $('.whiskey_error_msg').removeClass('error-msg-1').css('display', 'none');
+            }
+        });
+
+        $(".liquor").change(function() {
+            if ($(this).prop('checked')) {
+                $('.liquorinput').prop("disabled", false);
+                liquor = 1;
+                $('.liquorinput').removeClass("errorInput");
+                $('.liquor_error_msg').removeClass('error-msg-1').css('display', 'none');
+            } else {
+                $('.liquorinput').prop("disabled", true);
+                $('.liquorinput').val('');
+                liquor = 0;
+                $('.liquorinput').removeClass("errorInput");
+                $('.liquor_error_msg').removeClass('error-msg-1').css('display', 'none');
+
+            }
+        });
+
+        $(".cigarette").change(function() {
+            if ($(this).prop('checked')) {
+                $('.cigaretteinput').prop("disabled", false);
+                cigarette = 1;
+                $('.cigaretteinput').removeClass("errorInput");
+                $('.cigarette_error_msg').removeClass('error-msg-1').css('display', 'none');
+            } else {
+                $('.cigaretteinput').prop("disabled", true);
+                $('.cigaretteinput').val('');
+                cigarette = 0;
+                $('.cigaretteinput').removeClass("errorInput");
+                $('.cigarette_error_msg').removeClass('error-msg-1').css('display', 'none');
+
+            }
+        });
+        $(".beedi").change(function() {
+            if ($(this).prop('checked')) {
+                $('.beediinput').prop("disabled", false);
+                beedi = 1;
+                $('.beediinput').removeClass("errorInput");
+                $('.beedi_error_msg').removeClass('error-msg-1').css('display', 'none');
+            } else {
+                $('.beediinput').prop("disabled", true);
+                $('.beediinput').val('');
+                beedi = 0;
+                $('.beediinput').removeClass("errorInput");
+                $('.beedi_error_msg').removeClass('error-msg-1').css('display', 'none');
+            }
+        });
+        $(".cigar").change(function() {
+            if ($(this).prop('checked')) {
+                $('.cigarinput').prop("disabled", false);
+                cigar = 1;
+                $('.cigarinput').removeClass("errorInput");
+                $('.cigar_error_msg').removeClass('error-msg-1').css('display', 'none');
+            } else {
+                $('.cigarinput').prop("disabled", true);
+                $('.cigarinput').val('');
+                cigar = 0;
+                $('.cigarinput').removeClass("errorInput");
+                $('.cigar_error_msg').removeClass('error-msg-1').css('display', 'none');
+            }
+        });
+        $(".gutkha").change(function() {
+            if ($(this).prop('checked')) {
+                $('.gutkhainput').prop("disabled", false);
+                gutkha = 1;
+                $('.gutkhainput').removeClass("errorInput");
+                $('.gutkha_error_msg').removeClass('error-msg-1').css('display', 'none');
+            } else {
+                $('.gutkhainput').prop("disabled", true);
+                $('.gutkhainput').val('');
+                gutkha = 0;
+                $('.gutkhainput').removeClass("errorInput");
+                $('.gutkha_error_msg').removeClass('error-msg-1').css('display', 'none');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

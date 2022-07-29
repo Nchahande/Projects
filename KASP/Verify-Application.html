@@ -1,0 +1,1454 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Roboto Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/kotak-ulip.css" />
+    <link rel="stylesheet" href="css/gsp.css">
+    <link rel="stylesheet" href="css/other.css">
+
+
+    <title>Digital Ulip</title>
+
+    <style>
+        .aside-cover-container .cover-container-full {
+            align-items: flex-start !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="loader__container">
+        <div class="mask"></div>
+        <div class="loader">
+            <img src="./img/kotak-defaultLoader-1.gif" alt="">
+        </div>
+    </div>
+
+    <header></header>
+    <!-- header -->
+
+
+    <main class="bgs-grey" style="overflow: hidden;">
+        <div class="center_grid pt-xl-4 pt-lg-4">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-8 col-md-9 col-sm-10 col-11">
+                        <div class="stepper__container">
+                            <div class="stepper_items progrees">
+                                <div class="flex_div">
+                                    <div class="step_item">1</div>
+                                    <div class="step_caption">Personal details</div>
+                                </div>
+                                <div class="step_count">1/2</div>
+                            </div>
+                            <div class="stepper_gap"></div>
+                            <div class="stepper_items">
+                                <div class="flex_div">
+                                    <div class="step_item">2</div>
+                                    <div class="step_caption">Health details</div>
+                                </div>
+                            </div>
+                            <div class="stepper_gap"></div>
+                            <div class="stepper_items">
+                                <div class="flex_div">
+                                    <div class="step_item">3</div>
+                                    <div class="step_caption">
+                                        <div>Benefits & Review</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stepper_gap"></div>
+                            <div class="stepper_items">
+                                <div class="flex_div">
+                                    <div class="step_item">4</div>
+                                    <div class="step_caption">Upload documents</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-7 col-md-8 col-12">
+                        <div class="form_left_container">
+                            <div class="row">
+                                <div class="col-12" id="paymentSuccessful">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="celebration_img mr-2">
+                                            <img src="./img/congo-1.svg" alt="">
+                                        </div>
+                                        <h6 class="mb-0">You have successfully completed the payment. Kindly fill in the further details to submit your application.</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>A few more details to help us verify your application</h2>
+                            <h6>Select one of the 2 options given below to proceed</h6>
+
+                            <div class="kyc_container">
+                                <div class="tab__content">
+                                    <div class="accordian_container">
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <!-- <button class="accordion-button" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                          Central KYC&nbsp;<span class="tooltip"><img src="img/tooltip.svg"><span class="tooltiptext">Your total amount you will invest in this plan</span></span>
+                                       </button> -->
+                                                    <button class="accordion-button" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Central KYC&nbsp;<span><img src="img/tooltip.svg" alt="" data-toggle="tooltip" data-placement="top" title="Your total amount you will invest in this plan"></span>
+                                     </button>
+                                                </h2>
+                                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        <hr>
+                                                        <div class="ckyc_field">
+                                                            <div class="row">
+                                                                <!-- C-KYC number name -->
+                                                                <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                                                                    <div class="field_row CKYCnumber_placeholder">
+                                                                        <!-- <label>Enter C-KYC number</label> -->
+                                                                        <input type="text" placeholder="Enter C-KYC number" value="cczpv4456j" name="CKYCnumber" class="CKYCnumber_text" />
+                                                                        <p class="error-msg CKYCnumber_error_msg">Please enter</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="col-xl-12 col-lg-12 col-md-12 col-12 text-center">
+                                                                <button class="kotak-btn kotak-btn-primary kycButton" type="button">Verify</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-none">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingTwo">
+                                                        <!-- <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                              Aadhaar KYC &nbsp;<span class="tooltip"><img src="img/tooltip.svg"><span class="tooltiptext">Your total amount you will invest in this plan</span></span>
+                                          </button> -->
+                                                        <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Aadhaar KYC &nbsp;<span><img src="img/tooltip.svg" alt="" data-toggle="tooltip" data-placement="top" title="Your total amount you will invest in this plan"></span>
+                                        </button>
+                                                    </h2>
+                                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                                        <div class="accordion-body">
+                                                            <hr>
+                                                            <div class="aadhar_kyc_panel">
+                                                                <div class="row">
+                                                                    <!-- Aadhar name -->
+                                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                                                                        <div class="field_row">
+                                                                            <label>Your 12-digit aadhaar no.</label>
+                                                                            <input type="text" placeholder="Enter here" name="aadhar" class="aadhar_text" />
+                                                                            <p class="error-msg aadhar_error_msg">Please enter</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <div class="option_container custom-multiline option-inline field_row">
+                                                                            <label>
+                                                            <input type="checkbox" name="aadharCKYC" checked required>
+                                                            <p class="caption">I hereby give my consent to Kotak Life to verify my Aadhaar to establish its genuineness through Quick Response (QR) code (embedded in the Aadhaar card), e-verification or through other such acceptable manner as per UIDAI guidelines or under any Act or law from time to time.</p>
+                                                            <span class="checkmark"></span>
+                                                        </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <hr>
+                                                                <div class="text-center">
+                                                                    <button class="kotak-btn kotak-btn-primary proceedbtn" type="button">GENERATE OTP</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingThree">
+                                                    <!-- <button class="accordion-button collapsed pb-3" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                          Enter address manually &nbsp;<span class="tooltip"><img src="img/tooltip.svg"><span class="tooltiptext">Your total amount you will invest in this plan</span></span>
+                                      </button> -->
+                                                    <button class="accordion-button collapsed pb-3" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Enter address manually &nbsp;<span><img src="img/tooltip.svg" alt="" data-toggle="tooltip" data-placement="top" title="Your total amount you will invest in this plan"></span>
+                                    </button>
+                                                </h2>
+                                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                                    <!-- <div class="accordion-body">
+                                 
+                                      </div> -->
+                                                </div>
+                                            </div>
+
+                                            <div class="address_panel">
+                                                <div class="received_address">
+                                                    <h6>Enter current address</h6>
+                                                    <form id="CommunicationAddress">
+                                                        <div class="row">
+
+                                                            <div id="form11" style="padding: 15px;">
+                                                                <div class="row">
+                                                                    <div class="col-xl-6">
+                                                                        <div class="field_row">
+                                                                            <label>Address line 1<span class="imp_tag">*</span></label>
+                                                                            <input type="text" placeholder="Enter address line 1" name="address1" value="" class="address1 condInput" />
+                                                                            <p class="error-msg address1_error_msg">Please enter address line 1</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-6">
+                                                                        <div class="field_row">
+                                                                            <label>Address line 2<span class="imp_tag">*</span></label>
+                                                                            <input type="text" placeholder="Enter address line 2" name="address2" value="" class="address2 condInput" />
+                                                                            <p class="error-msg address2_error_msg">Please enter address line 2</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-6">
+                                                                        <div class="field_row">
+                                                                            <label>Landmark</label>
+                                                                            <input type="text" name="landmark" placeholder="Enter landmark" class="landmark condInput" />
+                                                                            <p class="error-msg">Please enter landmark</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-6">
+                                                                        <div class="field_row">
+                                                                            <label>Pincode<span class="imp_tag">*</span></label>
+                                                                            <input type="number" class="pincode condInput" id="pincode" value="" placeholder="Enter pincode" name="pincode" />
+                                                                            <p class="error-msg pincode_error_msg">Please enter pincode</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-6">
+                                                                        <div class="field_row">
+                                                                            <label>City<span class="imp_tag">*</span></label>
+                                                                            <select class="condInput" disabled="disabled">
+                                                                                <option value="0">Hyderabad</option>
+                                                                                <option value="0">Bengaluru</option>
+                                                                                <option value="0">Chennai</option>
+                                                                                <option value="0">Mumbai</option>
+                                                                            </select>
+                                                                            <p class="error-msg">Please select city.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-6">
+                                                                        <div class="field_row">
+                                                                            <label>State<span class="imp_tag">*</span></label>
+                                                                            <select class="condInput" disabled="disabled">
+                                                                                <option>Andaman and Nicobar Islands</option>  
+                                                                                <option>Andhra Pradesh</option>
+                                                                                <option>Arunachal Pradesh</option>
+                                                                                <option>Assam</option>
+                                                                                <option>Bihar</option>
+                                                                                <option>Chandigarh</option>
+                                                                                <option>Chhattisgarh</option>
+                                                                                <option>Dadra and Nagar Haveli</option>
+                                                                                <option>Daman and Diu</option>
+                                                                                <option>National Capital Territory of Delhi union territory</option>
+                                                                                <option>Goa</option>
+                                                                                <option>Gujarat</option>
+                                                                                <option>Haryana</option>
+                                                                                <option>Himachal Pradesh</option>
+                                                                                <option>Jammu and Kashmir</option>
+                                                                                <option>Jharkhand</option>
+                                                                                <option>Karnataka</option>
+                                                                                <option>Kerala</option>
+                                                                                <option>Ladakh</option>
+                                                                                <option>Lakshadweep</option>
+                                                                                <option>Madhya Pradesh</option>
+                                                                                <option>Maharashtra</option>
+                                                                                <option>Manipur</option>
+                                                                                <option>Meghalaya</option>
+                                                                                <option>Mizoram</option>
+                                                                                <option>Nagaland</option>
+                                                                                <option>Odisha</option>
+                                                                                <option>Puducherry</option>
+                                                                                <option>Punjab</option>
+                                                                                <option>Rajasthan</option>
+                                                                                <option>Sikkim</option>
+                                                                                <option>Tamil Nadu</option>
+                                                                                <option>Telangana</option>
+                                                                                <option>Tripura</option>
+                                                                                <option>Uttar Pradesh</option>
+                                                                                <option>Uttarakhand</option>
+                                                                                <option>West Bengal</option>
+                                                                            </select>
+                                                                            <p class="error-msg">This is an error message.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--  <div class="col-12 mt-3">
+                                              <h6>Permanent address</h6>
+                                            </div> -->
+                                                            <div class="col-12">
+                                                                <div class="option_container option-inline mb-3">
+                                                                    <label>
+                                                                        <input type="checkbox" class="isPermAddSame" checked name="permanent_address">
+                                                                        <span class="caption">My permanent address is same as my current address</span>
+                                                                        <span class="checkmark"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-12">
+                                                                <div class="row" id="perm_add_container">
+                                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                                        <div class="field_row">
+                                                                            <div class="form_field mb-3">
+                                                                                <label>Address line 1<span class="imp_tag">*</span></label>
+                                                                                <input type="text" class="address3" name="address3" placeholder="Enter address Line 1">
+                                                                                <p class="error-msg address3_error_msg">Please enter address line 1</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                                        <div class="field_row">
+                                                                            <div class="form__field__caption d-xl block d-lg-block d-md-block d-sm-block d-none">
+                                                                            </div>
+                                                                            <div class="form_field mb-3">
+                                                                                <label>Address line 2<span class="imp_tag">*</span></label>
+                                                                                <input type="text" class="address4" name="address4" placeholder="Enter address line 2">
+                                                                                <p class="error-msg address4_error_msg">Please enter address line 2</p>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                                        <div class="field_row">
+                                                                            <div class="form_field mb-3">
+                                                                                <label>Landmark</label>
+                                                                                <input type="text" name="landmark1" placeholder="Enter landmark">
+                                                                                <p class="error-msg">Please enter landmark</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                                        <div class="field_row">
+                                                                            <div class="form_field mb-3">
+                                                                                <label>Pincode<span class="imp_tag">*</span></label>
+                                                                                <input type="number" class="pincode1" name="pincode1" pattern="\d*" onkeypress="validate(event)" placeholder="Enter pincode">
+                                                                                <p class="error-msg pincode1_error_msg">Please enter pincode</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                                        <div class="field_row">
+                                                                            <div class="form_field mb-3">
+                                                                                <label>City<span class="imp_tag">*</span></label>
+                                                                                <select name="city1" disabled="disabled">
+                                                                  <option value="0">Hyderabad</option>
+                                                                  <option value="0">Bengaluru</option>
+                                                                  <option value="0">Chennai</option>
+                                                                  <option value="0">Mumbai</option>
+                                                              </select>
+                                                                                <p class="error-msg">Please enter city</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                                        <div class="field_row">
+                                                                            <div class="form_field mb-3">
+                                                                                <label>State<span class="imp_tag">*</span></label>
+                                                                                <select name="state1" disabled="disabled">
+                                                              <option>Andaman and Nicobar Islands</option>  
+                                                              <option>Andhra Pradesh</option>
+                                                              <option>Arunachal Pradesh</option>
+                                                              <option>Assam</option>
+                                                              <option>Bihar</option>
+                                                              <option>Chandigarh</option>
+                                                              <option>Chhattisgarh</option>
+                                                              <option>Dadra and Nagar Haveli</option>
+                                                              <option>Daman and Diu</option>
+                                                              <option>National Capital Territory of Delhi union territory</option>
+                                                              <option>Goa</option>
+                                                              <option>Gujarat</option>
+                                                              <option>Haryana</option>
+                                                              <option>Himachal Pradesh</option>
+                                                              <option>Jammu and Kashmir</option>
+                                                              <option>Jharkhand</option>
+                                                              <option>Karnataka</option>
+                                                              <option>Kerala</option>
+                                                              <option>Ladakh</option>
+                                                              <option>Lakshadweep</option>
+                                                              <option>Madhya Pradesh</option>
+                                                              <option>Maharashtra</option>
+                                                              <option>Manipur</option>
+                                                              <option>Meghalaya</option>
+                                                              <option>Mizoram</option>
+                                                              <option>Nagaland</option>
+                                                              <option>Odisha</option>
+                                                              <option>Puducherry</option>
+                                                              <option>Punjab</option>
+                                                              <option>Rajasthan</option>
+                                                              <option>Sikkim</option>
+                                                              <option>Tamil Nadu</option>
+                                                              <option>Telangana</option>
+                                                              <option>Tripura</option>
+                                                              <option>Uttar Pradesh</option>
+                                                              <option>Uttarakhand</option>
+                                                              <option>West Bengal</option>
+                                                          </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!--  <div class="col-lg-12 option_container option-inline mb-5 newcheckbox-section">
+                                                    <label class="p-0 mb-2">My communication address would be same as </label>
+                                                    <div class="col-lg-12">
+                                                      <div class="row addressSelectCheckbox">
+                                                        <span>
+                                                          <label class="">
+                                                          <input type="radio" class="declaraction cadd" name="checkAddress" checked onclick="onlyOne(this)">
+                                                            <span class="caption">Current address</span>
+                                                                  <span class="checkmark"></span>
+                                                          </label>
+                                                        </span>
+                                                        <span class="paddDiv">
+                                                          <label class="">
+                                                          <input type="radio" class="declaraction padd" name="checkAddress" onclick="onlyOne(this)">
+                                                            <span class="caption">Permanent address</span>
+                                                                  <span class="checkmark"></span>
+                                                          </label>
+                                                        </span>
+                                                      </div>
+                                                    </div>
+                                                  </div> -->
+
+
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-12 mb-3">
+                                                                <label class="p-0 mb-2">My communication address would be same as </label>
+                                                                <div class="col-lg-12">
+                                                                    <div class="row">
+                                                                        <div class="radio mr-4">
+                                                                            <input id="radio-1" name="radio" type="radio" checked>
+                                                                            <label for="radio-1" class="radio-label">Current address</label>
+                                                                        </div>
+
+                                                                        <div class="radio">
+                                                                            <input id="radio-2" name="radio" type="radio">
+                                                                            <label for="radio-2" class="radio-label">Permanent address</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <!-- <div class="col-12">
+                                                <div class="option_container option-inline field_row mb-4" style="min-height: unset !important;">
+                                                    <label>
+                                                        <input type="checkbox" class="declaractionnew" name="eCommunication" checked>
+                                                        <span class="caption">I hereby give my consent to receive all communications</span>
+                                                        <span class="checkmark"></span>
+                                                            <p class="error-msg p-0">This field is required</p>
+                                                    </label>
+                                                </div>
+                                            </div> -->
+
+                                                            <div class="col-12">
+                                                                <div class="option_container option-inline field_row mb-4" style="min-height: unset !important;">
+                                                                    <label>
+                                                        <input type="checkbox" class="declaractionnew" name="declaraction" checked>
+                                                        <span class="caption">I hereby give my consent to receive all communications including policy document at the registered email 
+                                                            address provided by me in this proposal form</span>
+                                                        <span class="checkmark"></span>
+                                                            <p class="error-msg p-0">This field is required</p>
+                                                    </label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-12">
+                                                                <div class="option_container option-inline field_row">
+                                                                    <label>
+                                                        <input type="checkbox" class="declaractionnew" name="ePolicy" checked>
+                                                        <span class="caption">I want my policy document at the registered email address provided by me in this proposal form</span>
+                                                        <span class="checkmark"></span>
+                                                        <p class="error-msg p-0">This field is required</p>
+                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                                <div class="bottom__fixed">
+                                                    <div class="row mt-3">
+                                                        <div class="col-12 text-right d-flex align-items-center justify-content-between">
+                                                            <a href="Payment-Details.html" class="arrow-back-black">Back</a>
+                                                            <button class="kotak-btn kotak-btn-primary proceedbtn" onclick="checkInput()" type="button">CONTINUE</button>
+                                                        </div>
+                                                        <!-- <div class="col-6 text-left">
+                                            
+                                        </div> -->
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-4 col-lg-5 col-12">
+                        <div class="aside_container d-xl-block d-lg-block d-none mb-2">
+                            <div class="icon-block-caption highligh_blue">You get guranteed maturity benefit of</div>
+                            <div class="aside-icon-container">
+                                <img class="mr-3" src="img/bag-icon.svg" class="img-fluid">
+                                <div class="aside-icon-block">
+                                    <div class="icon-block-value value-sm">₹ 3,49,600 </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="aside-cover-container d-block m-0">
+                                <div class="icon-block-caption mt-3 mb-2">Death benefit</div>
+                                <div class="cover-container-full mb-2 fw-jcsb">
+                                    <div class="icon-block-caption mb-1">Benefit cover up to</div>
+                                    <div class="icon-block-amount"><b><span>₹</span>5,000</b></div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="aside-cover-container d-block m-0">
+
+                                <!-- <div class="icon-block-caption mt-3 mb-2">Benefits</div> -->
+                                <div class="icon-block-caption mt-3 mb-2">Your Riders</div>
+                                <div class="cover-container-full  fw-jcsb">
+                                    <div class="icon-block-caption mb-1">Kotak Term Benefit Rider</div>
+                                    <div class="icon-block-amount"><b><span>₹</span>5,000</b></div>
+                                    <!-- <div class="mb-2">
+                                    <div class="icon-block-caption mb-1">Accidental death</div>
+                                    <div class="icon-block-amount"><b><span>₹</span>6,000</b></div>
+                                </div>  -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside_container aside-cover-container d-xl-block d-lg-block d-md-block d-none">
+                            <div class="cover-container-full mb-2">
+                                <div class="icon-block-caption">Your quotation ID</div>
+                                <div class="icon-block-amount"><span>: </span>OT125780</div>
+                            </div>
+                            <div class="cover-container-full mb-2">
+                                <div class="icon-block-caption">You invest</div>
+                                <div class="icon-block-amount"><span> : </span>₹ 5,000 <small class="taxeLabel">(incl. of taxes)</small></div>
+                            </div>
+                            <div class="title-circle-footer mt-4"><span>Pay for</span> <strong>10 years</strong> for a policy term of <strong>20 years</strong></div>
+                        </div>
+
+                        <!--   
+                    <div class="d-xl-none d-lg-none d-md-none d-block" id="collaspse_mobile">
+                        <div class="float_button">
+                            <button id="for_expand"><img src="./img/expand.svg" alt=""></button>
+                        </div>
+                        <div class="aside_container bottom_sm_fixed more_details_fixed">
+                            <div id="after_expand">
+                                <h6 class="mb-3">Your returns</h6>
+                                <div class="aside_container">
+                                    <div class="aside-icon-container">
+                                        <img class="" src="img/bag-icon.svg" class="img-fluid">
+                                        <div class="aside-icon-block justify_sm_right pl-4">
+                                            <div class="icon-block-caption">Guranteed maturity benefits</div>
+                                            <div class="icon-block-value value-sm">₹ 3,49,600</div>
+                                        </div> 
+                                    </div> 
+                                    <hr class="my-2">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p class="payment_main">You pay</p>
+                                            <p class="payment_main_amt"><span>₹ </span> 3,49,600</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="payment_main">You get</p>
+                                            <p class="payment_main_amt"><span>₹ </span> 2,19,200</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+
+                            <div id="before_expand">
+                                <div class="aside-icon-block">
+                                    <div class="icon-block-caption">Guranteed maturity benefits</div>
+                                    <div class="icon-block-value value-sm">₹ 3,49,600 </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- modal  -->
+
+    <div class="modal fade c_kyc_popup" id="c_kyc_popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header pb-4 px-4 d-block mb-4">
+                    <h5 class="modal-title" id="">Your C-KYC details</h5>
+
+                </div>
+                <div class="modal-body" style="margin-top: 0 !important; padding-left: 15px;">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-6 mb-4">
+                                <label>Father's name</label>
+                                <div class="kyc_modal_value">Rajesh Gupte</div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <label>Mother’s name</label>
+                                <div class="kyc_modal_value">Usha Gupte</div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <label>Spouse’s name</label>
+                                <div class="kyc_modal_value">Shyam Gupte</div>
+                            </div>
+                            <div class="col-lg-12 mb-4">
+                                <label>Current address</label>
+                                <div class="kyc_modal_value">101 Vincenza Heights, Old Padra Road, Vadodara</div>
+                            </div>
+                            <div class="col-lg-12 mb-4">
+                                <label>Permanent address</label>
+                                <div class="kyc_modal_value">101 Vincenza Heights, Old Padra Road, Vadodara</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <hr>
+                                <p>Your CKYC is verified !! Kindly accept to auto save the details in the application and will be safely stored with us</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer col-lg-12">
+                    <div class="text-center col-lg-12">
+                        <button class="kotak-btn kotak-btn-cancel" onclick="rejectofCKYC();">Reject</button>
+                        <button class="kotak-btn kotak-btn-primary" data-dismiss="modal" onclick="successofCKYC();">Accept</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal end -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+    <!-- Custom jQuery -->
+    <script src="js/jquery.maskedinput.min.js"></script>
+
+    <script src="js/kotak-digital-ulip.js"></script>
+
+
+    <script type="text/javascript">
+        var v1 = 1;
+        var v2 = 1;
+        var v3 = 1;
+        var v4 = 1;
+        var v11 = 1;
+        var v41 = 1;
+        var isaddresschecked = 1;
+        var declaractioncheckbox = 0;
+        var declaractioncheckbox1 = 0;
+        var kycInput = 1;
+        var adhaarInput = 1;
+        var adCheck = 1;
+        var otpInputtt = 1;
+
+        if ($('#headingOne .accordion-button').attr('aria-expanded') === "true") {
+            $('.address_panel .condInput').each(function() {
+                $(this).prop("disabled", true);
+            });
+            // console.log("in function");
+            $('#headingOne').addClass("disabled");
+        } else {
+            $('.address_panel .condInput').each(function() {
+                $(this).prop("disabled", false);
+            });
+            $('#headingOne').removeClass("disabled");
+
+        }
+
+        if ($('#headingThree .accordion-button').attr('aria-expanded') === "true") {
+            $('.ckyc_field .condInput').each(function() {
+                $(this).prop("disabled", true);
+            });
+            $('#headingThree').addClass("disabled");
+
+        } else {
+            $('.ckyc_field .condInput').each(function() {
+                $(this).prop("disabled", false);
+            });
+            $('#headingThree').removeClass("disabled");
+
+        }
+
+
+        function adhaarActive() {
+
+            $('.address_panel .condInput').each(function() {
+                $(this).prop("disabled", true);
+            });
+
+
+            $('.ckyc_field .condInput').each(function() {
+                $(this).prop("disabled", false);
+            });
+
+            $('#headingThree').removeClass("disabled");
+            $('#headingOne').addClass("disabled");
+        }
+
+        function addressActive() {
+            $('.address_panel .condInput').each(function() {
+                $(this).prop("disabled", false);
+            });
+
+
+            $('.ckyc_field .condInput').each(function() {
+                $(this).prop("disabled", true);
+            });
+
+            $('#headingOne').removeClass("disabled");
+            $('#headingThree').addClass("disabled");
+        }
+
+
+        $("#headingOne").click(function() {
+
+            adhaarActive();
+
+        });
+
+        $("#headingThree").click(function() {
+
+            addressActive();
+
+
+        });
+
+        $("input").on("keyup", function() {
+            var correct = $(this).siblings('p.error-msg');
+            $(this).removeClass("errorInput");
+            correct.removeClass('error-msg-1').css('display', 'none');
+        });
+
+        $(document).ready(function() {
+            $('.declaraction').on('change', function(e) {
+                if (e.target.checked) {
+                    declaractioncheckbox = 0;
+                } else {
+                    declaractioncheckbox = 1;
+                }
+                // checkInput();
+
+            });
+
+            $('.adhaarcheck').on('change', function(e) {
+                if (e.target.checked) {
+                    adCheck = 0;
+                } else {
+                    adCheck = 1;
+                }
+                $('.adhaarcheck').removeClass("errorInput");
+                $('.adhaarcheck_error_msg').removeClass('error-msg-1').css('display', 'none');
+
+                // checkInput(); 
+            });
+
+
+            $('.declaractionnew').on('change', function(e) {
+                if (e.target.checked) {
+                    declaractioncheckbox1 = 0;
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    error.removeClass('error-msg-1').css('display', 'none');
+                } else {
+                    declaractioncheckbox1 = 1;
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                }
+                // checkInput();
+
+            });
+
+            $('.isPermAddSame').on('change', function(e) {
+                if (e.target.checked) {
+                    // v3 = 0;
+                    // v4 = 0;
+                    isaddresschecked = 1;
+
+                } else {
+                    // v3 = 1;
+
+                    // v4 = 1;
+                    isaddresschecked = 0;
+                    if ($('.address3').val() == "") {
+                        isValid = false;
+                        v4 = 1;
+                        // $('.proceedbtn').prop('disabled', true);
+                    }
+                    if ($('.pincode1').val() == "") {
+                        isValid = false;
+                        v3 = 1;
+                        // $('.proceedbtn').prop('disabled', true);
+                    }
+                }
+                // checkInput();
+            });
+            $('#form11 .condInput').blur(function() {
+                // if($(this).val()=='' ) {  
+                //     var error=$(this).siblings('p.error-msg');
+                //     error.addClass("visible").css('display', 'block');
+                // }
+                // else {
+                //     var correct=$(this).siblings('p.error-msg');
+                //     correct.addClass("invisible").css('display', 'none');
+
+                // }
+            }).trigger("focusout");
+        });
+
+        $("#address_panel input").on("blur", function() {
+            var valueofinput = $(this).val();
+            if ($(this).attr('name') == "address1") {
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v1 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v1 = 0;
+                }
+            }
+
+            if ($(this).attr('name') == "address2") {
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v11 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v11 = 0;
+                }
+            }
+
+            if ($(this).attr('name') == "pincode") {
+                if (validatePincode(valueofinput) == false || valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v2 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v2 = 0;
+                }
+            }
+            if ($(this).attr('name') == "pincode1") {
+                if (validatePincode(valueofinput) == false || valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v3 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v3 = 0;
+                }
+            }
+            if ($(this).attr('name') == "address3") {
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v4 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v4 = 0;
+                }
+            }
+            if ($(this).attr('name') == "address4") {
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    v41 = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    v41 = 0;
+                }
+            }
+            if ($(this).attr('name') == "ckycnumber") {
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    kycInput = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    kycInput = 0;
+                }
+            }
+            if ($(this).attr('name') == "adhaarnumber") {
+                if (valueofinput == "") {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    adhaarInput = 1;
+                } else {
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+                    adhaarInput = 0;
+                }
+            }
+            // checkInput();
+
+        });
+
+        function checkInput() {
+            // console.log("in function");
+            var isValid = true;
+            // $("input").each(function() {
+            //     var element = $(this);
+            // if (v1 == 1 && v2 == 1 && isaddresschecked == 0) {
+            //     isValid = false;
+            // }
+            if (isaddresschecked == 0) {
+                // console.log("in function 1");
+
+                if ($('.address1').val() == '') {
+                    $('.address1').addClass("errorInput");
+                    $('.address1_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v1 = 1;
+                } else {
+                    v1 = 0;
+                }
+                if ($('.address2').val() == '') {
+                    $('.address2').addClass("errorInput");
+                    $('.address2_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v11 = 1;
+                } else {
+                    v11 = 0;
+                }
+                if ($('.address3').val() == '') {
+                    $('.address3').addClass("errorInput");
+                    $('.address3_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v4 = 1;
+                } else {
+                    v4 = 0;
+                }
+                if ($('.address4').val() == '') {
+                    $('.address4').addClass("errorInput");
+                    $('.address4_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v41 = 1;
+                } else {
+                    v41 = 0;
+                }
+                if ($('.pincode').val() == '') {
+                    $('.pincode').addClass("errorInput");
+                    $('.pincode_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v2 = 1;
+                } else {
+                    v2 = 0;
+                }
+                if ($('.pincode1').val() == '') {
+                    $('.pincode1').addClass("errorInput");
+                    $('.pincode1_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v3 = 1;
+                } else {
+                    v3 = 0;
+                }
+
+                if (v1 == 1 || v11 == 1 || v2 == 1 || v3 == 1 || v4 == 1 || v41 == 1 || declaractioncheckbox == 1 || declaractioncheckbox1 == 1) {
+                    isValid = false;
+                } else {
+                    // isValid = true;
+                    window.location = "Personal-Details.html";
+                }
+            } else {
+                // console.log("in function 2");
+
+                if ($('.address1').val() == '') {
+                    $('.address1').addClass("errorInput");
+                    $('.address1_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v1 = 1;
+                } else {
+                    v1 = 0;
+                }
+                if ($('.address2').val() == '') {
+                    $('.address2').addClass("errorInput");
+                    $('.address2_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v11 = 1;
+                } else {
+                    v11 = 0;
+                }
+                if ($('.pincode').val() == '') {
+                    $('.pincode').addClass("errorInput");
+                    $('.pincode_error_msg').addClass('error-msg-1').css('display', 'block');
+                    v2 = 1;
+                } else {
+                    v2 = 0;
+                }
+                if (v1 == 1 || v11 == 1 || v2 == 1 || declaractioncheckbox == 1 || declaractioncheckbox1 == 1) {
+                    isValid = false;
+                } else {
+                    if ($('.pincode').val() == '181131') {
+                        // jQuery.noConflict();
+                        $('#pincode_error').modal('show');
+                    } else {
+                        window.location = "Personal-Details.html";
+                    }
+                }
+            }
+            // });
+            // if (isValid != false) {
+            //     // $('.proceedbtn').prop('disabled', false);
+            // }
+            // else{
+            //     // $('.proceedbtn').prop('disabled', true);
+            // }
+            $('html, body').animate({
+                scrollTop: ($('.errorInput').offset().top - 300)
+            }, 2000);
+        }
+
+        $(".kycButton").click(function() {
+            if ($('.ckycnumber').val() == '') {
+                $('.ckycnumber').addClass("errorInput");
+                $('.ckycnumber_error_msg').addClass('error-msg-1').css('display', 'block');
+                kycInput = 1;
+            } else {
+                kycInput = 0;
+            }
+
+            if (kycInput == 0) {
+                // jQuery.noConflict();
+                $('#c_kyc_popup').modal('show');
+                // window.location = "Personal-Details.html";
+            } else {
+
+            }
+        });
+
+        $(".gotpButton").click(function() {
+            if ($('.adhaarnumber').val() == '') {
+                $('.adhaarnumber').addClass("errorInput");
+                $('.adhaarnumber_error_msg').addClass('error-msg-1').css('display', 'block');
+                adhaarInput = 1;
+            } else {
+                adhaarInput = 0;
+            }
+            if (adCheck == 1) {
+                $('.adhaarcheck').addClass("errorInput");
+                $('.adhaarcheck_error_msg').addClass('error-msg-1').css('display', 'block');
+
+            } else {
+                // adhaarInput = 0;
+            }
+
+            if (adhaarInput == 0 || adCheck == 0) {
+                $('.otpButton1').css('display', 'none');
+                $('.otpButton2').css('display', 'block');
+                $('.otpnumber1').css('display', 'block');
+
+                // window.location = "Personal-Details.html";
+            } else {
+
+            }
+        });
+
+        $(".otpButton").click(function() {
+            if ($('.adhaarnumber').val() == '') {
+                $('.adhaarnumber').addClass("errorInput");
+                $('.adhaarnumber_error_msg').addClass('error-msg-1').css('display', 'block');
+                adhaarInput = 1;
+            } else {
+                adhaarInput = 0;
+            }
+            if ($('.OTPnumber').val() == '') {
+                $('.OTPnumber').addClass("errorInput");
+                $('.otpnumber_error_msg').addClass('error-msg-1').css('display', 'block');
+                otpInputtt = 1;
+            } else {
+                otpInputtt = 0;
+            }
+            if (adCheck == 1) {
+                $('.adhaarcheck').addClass("errorInput");
+                $('.adhaarcheck_error_msg').addClass('error-msg-1').css('display', 'block');
+
+            } else {
+                // adhaarInput = 0;
+            }
+
+            if (adhaarInput == 0 || adCheck == 0 || otpInputtt == 0) {
+                scrollToAddress();
+                disableckycOption();
+                // window.location = "Personal-Details.html";
+            } else {
+
+            }
+        });
+
+
+
+        $('.cadd').prop('disabled', true);
+        // $('.padd').prop('disabled', true);
+        $('.newcheckbox-section').css('display', 'none');
+
+        $(function() {
+            $('#perm_add_container').css('display', 'none');
+            $('.isPermAddSame').click(function() {
+                if ($(this).prop("checked")) {
+                    $('#perm_add_container').css('display', 'none');
+                    // $('.padd').prop('disabled', true);
+                    $('.newcheckbox-section').css('display', 'none');
+                } else {
+                    $('#perm_add_container').css('display', 'flex');
+                    $('.newcheckbox-section').css('display', 'block');
+                    // $('.paddDiv').css('display', 'block');
+                    // $('.newcheckbox-section').prop('disabled', false);
+                }
+            });
+
+            $(".kotak-btn-primary").click(function() {
+                // checkInput();
+                //     var number = $('#pincode').val();
+                //     var sign = number > 0 ? 1 : number == 0 ? 0 : -1; 
+                //     if(sign == 1){ 
+                //         $('#CommunicationAddress').prop('action', 'Personal-Details.html');
+                //     } else {
+                //         $('#CommunicationAddress').prop('action', 'Sorry.html');
+                //     }                
+            });
+
+        })
+
+        function onlyOne(checkbox) {
+            var checkboxes = document.getElementsByName('checkAddress')
+            checkboxes.forEach((item) => {
+                if (item !== checkbox) {
+                    item.checked = false;
+                    $(item).prop('disabled', false);
+                }
+            })
+            $(checkbox).prop("disabled", true);
+        }
+
+        // $('.collapsed').parents('.card-header').addClass('tick_circle');
+
+        function nextPage() {
+            window.location = "Personal-Details.html";
+        }
+
+        function scrollToAddress(e) {
+
+            $('#headingThree').find('.accordion-button').trigger('click');
+            // $('html, body').animate({
+            //     scrollTop: $("#addressDiv").offset().top
+            // }, 2000);
+            // e.preventDefault();
+            //  var target = $('#addressDiv').attr('href');
+            //  $('html, body').animate({
+            //    scrollTop: ($(target).offset().top)
+            //  }, 2000);
+
+
+            //$("#CommunicationAddress").scrollIntoView();
+
+            $('html, body').animate({
+                scrollTop: $("#CommunicationAddress").offset().top - 400
+            }, 500);
+
+        }
+
+        function rejectofCKYC() {
+            //$('.kycButton').css('display', 'none');
+            // console.log("abcd");
+            $('#c_kyc_popup').modal('hide');
+            scrollToAddress();
+            enableAddressForm();
+            disableAdhaarOption();
+            disableManualAddressOption();
+            // $('#headingThree3').click();
+            // $('#collapse').removeClass('show');
+            // $('#collapseThree3').addClass('show');
+
+        }
+
+        function successofCKYC() {
+            //$('.kycButton').css('display', 'none');
+            $('#headingThree').addClass("disabled");
+            scrollToAddress();
+            disableAddressForm();
+            disableManualAddressOption();
+            disableAdhaarOption();
+            $('#headingOne').addClass('disabled');
+        }
+
+        function disableAdhaarOption() {
+            $("#headingTwo2").addClass("inactiveTabs");
+        }
+
+        function disableckycOption() {
+            $("#headingOne1").addClass("inactiveTabs");
+        }
+
+        function disableManualAddressOption() {
+            $("#headingThree3").addClass("inactiveTabs");
+        }
+
+        function disableAddressForm() {
+            $('.address1').attr('value', '20, kcml society');
+            $('.address2').attr('value', 'f1209, mantri celestia');
+            $('.pincode').attr('value', '500032');
+            $('.landmark').attr('value', 'opp kotak atm');
+            $("#CommunicationAddress .condInput").prop("disabled", true);
+            $('.proceedbtn').prop("disabled", false);
+        }
+
+        function enableAddressForm() {
+            $('.proceedbtn').prop("disabled", false);
+            $("#CommunicationAddress .condInput").prop("disabled", false);
+            $('.address1').focus();
+        }
+
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+
+        $(document).ready(function() {
+            $("#paymentSuccessful").delay(4000).fadeOut("slow");
+            $(this).scrollTop(0);
+        });
+        var isStart = true;
+        var curPage = 'Verfy-Application';
+        // console.log("")
+        $(function() {
+            v1 = 0;
+            $("#ChildDOB1").css('display', 'none');
+
+            $("#sideContent").load(curPage + ".html");
+            $("#mobileContainer").load(curPage + ".html");
+
+            $("#proceedBtnMobile").css('display', 'block');
+            $("#applyBtnMobile").css('display', 'none');
+
+            $('#applyBtn').prop("disabled", true);
+            $('#applyBtn').removeClass('kotak-btn-primary');
+            $('#applyBtn').addClass('kotak-disabled');
+
+
+
+            $('.dropdown_container a.dropdown-item').click(function() {
+                $('#dropdownMenuButton, #dropdownMenuButtonSm').html($(this).html());
+            });
+
+            $('#applyBtn').click(function() {
+
+                if (isStart) {
+                    isStart = false;
+                } else {
+                    // $("#sideContent").load(curPage+".html");
+                }
+
+                if (curPage == 'Rising-Star') {
+                    if (dobAge == 1) {
+                        $(this).prop("disabled", false);
+                        $(this).addClass('kotak-btn-primary');
+                        $(this).removeClass('kotak-disabled');
+
+                        $('#proceedBtn').prop("disabled", true);
+                        // $('#proceedBtn').attr("disabled", 'false');
+                        $('#proceedBtn').removeClass('kotak-btn-primary');
+                        $('#proceedBtn').addClass('kotak-disabled');
+                    } else {
+                        $(this).prop("disabled", true);
+                        $(this).removeClass('kotak-btn-primary');
+                        $(this).addClass('kotak-disabled');
+
+                        $('#proceedBtn').prop("disabled", false);
+                        // $('#proceedBtn').attr("disabled", 'false');
+                        $('#proceedBtn').addClass('kotak-btn-primary');
+                        $('#proceedBtn').removeClass('kotak-disabled');
+                    }
+                }
+
+            });
+
+            $('.applyBtn1').click(function() {
+                // console.log("in apply 1 btn click function");
+                if (isStart) {
+                    isStart = false;
+                } else {
+                    // $("#sideContent").load(curPage+".html");
+                }
+
+                $('#proceedBtn').prop("disabled", false);
+                // $('#proceedBtn').attr("disabled", 'false');
+                $('#proceedBtn').addClass('kotak-btn-primary');
+                $('#proceedBtn').removeClass('kotak-disabled');
+
+                $('#mobileContainer #proceedBtn').prop("disabled", false);
+                // $('#proceedBtn').attr("disabled", 'false');
+                $('#mobileContainer #proceedBtn').addClass('kotak-btn-primary');
+                $('#mobileContainer #proceedBtn').removeClass('kotak-disabled');
+
+                // $("#myModal").modal("hide");
+
+            });
+
+
+
+
+            $(".visit-link").focus(function() {
+
+                // $('#proceedBtn').prop("disabled", true);
+                // $('#proceedBtn').attr("disabled", true);
+                // $('#proceedBtn').removeClass('kotak-btn-primary');
+                // $('#proceedBtn').addClass('kotak-disabled');
+                // $('#proceedBtn').addClass('kotak-disabled34343');
+                if (v1 == 0) {
+                    $('#applyBtn').prop("disabled", false);
+                    $('#applyBtn').addClass('kotak-btn-primary');
+                    $('#applyBtn').removeClass('kotak-disabled');
+                    $('#proceedBtn').prop("disabled", true);
+                    $('#proceedBtn').removeClass('kotak-btn-primary');
+                    $('#proceedBtn').addClass('kotak-disabled');
+
+                    $('#mobileContainer #proceedBtn').prop("disabled", true);
+                    $('#mobileContainer #proceedBtn').removeClass('kotak-btn-primary');
+                    $('#mobileContainer #proceedBtn').addClass('kotak-disabled');
+
+                    // for mobile screen
+                    $("#proceedBtnMobile").css('display', 'none');
+                    $("#applyBtnMobile").css('display', 'block');
+                    $('#applyBtnMobile').prop("disabled", false);
+                    $('#applyBtnMobile').addClass('kotak-btn-primary');
+                    $('#applyBtnMobile').removeClass('kotak-disabled');
+                }
+
+            });
+            $(".investmentAmount").on("keyup", function() {
+
+                if ($(this).val() == '') {
+                    var error = $(this).siblings('p.error-msg');
+                    $(this).addClass("errorInput");
+                    error.addClass('error-msg-1').css('display', 'block');
+                    $('#applyBtn').prop("disabled", true);
+                    $('#applyBtn').removeClass('kotak-btn-primary');
+                    $('#applyBtn').addClass('kotak-disabled');
+                    $('#proceedBtn').prop("disabled", true);
+                    $('#proceedBtn').removeClass('kotak-btn-primary');
+                    $('#proceedBtn').addClass('kotak-disabled');
+                    $('#applyBtn1').prop("disabled", true);
+                    $('#applyBtn1').removeClass('kotak-btn-primary');
+                    $('#applyBtn1').addClass('kotak-disabled');
+
+                    // for mobile screen
+                    $("#proceedBtnMobile").css('display', 'none');
+                    $("#applyBtnMobile").css('display', 'block');
+                    $('#applyBtnMobile').prop("disabled", true);
+                    $('#applyBtnMobile').removeClass('kotak-btn-primary');
+                    $('#applyBtnMobile').addClass('kotak-disabled');
+
+                    v1 = 1;
+
+                } else {
+                    $('#applyBtn').prop("disabled", false);
+                    $('#applyBtn').addClass('kotak-btn-primary');
+                    $('#applyBtn').removeClass('kotak-disabled');
+                    $('#applyBtn1').prop("disabled", false);
+                    $('#applyBtn1').addClass('kotak-btn-primary');
+                    $('#applyBtn1').removeClass('kotak-disabled');
+                    $('#proceedBtn').prop("disabled", true);
+                    $('#proceedBtn').removeClass('kotak-btn-primary');
+                    $('#proceedBtn').addClass('kotak-disabled');
+                    var correct = $(this).siblings('p.error-msg');
+                    $(this).removeClass("errorInput");
+                    correct.removeClass('error-msg-1').css('display', 'none');
+
+                    // for mobile screen
+                    $("#proceedBtnMobile").css('display', 'none');
+                    $("#applyBtnMobile").css('display', 'block');
+                    $('#applyBtnMobile').prop("disabled", false);
+                    $('#applyBtnMobile').addClass('kotak-btn-primary');
+                    $('#applyBtnMobile').removeClass('kotak-disabled');
+
+                    v1 = 0;
+                }
+            });
+
+            $("select,.date-field-dob").on("change", function() {
+                if (v1 == 0) {
+                    $('#applyBtn').prop("disabled", false);
+                    $('#applyBtn').addClass('kotak-btn-primary');
+                    $('#applyBtn').removeClass('kotak-disabled');
+                    $('#proceedBtn').prop("disabled", true);
+                    $('#proceedBtn').removeClass('kotak-btn-primary');
+                    $('#proceedBtn').addClass('kotak-disabled');
+                    // for mobile screen
+                    $("#proceedBtnMobile").css('display', 'none');
+                    $("#applyBtnMobile").css('display', 'block');
+                    $('#applyBtnMobile').prop("disabled", false);
+                    $('#applyBtnMobile').addClass('kotak-btn-primary');
+                    $('#applyBtnMobile').removeClass('kotak-disabled');
+                }
+            });
+
+
+        });
+
+        $("#applyBtnMobile").click(function() {
+            $("#proceedBtnMobile").css('display', 'block');
+            $("#applyBtnMobile").css('display', 'none');
+        });
+    </script>
+
+</body>
+
+</html>
